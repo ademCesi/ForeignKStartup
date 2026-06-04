@@ -1,0 +1,325 @@
+// ─── Variables ───────────────────────────────────────────────────────────────
+$color-bg:          #ffffff;
+$color-bg-scrolled: rgba(255, 255, 255, 0.96);
+$color-primary:     #0A2540;
+$color-accent:      #C8372D;
+$color-text:        #1a1a2e;
+$color-text-muted:  #6b7280;
+$color-border:      #e5e7eb;
+
+$font-display:      'Playfair Display', Georgia, serif;
+$font-body:         'DM Sans', 'Helvetica Neue', sans-serif;
+
+$nav-height:        68px;
+$transition:        0.25s ease;
+$breakpoint-mobile: 768px;
+
+// ─── Base ─────────────────────────────────────────────────────────────────────
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: $nav-height;
+  background: $color-bg;
+  border-bottom: 1px solid $color-border;
+  transition: box-shadow $transition, background $transition;
+
+  &--scrolled {
+    background: $color-bg-scrolled;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  // ─── Container ──────────────────────────────────────────────────────────────
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  // ─── Logo ───────────────────────────────────────────────────────────────────
+  &__logo {
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+    gap: 1px;
+    flex-shrink: 0;
+  }
+
+  &__logo-foreign {
+    font-family: $font-display;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: $color-text-muted;
+    letter-spacing: 0.01em;
+  }
+
+  &__logo-k {
+    font-family: $font-display;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: $color-primary;
+    letter-spacing: 0.01em;
+  }
+
+  &__logo-star {
+    font-family: $font-display;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $color-accent;
+    line-height: 1;
+    margin-left: 1px;
+  }
+
+  // ─── Links ──────────────────────────────────────────────────────────────────
+  &__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    justify-content: center;
+
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+      position: fixed;
+      top: $nav-height;
+      left: 0;
+      right: 0;
+      background: $color-bg;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px 24px 24px;
+      border-bottom: 1px solid $color-border;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      gap: 4px;
+
+      &--open {
+        display: flex;
+      }
+    }
+  }
+
+  &__link-item {
+    @media (max-width: $breakpoint-mobile) {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    font-family: $font-body;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $color-text-muted;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    letter-spacing: 0.02em;
+    transition: color $transition, background $transition;
+    display: block;
+
+    &:hover {
+      color: $color-primary;
+      background: rgba($color-primary, 0.05);
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: 12px 8px;
+      font-size: 1rem;
+      border-bottom: 1px solid $color-border;
+      border-radius: 0;
+
+      &:hover {
+        background: transparent;
+        color: $color-primary;
+      }
+    }
+  }
+
+  // ─── Right side ─────────────────────────────────────────────────────────────
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+  }
+
+  // ─── Language dropdown ──────────────────────────────────────────────────────
+  &__lang {
+    position: relative;
+  }
+
+  &__lang-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: $font-body;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: $color-text-muted;
+    background: #f3f4f6;
+    border: 1px solid transparent;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color $transition, background $transition, border-color $transition;
+    white-space: nowrap;
+
+    &:hover {
+      color: $color-primary;
+      background: #eaecf0;
+    }
+
+    &--open {
+      color: $color-primary;
+      background: $color-bg;
+      border-color: $color-border;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  &__lang-trigger-flag {
+    font-family: $font-display;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #3d3d3d;
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+
+  &__lang-trigger-label {
+    letter-spacing: 0.01em;
+  }
+
+  &__lang-trigger-chevron {
+    color: $color-text-muted;
+    transition: transform $transition;
+
+    .navbar__lang-trigger--open & {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__lang-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 150px;
+    background: $color-bg;
+    border: 1px solid $color-border;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    margin: 0;
+    padding: 4px;
+    z-index: 100;
+    animation: dropdownFade 0.15s ease;
+  }
+
+  &__lang-option {
+    display: grid;
+    grid-template-columns: 1.6rem 1fr auto;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background $transition;
+
+    &:hover {
+      background: #f3f4f6;
+    }
+
+    &--active {
+      background: rgba($color-primary, 0.06);
+
+      .navbar__lang-option-label {
+        color: $color-primary;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__lang-option-flag {
+    font-family: $font-display;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #3d3d3d;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    width: 1.6rem;
+  }
+
+  &__lang-option-label {
+    font-family: $font-body;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: $color-text;
+  }
+
+  &__lang-option-check {
+    color: $color-primary;
+    flex-shrink: 0;
+  }
+
+  @keyframes dropdownFade {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  // ─── Burger ─────────────────────────────────────────────────────────────────
+  &__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+
+    span {
+      display: block;
+      height: 2px;
+      background: $color-primary;
+      border-radius: 2px;
+      transition: transform $transition, opacity $transition, width $transition;
+      transform-origin: center;
+
+      &:nth-child(1) { width: 22px; }
+      &:nth-child(2) { width: 16px; }
+      &:nth-child(3) { width: 22px; }
+    }
+
+    &--open span {
+      &:nth-child(1) {
+        width: 20px;
+        transform: translateY(7px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+        width: 0;
+      }
+      &:nth-child(3) {
+        width: 20px;
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      display: flex;
+    }
+  }
+}
