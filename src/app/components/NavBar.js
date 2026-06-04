@@ -10,9 +10,9 @@ const NavBar = () => {
   const langRef = useRef(null);
 
   const languages = [
-    { code: "En", label: t("english") },
-    { code: "Fr", label: t("french") },
-    { code: "Kr", label: t("korean") },
+    { code: "en", label: t("english") },
+    { code: "fr", label: t("french") },
+    { code: "kr", label: t("korean") },
   ];
 
   const currentLang = languages.find((l) => l.code === i18n.language) || languages[0];
