@@ -1,6 +1,6 @@
 stages:
   - lint
-
+ 
 lint:
   stage: lint
   image: node:20
@@ -9,8 +9,9 @@ lint:
     paths:
       - node_modules/
   before_script:
-    - npm ci
+    - npm install
   script:
     - npm run lint
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+ 
