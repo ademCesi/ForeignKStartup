@@ -1,12 +1,17 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { BrowserRouter } from 'react-router-dom';
 import NavBar from './components/NavBar';
+import ImageSlider from './components/ImagesSlider';
+import './App.scss';
 
 function App() {
   return (
-    <div>
-      <NavBar />
-    </div>
+    <BrowserRouter>
+      <div>
+        <NavBar />
+        <ImageSlider/>
+      </div>
+    </BrowserRouter>
   );
 }
 
