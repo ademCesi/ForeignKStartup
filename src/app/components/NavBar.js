@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import logoPNU from "../assets/images/logoPNU.png";
 import "../styles/NavBar.scss";
 
 const NavBar = () => {
@@ -18,11 +20,11 @@ const NavBar = () => {
   const currentLang = languages.find((l) => l.code === i18n.language) || languages[0];
 
   const navLinks = [
-    { label: t("home"), href: "#" },
-    { label: t("guide"), href: "#guide" },
-    { label: t("resources"), href: "#resources" },
-    { label: t("community"), href: "#community" },
-    { label: t("about"), href: "#about" },
+    { label: t("home"), href: "/" },
+    { label: t("guide"), href: "/guide" },
+    { label: t("resources"), href: "/resources" },
+    { label: t("community"), href: "/community" },
+    { label: t("about"), href: "/about" },
   ];
 
   useEffect(() => {
@@ -50,18 +52,19 @@ const NavBar = () => {
     <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <div className="navbar__container">
 
-        <a href="#" className="navbar__logo">
+        <Link to="/" className="navbar__logo">
+          <img src={logoPNU} alt="PNU Logo" className="navbar__logo-image" />
           <span className="navbar__logo-foreign">Foreign</span>
           <span className="navbar__logo-k"> K-Startup</span>
           <span className="navbar__logo-star">*</span>
-        </a>
+        </Link>
 
         <ul className={`navbar__links ${menuOpen ? "navbar__links--open" : ""}`}>
           {navLinks.map(({ label, href }) => (
             <li key={label} className="navbar__link-item">
-              <a href={href} className="navbar__link" onClick={() => setMenuOpen(false)}>
+              <Link to={href} className="navbar__link" onClick={() => setMenuOpen(false)}>
                 {label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -81,7 +84,7 @@ const NavBar = () => {
               </span>
               <span className="navbar__lang-trigger-label">{currentLang.label}</span>
               <svg className="navbar__lang-trigger-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
 
@@ -101,7 +104,7 @@ const NavBar = () => {
                     <span className="navbar__lang-option-label">{lang.label}</span>
                     {i18n.language === lang.code && (
                       <svg className="navbar__lang-option-check" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <path d="M2.5 7L5.5 10L11.5 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M2.5 7L5.5 10L11.5 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     )}
                   </li>
