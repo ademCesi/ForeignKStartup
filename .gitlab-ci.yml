@@ -3,7 +3,7 @@ stages:
 
 lint:
   stage: lint
-  image: node:18
+  image: node:20
   cache:
     key: $CI_COMMIT_REF_SLUG
     paths:
