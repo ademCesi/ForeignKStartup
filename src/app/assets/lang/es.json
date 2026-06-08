@@ -1,0 +1,182 @@
+{
+  "home": "Inicio",
+  "guide": "Guía",
+  "resources": "Recursos",
+  "community": "Comunidad",
+  "about": "Acerca de",
+  "english": "Inglés",
+  "french": "Francés",
+  "korean": "Coreano",
+  "spanish": "Español",
+  "russian": "Ruso",
+  "chinese": "Chino",
+  "portuguese": "Portugués",
+  "japanese": "Japonés",
+  "hindi": "Hindi",
+  "arabic": "Árabe",
+  "title_home": "¿Cómo crear una empresa en Corea del Sur?",
+  "subtitle_home": "Guía completa para emprendedores extranjeros",
+  "start_journey": "Comienza tu aventura",
+  "roadmap": {
+    "eyebrow": "Proceso",
+    "title": "Hoja de ruta para crear tu startup en Corea",
+    "subtitle": "Guía paso a paso para emprendedores extranjeros",
+    "step1": {
+      "title": "Obtener la visa correcta",
+      "description": "Primero necesitas permiso legal para emprender en Corea."
+    },
+    "step2": {
+      "title": "Elegir una estructura legal",
+      "description": "Corporación LLC o empresa individual cada una con implicaciones distintas."
+    },
+    "step3": {
+      "title": "Asegurar una dirección comercial",
+      "description": "Se requiere una dirección registrada en Corea."
+    },
+    "step4": {
+      "title": "Registrar tu startup",
+      "description": "Proceso oficial documentos necesarios y plazos."
+    },
+    "step5": {
+      "title": "Abrir una cuenta bancaria",
+      "description": "El paso más complicado para extranjeros."
+    },
+    "step6": {
+      "title": "Registrarse en impuestos",
+      "description": "Resumen del sistema fiscal coreano."
+    },
+    "step7": {
+      "title": "Encontrar financiamiento",
+      "description": "Corea ofrece programas públicos y capital de riesgo."
+    },
+    "step8": {
+      "title": "Contratar seguros",
+      "description": "Obligatorio al contratar empleados."
+    }
+  },
+  "stepPage": {
+    "eyebrow": "Etapa",
+    "backLabel": "Volver a la hoja de ruta",
+    "comingSoon": "Contenido próximamente...",
+    "notFound": "Etapa no encontrada"
+  },
+  "footer": {
+    "tagline": "Tu puerta de entrada para lanzar una startup en Corea del Sur.",
+    "organization": "Universidad Nacional de Pusan V-SPACE",
+    "addressLine1": "2, Busandaehak-ro 63beon-gil, Geumjeong-gu, Busan",
+    "addressLine2": "Edificio de Ingeniería Mecánica (303), sala 208 V-SPACE",
+    "phone": "Tel. 051-510-3261",
+    "fax": "Fax. 051-510-0787",
+    "privacy": "Política de privacidad",
+    "emailPolicy": "Rechazo de recopilación no autorizada de correos electrónicos",
+    "contact": "Contacto",
+    "copyrightOwner": "PNU V-Space",
+    "copyright": "© Copyright"
+  },
+  "privacyPage": {
+    "eyebrow": "V-SPACE",
+    "title": "Recopilación y uso de información personal",
+    "subtitle": "Política de privacidad",
+    "intro": [
+      "V-SPACE concede gran importancia a la protección de la información personal de los usuarios y hace todo lo posible para garantizar que la información personal que los usuarios proporcionan en línea al utilizar los servicios de la empresa esté protegida.",
+      "En consecuencia, V-SPACE cumple con las disposiciones sobre protección de la información personal establecidas en las leyes y normativas pertinentes que deben observar los proveedores de servicios de información y comunicaciones, incluidas la Ley de Protección del Secreto de las Comunicaciones, la Ley de Negocios de Telecomunicaciones y la Ley de Promoción de la Utilización de las Redes de Información y Comunicaciones y Protección de la Información, así como con las directrices de protección de la información personal establecidas por el Ministerio de Información y Comunicación.",
+      "A través de esta política de privacidad, V-SPACE informa a los usuarios sobre los fines y la forma en que se utiliza la información personal que proporcionan, así como sobre las medidas adoptadas para proteger dicha información personal.",
+      "V-SPACE publica esta política de privacidad en la página principal del sitio web para que los usuarios puedan consultarla fácilmente en cualquier momento.",
+      "La política de privacidad de la empresa puede modificarse en cualquier momento debido a cambios en las leyes y directrices gubernamentales o en las políticas internas de la empresa, y se han establecido los procedimientos necesarios para su mejora continua. Se recomienda a los usuarios revisarla periódicamente al visitar el sitio."
+    ],
+    "section1": {
+      "title": "1. Finalidad de la recopilación y uso de la información personal",
+      "paragraphs": [
+        "\"Información personal\" se refiere a la información sobre una persona viva que permite identificarla mediante elementos incluidos en dicha información, como el nombre o el número de registro de residente, incluyendo la información que, por sí sola, no permite identificar a una persona concreta pero que puede hacerlo fácilmente al combinarse con otra información.",
+        "La mayoría de los servicios pueden utilizarse en cualquier momento sin necesidad de un registro de usuario independiente. Sin embargo, V-SPACE recopila información personal de los usuarios para ofrecer servicios de mejor calidad y más avanzados, incluidos servicios personalizados, a través de sus servicios para miembros.",
+        "V-SPACE no divulga la información personal de los usuarios sin su consentimiento previo, y la información recopilada se utiliza de la siguiente manera."
+      ],
+      "bullets": [
+        "A partir de la información personal proporcionada por los usuarios, pueden desarrollarse servicios más útiles.",
+        "Al desarrollar nuevos servicios o ampliar contenidos, la información personal proporcionada previamente por los usuarios existentes puede utilizarse para determinar con mayor eficiencia la prioridad de los servicios que deben desarrollarse y para seleccionar y ofrecer de manera razonable los contenidos que los usuarios necesitan."
+      ],
+      "dataTitle": "Elementos de información personal recopilados y finalidades de la recopilación y uso",
+      "dataItems": [
+        {
+          "label": "Nombre, ID, contraseña, número de registro de residente",
+          "purpose": "Se utilizan para el procedimiento de verificación de identidad relacionado con el uso de los servicios para miembros"
+        },
+        {
+          "label": "Dirección de correo electrónico, número de teléfono",
+          "purpose": "Asegurar un canal de comunicación fluido para el envío de avisos y la gestión de reclamaciones"
+        },
+        {
+          "label": "Información de cuenta bancaria, información de tarjeta de crédito",
+          "purpose": "Pago por el uso de los servicios y servicios adicionales"
+        },
+        {
+          "label": "Dirección, número de teléfono",
+          "purpose": "Asegurar una dirección exacta para facturación y entrega de productos"
+        },
+        {
+          "label": "Otros elementos opcionales",
+          "purpose": "Datos utilizados para ofrecer servicios personalizados"
+        },
+        {
+          "label": "Dirección IP",
+          "purpose": "Prevenir el uso fraudulento por parte de miembros problemáticos y evitar usos no autorizados"
+        }
+      ]
+    },
+    "section2": {
+      "title": "2. Información personal recopilada y métodos de recopilación",
+      "paragraphs": [
+        "Cuando los usuarios se registran como miembros para utilizar los servicios para miembros, V-SPACE recibe en línea la información esencial para la prestación del servicio. La información obligatoria que se solicita en el momento del registro incluye el nombre, el número de registro de residente y la dirección de correo electrónico.",
+        "Además, para ofrecer servicios de alta calidad, los usuarios pueden introducir de forma opcional información como su número de teléfono.",
+        "No se recopila información personal sensible que pueda vulnerar los derechos fundamentales de los usuarios, como raza y etnia, ideas y creencias, lugar de origen y registro familiar, inclinación política, antecedentes penales, estado de salud y vida sexual. Si resultara inevitable recopilarla, se obtendrá sin falta el consentimiento previo de los usuarios."
+      ]
+    },
+    "section3": {
+      "title": "3. Periodo de conservación y uso de la información personal recopilada",
+      "paragraphs": [
+        "Mientras el usuario utilice los servicios proporcionados por la empresa como miembro del sitio web de V-SPACE, V-SPACE conservará de manera continua la información personal del usuario y la utilizará para la prestación de los servicios y fines relacionados.",
+        "Para evitar la reincidencia de uso fraudulento por parte de miembros problemáticos, V-SPACE podrá conservar el número de registro de residente del miembro correspondiente durante un año a partir de la fecha de terminación del contrato de uso."
+      ],
+      "table": [
+        {
+          "key": "Registros sobre contratos o cancelaciones de suscripción",
+          "value": "5 años"
+        },
+        {
+          "key": "Registros sobre pagos y suministro de bienes, etc.",
+          "value": "5 años"
+        },
+        {
+          "key": "Registros sobre quejas de consumidores o resolución de disputas",
+          "value": "3 años"
+        }
+      ],
+      "destroyTitle": "Método de destrucción de la información personal",
+      "destroyMethods": [
+        "La información personal impresa en papel se destruye mediante trituración o incineración.",
+        "La información personal almacenada en archivos electrónicos se elimina mediante métodos técnicos que hacen imposible recuperar los registros."
+      ]
+    }
+  },
+  "emailPrivacyPage": {
+    "eyebrow": "V-SPACE",
+    "title": "Rechazo de recopilación no autorizada de correos electrónicos",
+    "subtitle": "Aviso sobre la prohibición de recopilar direcciones de correo electrónico sin autorización",
+    "intro": "Por favor, cumpla con la Ley de Promoción de la Utilización de las Redes de Información y Comunicaciones y Protección de la Información, etc.",
+    "body": "Este sitio web rechaza la recopilación no autorizada de las direcciones de correo electrónico publicadas en este sitio mediante programas de recopilación de correos electrónicos u otros dispositivos técnicos, con el fin de bloquear correos indiscriminados enviados por terceros a los miembros. Tenga en cuenta que su incumplimiento puede ser sancionado penalmente conforme a la Ley de Redes de Información y Comunicaciones.",
+    "notice": {
+      "title": "Artículo 50-2 de la Ley de Redes de Información y Comunicaciones",
+      "subtitle": "Prohibición de la recopilación no autorizada de direcciones de correo electrónico, etc.",
+      "bullets": [
+        "Nadie podrá recopilar direcciones de correo electrónico utilizando programas que recojan automáticamente direcciones de correo electrónico u otros dispositivos técnicos desde un sitio web en el que se indique expresamente la voluntad de rechazar dicha recopilación.",
+        "Nadie podrá vender ni distribuir direcciones de correo electrónico recopiladas en violación del apartado 1.",
+        "Nadie podrá utilizar para la transmisión de información una dirección de correo electrónico sabiendo que su recopilación, venta o distribución está prohibida en virtud de los apartados 1 y 2."
+      ]
+    },
+    "callout": {
+      "beforePhone": "Si ha sufrido daños por la recopilación no autorizada de direcciones de correo electrónico mediante dichos dispositivos técnicos, repórtelo a través de la línea directa del Centro de Respuesta contra el Spam Ilegal ",
+      "afterPhoneBeforeLink": " o mediante la página de denuncia en ",
+      "afterLink": "."
+    }
+  }
+}

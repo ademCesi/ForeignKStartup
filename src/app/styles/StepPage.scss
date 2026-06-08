@@ -1,0 +1,271 @@
+// ─── Variables ───────────────────────────────────────────────────────────────
+$color-bg: #f8f7f4;
+$color-primary: #0A2540;
+$color-accent: #C8372D;
+$color-text: #1a1a2e;
+$color-text-muted: #6b7280;
+$color-border: #e5e7eb;
+$color-white: #ffffff;
+
+$font-display: 'Playfair Display', Georgia, serif;
+$font-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+$nav-height: 68px;
+$transition: 0.25s ease;
+$breakpoint-mobile: 768px;
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
+.step-page {
+    min-height: 100vh;
+    background: $color-bg;
+    padding-top: $nav-height;
+
+    &--not-found {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        padding: 80px 24px;
+        font-family: $font-body;
+        color: $color-text-muted;
+    }
+
+    // ─── Back button sticky ───────────────────────────────────────────────────
+    &__back-wrapper {
+        position: sticky;
+        bottom: 32px;
+        display: flex;
+        justify-content: center;
+        margin-top: 48px;
+        pointer-events: none;
+    }
+
+    &__back-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: $font-body;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: $color-white;
+        background: $color-primary;
+        border: none;
+        border-radius: 100px;
+        padding: 12px 24px;
+        cursor: pointer;
+        pointer-events: all;
+        box-shadow: 0 4px 20px rgba($color-primary, 0.35);
+        transition: background $transition, transform $transition, box-shadow $transition;
+
+        &:hover {
+            background: lighten($color-primary, 8%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba($color-primary, 0.4);
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            padding: 10px 20px;
+            bottom: 20px;
+        }
+    }
+
+    // ─── Hero ────────────────────────────────────────────────────────────────────
+    &__hero {
+        background: $color-primary;
+        padding: 60px 40px 80px;
+        position: relative;
+        overflow: hidden;
+
+        // Decorative background number
+        &::before {
+            content: attr(data-number);
+            position: absolute;
+            right: -20px;
+            top: -20px;
+            font-family: $font-display;
+            font-size: 20rem;
+            font-weight: 700;
+            color: rgba($color-white, 0.03);
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            padding: 40px 20px 60px;
+        }
+    }
+
+    &__hero-inner {
+        max-width: 860px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+
+        @media (max-width: $breakpoint-mobile) {
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    &__number {
+        font-family: $font-display;
+        font-size: 5rem;
+        font-weight: 700;
+        color: rgba($color-accent, 0.4);
+        line-height: 1;
+        flex-shrink: 0;
+        margin-top: 4px;
+
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 3rem;
+        }
+    }
+
+    &__hero-text {
+        flex: 1;
+    }
+
+    &__eyebrow {
+        font-family: $font-body;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba($color-white, 0.4);
+        margin: 0 0 16px;
+    }
+
+    &__title {
+        font-family: $font-display;
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        font-weight: 700;
+        color: $color-white;
+        margin: 0 0 20px;
+        line-height: 1.2;
+    }
+
+    &__lead {
+        font-family: $font-body;
+        font-size: 1rem;
+        color: rgba($color-white, 0.7);
+        line-height: 1.8;
+        margin: 0;
+        max-width: 580px;
+    }
+
+    // ─── Content ──────────────────────────────────────────────────────────────
+    &__content {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 60px 40px 120px;
+
+        @media (max-width: $breakpoint-mobile) {
+            padding: 40px 20px 120px;
+        }
+    }
+
+    &__body {
+        font-family: $font-body;
+        font-size: 1rem;
+        color: $color-text;
+        line-height: 1.9;
+        background: $color-white;
+        border: 1px solid $color-border;
+        border-radius: 12px;
+        padding: 40px;
+        margin-bottom: 60px;
+        min-height: 200px;
+
+        @media (max-width: $breakpoint-mobile) {
+            padding: 24px;
+        }
+    }
+
+    &__placeholder {
+        color: $color-text-muted;
+        font-style: italic;
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    // ─── Step nav ─────────────────────────────────────────────────────────────
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    &__nav-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: $font-body;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: $color-text-muted;
+        background: $color-white;
+        border: 1px solid $color-border;
+        border-radius: 8px;
+        padding: 10px 16px;
+        cursor: pointer;
+        transition: color $transition, border-color $transition, box-shadow $transition;
+        max-width: 200px;
+
+        span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &:hover:not(:disabled) {
+            color: $color-primary;
+            border-color: $color-primary;
+            box-shadow: 0 2px 8px rgba($color-primary, 0.1);
+        }
+
+        &:disabled {
+            opacity: 0.3;
+            cursor: default;
+        }
+
+        &--next {
+            flex-direction: row-reverse;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            span {
+                display: none;
+            }
+
+            padding: 10px 12px;
+        }
+    }
+
+    &__nav-dots {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+    }
+
+    &__nav-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $color-border;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        transition: background $transition, transform $transition, width $transition;
+
+        &--active {
+            background: $color-accent;
+            width: 20px;
+            border-radius: 3px;
+        }
+    }
+
+
+}
