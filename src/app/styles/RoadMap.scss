@@ -1,0 +1,221 @@
+// ─── Variables ───────────────────────────────────────────────────────────────
+$color-bg: #f8f7f4;
+$color-primary: #0A2540;
+$color-accent: #C8372D;
+$color-text: #1a1a2e;
+$color-text-muted: #6b7280;
+$color-border: #e5e7eb;
+$color-card-bg: #ffffff;
+
+$font-display: 'Playfair Display', Georgia, serif;
+$font-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+
+$transition: 0.25s ease;
+$breakpoint-mobile: 768px;
+
+// ─── Section ──────────────────────────────────────────────────────────────────
+.roadmap {
+    background: $color-bg;
+    padding: 100px 0 120px;
+    overflow: hidden;
+
+    &__container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    // ─── Header ───────────────────────────────────────────────────────────────
+    &__header {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    &__eyebrow {
+        font-family: $font-body;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $color-accent;
+        margin: 0 0 16px;
+    }
+
+    &__title {
+        font-family: $font-display;
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 700;
+        color: $color-primary;
+        margin: 0 0 16px;
+        line-height: 1.2;
+    }
+
+    &__subtitle {
+        font-family: $font-body;
+        font-size: 1rem;
+        color: $color-text-muted;
+        max-width: 480px;
+        margin: 0 auto;
+        line-height: 1.7;
+    }
+
+    // ─── Timeline ─────────────────────────────────────────────────────────────
+    &__timeline {
+        position: relative;
+    }
+
+    &__line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, transparent, $color-border 8%, $color-border 92%, transparent);
+        transform: translateX(-50%);
+
+        @media (max-width: $breakpoint-mobile) {
+            left: 20px;
+        }
+    }
+
+    // ─── Step ─────────────────────────────────────────────────────────────────
+    &__step {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 56px;
+        opacity: 0;
+        transition: opacity 0.6s ease, transform 0.6s ease;
+
+        &--left {
+            flex-direction: row;
+            transform: translateX(-40px);
+
+            .roadmap__card {
+                margin-right: calc(50% + 40px);
+                text-align: right;
+            }
+
+            .roadmap__dot {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &--right {
+            flex-direction: row-reverse;
+            transform: translateX(40px);
+
+            .roadmap__card {
+                margin-left: calc(50% + 40px);
+                text-align: left;
+            }
+
+            .roadmap__dot {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &--visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 52px;
+            transform: translateX(-20px) !important;
+
+            &--visible {
+                transform: translateX(0) !important;
+            }
+
+            .roadmap__card {
+                margin: 0 !important;
+                text-align: left !important;
+                width: 100%;
+            }
+
+            .roadmap__dot {
+                position: absolute !important;
+                left: 20px !important;
+                top: 4px !important;
+                transform: translateX(-50%) !important;
+            }
+        }
+    }
+
+    // ─── Card ─────────────────────────────────────────────────────────────────
+    &__card {
+        background: $color-card-bg;
+        border: 1px solid $color-border;
+        border-radius: 12px;
+        padding: 28px 32px;
+        width: calc(50% - 60px);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        transition: box-shadow $transition, transform $transition;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 8px 32px rgba($color-primary, 0.1);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 100%;
+            padding: 20px 24px;
+        }
+    }
+
+    &__card-number {
+        font-family: $font-display;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: rgba($color-accent, 0.15);
+        line-height: 1;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    &__card-title {
+        font-family: $font-display;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: $color-primary;
+        margin: 0 0 10px;
+        line-height: 1.3;
+    }
+
+    &__card-description {
+        font-family: $font-body;
+        font-size: 0.9rem;
+        color: $color-text-muted;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    // ─── Dot ──────────────────────────────────────────────────────────────────
+    &__dot {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: $color-card-bg;
+        border: 2px solid $color-accent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        flex-shrink: 0;
+    }
+
+    &__dot-inner {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: $color-accent;
+    }
+}

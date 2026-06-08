@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/ImagesSlider.scss";
 import slide1 from "../assets/images/slide1.jpg";
 import slide2 from "../assets/images/slide2.jpg";
@@ -16,9 +17,11 @@ const SLIDES = [
 ];
 
 const ImageSlider = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
+  const navigate = useNavigate();
   const [current, setCurrent] = useState(0);
   const [prev, setPrev] = useState(null);
+
   const goTo = useCallback((index) => {
     if (index === current) return;
     setPrev(current);
@@ -41,6 +44,14 @@ const ImageSlider = () => {
     }, 6000);
     return () => clearInterval(timer);
   }, []);
+
+  const handleStartJourney = () => {
+    navigate("/", { state: { scrollTo: "roadmap" } });
+    setTimeout(() => {
+      const el = document.getElementById("roadmap");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
 
   return (
     <div className="slider">
@@ -66,7 +77,9 @@ const ImageSlider = () => {
         <h1 className="slider__title">{t("title_home")}</h1>
         <p className="slider__subtitle">{t("subtitle_home")}</p>
         <div className="slider__cta">
-          <button className="slider__btn">{t("start_journey")}</button>
+          <button className="slider__btn" onClick={handleStartJourney}>
+            {t("start_journey")}
+          </button>
         </div>
       </div>
 
