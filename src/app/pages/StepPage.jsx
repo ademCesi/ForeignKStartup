@@ -10,7 +10,7 @@ const STEP_COUNT = 8;
 const StepPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const stepIndex = parseInt(id, 10);
     const isValid = stepIndex >= 1 && stepIndex <= STEP_COUNT;
@@ -47,6 +47,9 @@ const StepPage = () => {
     const title = t(`roadmap.step${stepIndex}.title`);
     const description = t(`roadmap.step${stepIndex}.description`);
     const details = t(`roadmap.step${stepIndex}.details`, { defaultValue: "" });
+    
+    // Get resources from i18n
+    const resources = i18n.getResourceBundle(i18n.language, "translation")?.[`roadmap`]?.[`step${stepIndex}`]?.resources || [];
 
     return (
         <>
@@ -69,7 +72,18 @@ const StepPage = () => {
                 <div className="step-page__content">
                     <div className="step-page__body">
                         {details ? (
-                            <p>{details}</p>
+                            <>
+                                {details.split("\n\n").map((paragraph, index) => (
+                                    <p key={index}>
+                                        {paragraph.split("\n").map((line, lineIndex) => (
+                                            <React.Fragment key={lineIndex}>
+                                                {line}
+                                                {lineIndex < paragraph.split("\n").length - 1 && <br />}
+                                            </React.Fragment>
+                                        ))}
+                                    </p>
+                                ))}
+                            </>
                         ) : (
                             <p className="step-page__placeholder">{t("stepPage.comingSoon")}</p>
                         )}
@@ -124,6 +138,22 @@ const StepPage = () => {
                             {t("stepPage.backLabel")}
                         </button>
                     </div>
+
+                    {/* Resources section */}
+                    {details && resources && resources.length > 0 && (
+                        <div className="step-page__resources">
+                            <h3>{t("stepPage.resources")}</h3>
+                            <ul>
+                                {resources.map((resource, index) => (
+                                    <li key={index}>
+                                        <a href={resource.url} target="_blank" rel="noopener noreferrer">
+                                            {resource.label}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
                 </div>
 
             </main>

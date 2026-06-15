@@ -267,5 +267,51 @@ $breakpoint-mobile: 768px;
         }
     }
 
+    // ─── Resources ────────────────────────────────────────────────────────────
+    &__resources {
+        background: $color-white;
+        border: 1px solid $color-border;
+        border-radius: 12px;
+        padding: 40px;
+        margin-bottom: 60px;
+
+        @media (max-width: $breakpoint-mobile) {
+            padding: 24px;
+        }
+
+        h3 {
+            font-family: $font-display;
+            font-size: 1.5rem;
+            color: $color-primary;
+            margin: 0 0 24px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin-bottom: 12px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    color: $color-accent;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-family: $font-body;
+                    transition: color $transition;
+
+                    &:hover {
+                        color: $color-primary;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
 
 }

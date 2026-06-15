@@ -23,42 +23,83 @@
     "subtitle": "Guide étape par étape pour les entrepreneurs étrangers",
     "step1": {
       "title": "Obtenir le bon visa",
-      "description": "Avant toute chose il faut une autorisation légale pour créer une entreprise en Corée. Voici les principaux visas disponibles pour les fondateurs étrangers."
+      "description": "Avant toute chose il faut une autorisation légale pour créer une entreprise en Corée. Voici les principaux visas disponibles pour les fondateurs étrangers.",
+      "details": "Le visa d'investisseur étranger (D-8-4) est le plus courant pour les fondateurs. Depuis novembre 2024, le visa D-8-4S offre une route simplifiée. Avant l'arrivée, vous pouvez demander un visa de long séjour temporaire (D-10-2) pour préparer la création de votre entreprise, puis basculer vers le D-8-4 une fois l'immatriculation confirmée via le programme OASIS de KISED.\n\nLes titulaires de visa doivent souscrire une assurance privée d'au moins 100 millions de wons et présenter un casier judiciaire vierge. Vous devez demander votre carte de résidence étrangère (ARC) dans les 90 jours suivant votre arrivée. Cette carte fournit un numéro de résident essentiel pour ouvrir un compte bancaire, souscrire un abonnement téléphonique ou s'inscrire à des formations.",
+      "resources": [
+        {"label": "Invest Korea - Visa D-8-4", "url": "https://www.investkorea.org"},
+        {"label": "KISED - Programme OASIS", "url": "https://www.kised.or.kr"}
+      ]
     },
     "step2": {
       "title": "Choisir une structure juridique",
-      "description": "Société par actions SARL ou entreprise individuelle chacune a des implications différentes en termes de responsabilité fiscalité et financement."
+      "description": "Société par actions SARL ou entreprise individuelle chacune a des implications différentes en termes de responsabilité fiscalité et financement.",
+      "details": "La Chusik Hoesa (주식회사 - Société par actions) est recommandée si vous envisagez de lever des fonds. Elle offre plus de flexibilité pour les investisseurs et est mieux reconnue par les fonds de capital-risque. La Yuhan Hoesa (유한회사 - SARL) est plus simple à créer et gère si vous démarrez seul.\n\nLa Corée autorise 100% de capital étranger. Un seul actionnaire suffit pour créer une société. Pour une Chusik Hoesa, un commissaire aux comptes statutaire est requis si le capital dépasse 1 milliard de KRW. Les rôles et pourcentages de propriété doivent être clairement définis dans les documents internes avant l'immatriculation.\n\nLe coût de l'enregistrement est d'environ 0,4% du capital enregistré, avec un minimum de 112 500 KRW (hors honoraires d'avocat). Les statuts doivent être rédigés conformément au droit coréen pour éviter des rejets lors de l'immatriculation.",
+      "resources": [
+        {"label": "Behalf Korea - Guide de constitution", "url": "https://behalfkr.com/korea-business-registration/"},
+        {"label": "Behalf Korea - Formation d'entreprise", "url": "https://behalfkr.com/south-korea-company-formation/"}
+      ]
     },
     "step3": {
       "title": "Sécuriser une adresse professionnelle",
-      "description": "Un siège social coréen est obligatoire pour enregistrer une société. Options possibles bureaux virtuels ou centres publics pour startups."
+      "description": "Un siège social coréen est obligatoire pour enregistrer une société. Options possibles bureaux virtuels ou centres publics pour startups.",
+      "details": "Votre adresse professionnelle (siège social) doit être en Corée du Sud et être formellement notifiée lors de l'immatriculation. Plusieurs options s'offrent à vous:\n\n1. Bureaux virtuels : Services commerciaux qui offrent une adresse coréenne et accès aux espaces de réunion (environ 20 000-50 000 KRW/mois).\n\n2. Centres publics pour startups : Des incubateurs et accélérateurs offrent des espaces de bureau à moindre coût, souvent accompagnés de mentoring (KISED, universités, gouvernements locaux).\n\n3. Espace de co-working : De nombreuses villes offrent des espaces partagés modernes et abordables.\n\n4. Adresse personnelle : Certaines municipalités acceptent une adresse résidentielle comme siège social.\n\nVous devez fournir la preuve de location ou de propriété lors de l'enregistrement commercial ultérieur.",
+      "resources": [
+        {"label": "KISED - Centres d'incubation", "url": "https://www.kised.or.kr"}
+      ]
     },
     "step4": {
       "title": "Enregistrer votre startup",
-      "description": "Procédure officielle documents nécessaires lieux d’enregistrement et délais à prévoir."
+      "description": "Procédure officielle documents nécessaires lieux d'enregistrement et délais à prévoir.",
+      "details": "L'enregistrement auprès du Registre du Commerce du Tribunal de district comprend deux étapes principales:\n\n1. Réservation du nom de société auprès du Registre du Tribunal Suprême. Les noms doivent respecter les conventions coréennes et les classifications industrielles. Cette étape crée souvent des délais sans accompagnement professionnel.\n\n2. Dépôt des statuts et documents au tribunal. Vous devez présenter : copie des statuts, certificat de solde de dépôt, passeports apostillés des directeurs/actionnaires, procuration légalisée, et procurations en deux exemplaires si un mandataire dépose la demande.\n\nTous les documents étrangers (statuts, procuration, résolutions) nécessitent une notarisation et une apostille ou une légalisation consulaire. Une traduction officielle en coréen est requise. À l'approbation, la société reçoit un numéro d'immatriculation et un certificat de sceau corporatif (인감), qui établit officiellement l'existence de l'entreprise.",
+      "resources": [
+        {"label": "Registre du Tribunal Suprême - Immatriculation", "url": "https://www.iros.go.kr"},
+        {"label": "Behalf Korea - Guide d'enregistrement", "url": "https://behalfkr.com/south-korea-company-registration-guide/"}
+      ]
     },
     "step5": {
       "title": "Ouvrir un compte bancaire",
-      "description": "Souvent l’étape la plus compliquée pour les étrangers. Voici les banques adaptées les papiers à préparer et comment éviter les refus."
+      "description": "Souvent l'étape la plus compliquée pour les étrangers. Voici les banques adaptées les papiers à préparer et comment éviter les refus.",
+      "details": "L'ouverture d'un compte bancaire en Corée nécessite plusieurs étapes :\n\n1. Notification FDI : Un investisseur étranger doit d'abord notifier son investissement direct auprès de KOTRA (Foreign Investor Support Center) ou d'une banque de change agréée, en détaillant l'identité de l'investisseur, le montant investi et le secteur d'activité.\n\n2. Virement du capital initial : Le capital déclaré doit être transféré sur un compte temporaire en devises étrangères en Corée. La banque émet un certificat de transaction de change (외국환거래신고필증) qui est obligatoire pour toutes les procédures ultérieures.\n\n3. Ouverture du compte d'entreprise : Une fois l'immatriculation confirmée, votre capital doit être transféré sur un compte bancaire d'entreprise coréen dédié. Les banques exigent souvent que les fondateurs se rendent en personne, bien que certaines acceptent l'ouverture à distance avec des documents certifiés. Les nouveaux comptes sont souvent soumis à des restrictions de transaction pendant 20 jours ouvrables.\n\nLe certificat de dépôt émis par la banque est obligatoire pour l'enregistrement final en tant qu'entreprise à capitaux étrangers.",
+      "resources": [
+        {"label": "Invest Korea - Notification FDI", "url": "https://www.investkorea.org/ik-en/cntnts/i-351/web.do"},
+        {"label": "Behalf Korea - Guide FDI", "url": "https://behalfkr.com/south-korea-company-registration-guide/"}
+      ]
     },
     "step6": {
       "title": "S’enregistrer aux impôts",
-      "description": "Aperçu du système fiscal coréen pour startups TVA et impôt sur les sociétés."
+      "description": "Aperçu du système fiscal coréen pour startups TVA et impôt sur les sociétés.",
+      "details": "Trois enregistrements fiscaux sont nécessaires :\n\n1. Certificat d'enregistrement commercial : Obtenu auprès de l'administration locale pour exercer légalement des activités commerciales, émettre des factures fiscales et ouvrir un compte bancaire professionnel. Vous devez fournir les documents d'immatriculation au tribunal et les informations de bail.\n\n2. Enregistrement FDI final : Après l'immatriculation de la société, enregistrement auprès de KOTRA dans les 60 jours suivant le paiement du capital investi.\n\n3. Agent fiscal obligatoire : Les entités à capitaux étrangers doivent désigner un agent fiscal national (회계대리인). Les déclarations fiscales doivent être rédigées en coréen.\n\nSystème fiscal : L'impôt sur les sociétés est progressif (9% à 24% au niveau national) plus surtaxe locale. La TVA s'applique à 10% sur la plupart des biens et services. Les startups peuvent bénéficier d'une réduction de 50% à 100% de l'impôt sur les sociétés pendant les 5 premières années si elles remplissent certains critères. La déclaration annuelle est due dans les trois mois suivant la fin de l'exercice.",
+      "resources": [
+        {"label": "National Tax Service - Déclarations fiscales", "url": "https://www.nts.go.kr"},
+        {"label": "Invest Korea - Notification FDI", "url": "https://www.investkorea.org/ik-en/cntnts/i-351/web.do"}
+      ]
     },
     "step7": {
       "title": "Trouver du financement",
-      "description": "La Corée propose de nombreux programmes publics subventions accélérateurs et fonds de capital risque pour soutenir les fondateurs étrangers."
+      "description": "La Corée propose de nombreux programmes publics subventions accélérateurs et fonds de capital risque pour soutenir les fondateurs étrangers.",
+      "details": "Avant d'ouvrir votre compte bancaire, vous devez structurer votre financement initial :\n\n1. Notification FDI (Foreign Direct Investment) : Les investissements étrangers formels doivent être notifiés à KOTRA. Cette notification doit détailler l'identité de l'investisseur, le montant investi et le secteur d'activité.\n\n2. Structure minimale : Pour les investissements inférieurs à 100 millions de KRW, une notification d'acquisition de titres par un non-résident peut être utilisée. Bien que l'immatriculation soit techniquement possible avec seulement 10 millions de KRW, une structure FDI formelle est généralement recommandée pour des raisons bancaires et de conformité.\n\n3. Programmes de financement : KISED (Korea Institute of Startup & Entrepreneurship Development) propose OASIS, le K-Startup Grand Challenge et d'autres programmes. Des incubateurs universitaires et municipaux offrent des subventions et du mentorat. Les fonds de capital-risque coréens ciblent activement les startups étrangères basées en Corée.\n\n4. Crédits aux startups : Les banques de développement coréennes proposent des taux préférentiels pour les entreprises nouvelles enregistrées depuis moins de 5 ans.",
+      "resources": [
+        {"label": "Invest Korea - Support FDI", "url": "https://www.investkorea.org"},
+        {"label": "KISED - OASIS & K-Startup Grand Challenge", "url": "https://www.kised.or.kr"}
+      ]
     },
     "step8": {
       "title": "Souscrire aux assurances",
-      "description": "Dès que vous embauchez vous devez inscrire votre société aux assurances obligatoires coréennes santé retraite chômage."
+      "description": "Dès que vous embauchez vous devez inscrire votre société aux assurances obligatoires coréennes santé retraite chômage.",
+      "details": "Les quatre assurances sociales obligatoires (4대보험) s'appliquent dès le premier employé. Le défaut d'inscription entraîne des pénalités et des rappels de cotisations :\n\n1. Retraite nationale (국민연금) : Taux combiné de 9% du salaire mensuel brut (4,5% employeur / 4,5% salarié).\n\n2. Assurance maladie (국민건강보험) : Employeur et salarié contribuent chacun à hauteur de 3,43% du salaire mensuel, plus surtaxe pour soins de longue durée.\n\n3. Assurance chômage (고용보험) : Les taux varient selon le secteur et la taille de l'entreprise, partagés entre employeur et salarié.\n\n4. Assurance accidents du travail (산재보험) : Entièrement à charge de l'employeur. Le taux varie significativement selon le secteur et le risque d'accidents.\n\nLe salaire minimum national est fixé à 10 030 KRW par heure en 2025, applicable à tous les travailleurs quelle que soit leur nationalité. L'indemnité de licenciement (Taejikgeum) équivaut à 30 jours de salaire par année travaillée. La Corée a signé 41 accords de totalisation en 2025 permettant de combiner les périodes de cotisation pour accéder aux droits à la retraite.",
+      "resources": [
+        {"label": "National Pension Service - Cotisations retraite", "url": "https://www.nps.or.kr"},
+        {"label": "NHIS - Assurance maladie", "url": "https://www.nhis.or.kr"},
+        {"label": "Ministry of Employment & Labor - Droit du travail", "url": "https://www.moel.go.kr"}
+      ]
     }
   },
   "stepPage": {
     "eyebrow": "Étape",
     "backLabel": "Retour à la roadmap",
     "comingSoon": "Contenu à venir...",
-    "notFound": "Étape introuvable"
+    "notFound": "Étape introuvable",
+    "resources": "Ressources utiles"
   },
   "footer": {
     "tagline": "Votre passerelle pour lancer une startup en Corée du Sud.",
