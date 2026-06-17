@@ -23,42 +23,795 @@
     "subtitle": "Guia passo a passo para empreendedores estrangeiros",
     "step1": {
       "title": "Obter o visto correto",
-      "description": "Primeiro é necessário permissão legal para abrir empresa na Coreia."
+      "description": "Primeiro é necessário permissão legal para abrir empresa na Coreia.",
+      "details": "A escolha do visto é a primeira decisão estratégica do seu projeto: ela determina a rapidez da sua instalação, os trâmites a cumprir e o nível de liberdade que você terá para desenvolver sua empresa.\n\nQuatro vistos principais se destinam a fundadores estrangeiros na Coreia. Identifique abaixo a situação que mais se aproxima do seu projeto para descobrir o caminho mais adequado, compare as opções em detalhe e depois siga o percurso típico até o visto D-8-4.",
+      "visaGuide": {
+        "tabs": {
+          "eyebrow": "Comparativo",
+          "title": "Qual visto combina com o seu perfil?",
+          "subtitle": "Quatro caminhos principais levam à abertura de uma empresa na Coreia. Identifique o que corresponde à sua situação e compare condições, duração e vantagens.",
+          "idealForLabel": "Perfil indicado",
+          "advantagesLabel": "Vantagens",
+          "requirementsLabel": "Requisitos",
+          "items": [
+            {
+              "icon": "rocket",
+              "code": "D-8-4",
+              "name": "Visto de investidor tecnológico (OASIS)",
+              "tag": "Caminho padrão",
+              "summary": "Esse é o caminho padrão para fundadores estrangeiros. Seu processo é avaliado pela KISED segundo um sistema de pontos (formação, experiência, propriedade intelectual, financiamento). Depois de aprovado, você registra sua empresa e então obtém o visto.",
+              "idealFor": "Você tem um projeto consolidado: plano de negócios sólido, patente, prototótipo ou experiência empreendedora reconhecida.",
+              "advantages": [
+                "Duração de 1 ano, renovável até 2 anos após a confirmação",
+                "Reconhecimento institucional completo e acesso a apoios da KISED e a programas públicos de financiamento"
+              ],
+              "requirements": [
+                "Avaliação por pontos do OASIS (formação, experiência, patentes, financiamento)",
+                "Empresa registrada na Coreia (Chusik ou Yuhan Hoesa)",
+                "Capital social depositado em conta dedicada",
+                "Carta de confirmação emitida pela KISED"
+              ],
+              "watchOut": "O processo de avaliação do OASIS pode levar vários meses."
+            },
+            {
+              "icon": "medal",
+              "code": "D-8-4S",
+              "name": "Caminho simplificado (desde novembro de 2024)",
+              "tag": "Caminho rápido · 2024",
+              "summary": "Graças à recomendação direta do seu programa, seu processo é analisado mais rapidamente, com menos documentos a apresentar. É o caminho mais rápido para quem já está em um programa de apoio.",
+              "idealFor": "Você concluiu um programa de aceleração reconhecido (K-Startup Grand Challenge, TIPS, Born2Global...).",
+              "advantages": [
+                "Duração de 1 ano, renovável",
+                "Tramitação acelerada e menos documentos comprobatórios"
+              ],
+              "requirements": [
+                "Recomendação direta de um programa parceiro (K-Startup Grand Challenge, TIPS...)",
+                "Processo simplificado, sem avaliação completa por pontos",
+                "Empresa registrada na Coreia"
+              ],
+              "watchOut": "Reservado a perfis já selecionados por um programa parceiro reconhecido."
+            },
+            {
+              "icon": "compass",
+              "code": "D-10-2",
+              "name": "Visto de preparação para abertura de empresa",
+              "tag": "Caminho de preparação",
+              "summary": "Esse visto de longa permanência temporária permite que você fique legalmente na Coreia para finalizar seu plano de negócios e montar seu processo do OASIS, antes de migrar para o D-8-4.",
+              "idealFor": "Você quer explorar o mercado coreano e preparar seu processo com calma antes de se comprometer.",
+              "advantages": [
+                "6 meses, renovável uma vez",
+                "Permite preparar seu processo do OASIS e seu registro com calma, sem pressão de prazos"
+              ],
+              "requirements": [
+                "Plano de negócios detalhado",
+                "Comprovação de recursos financeiros suficientes",
+                "Não é necessário registrar empresa para obtê-lo"
+              ],
+              "watchOut": "Não permite exercer atividade comercial remunerada — apenas preparação."
+            },
+            {
+              "icon": "star",
+              "code": "F-2-7",
+              "name": "Visto por pontos para talentos",
+              "tag": "Visto por pontos",
+              "summary": "Baseado em um sistema de pontos (idade, formação, renda, nível de coreano...), esse visto não está vinculado a uma empresa específica. Oferece mais liberdade, mas não substitui o registro tradicional da sua empresa.",
+              "idealFor": "Você tem um perfil sênior (formação avançada, experiência profissional, renda confortável) e quer manter uma atividade flexível.",
+              "advantages": [
+                "3 anos renovável, com possibilidade de evoluir para residência permanente (F-5)",
+                "Grande liberdade: trocar de atividade, acumular status e acesso facilitado à residência permanente"
+              ],
+              "requirements": [
+                "Pontuação mínima no sistema de pontos (idade, formação, experiência, renda, coreano)",
+                "Comprovantes de formação e experiência profissional",
+                "Sem vínculo obrigatório com uma empresa específica"
+              ],
+              "watchOut": "Não inclui as vantagens específicas para startups (programas e financiamentos da KISED)."
+            }
+          ],
+          "specialCase": {
+            "icon": "graduation",
+            "title": "Você é estudante na Coreia (visto D-2)?",
+            "description": "Se o seu projeto nasceu durante seus estudos, muitas universidades — incluindo a PNU — têm uma fundação de cooperação indústria-universidade que pode ajudá-lo a passar do status de estudante para o de fundador D-8-4, sem precisar deixar o país."
+          }
+        },
+        "timeline": {
+          "eyebrow": "O percurso",
+          "title": "O caminho até o visto D-8-4",
+          "subtitle": "O caminho padrão, via programa OASIS da KISED, em sete etapas.",
+          "items": [
+            {
+              "title": "Preparar o processo",
+              "description": "Reúna diplomas, currículo, plano de negócios e comprovantes de experiência ou patentes, traduzidos e apostilados."
+            },
+            {
+              "title": "Envio na plataforma OASIS",
+              "description": "Envie seu processo on-line na plataforma da KISED para avaliação segundo o sistema de pontos."
+            },
+            {
+              "title": "Avaliação e entrevista",
+              "description": "A KISED analisa seu processo. Uma entrevista pode ser realizada de acordo com seu perfil e setor de atividade."
+            },
+            {
+              "title": "Carta de recomendação",
+              "description": "Em caso de aprovação, a KISED emite uma carta de recomendação necessária para o pedido de visto."
+            },
+            {
+              "title": "Registro da empresa",
+              "description": "Com a carta de recomendação da KISED em mãos, você pode finalizar o registro legal da sua empresa junto ao tribunal comercial — capital social, estatuto social, protocolo do processo.",
+              "stepLink": 4,
+              "stepLinkLabel": "Ver detalhes do registro"
+            },
+            {
+              "title": "Protocolo do pedido de visto",
+              "description": "Protocole seu pedido no consulado coreano, caso esteja no exterior, ou no escritório local de imigração para mudança de status."
+            },
+            {
+              "title": "Obtenção do visto e do cartão ARC",
+              "description": "Depois que o visto D-8-4 for aprovado, solicite seu cartão de residente estrangeiro (ARC) dentro de 90 dias após a entrada na Coreia."
+            }
+          ]
+        },
+        "checklist": {
+          "eyebrow": "Depois do visto",
+          "title": "O que não pode ser esquecido",
+          "subtitle": "Quatro pontos essenciais a antecipar, independentemente do visto obtido.",
+          "items": [
+            {
+              "icon": "shield",
+              "title": "Seguro privado",
+              "description": "Contrate um seguro de saúde privado com cobertura de pelo menos 100 milhões de KRW antes de protocolar seu processo."
+            },
+            {
+              "icon": "document",
+              "title": "Antecedentes criminais sem pendências",
+              "description": "Apresente uma certidão de antecedentes criminais sem pendências, apostilada ou legalizada, acompanhada de tradução oficial."
+            },
+            {
+              "icon": "id-card",
+              "title": "Cartão de residente (ARC)",
+              "description": "Solicite seu Alien Registration Card dentro de 90 dias após sua chegada: indispensável para abrir conta bancária ou contratar um plano de telefonia."
+            },
+            {
+              "icon": "refresh",
+              "title": "Renovação anual",
+              "description": "Antecipe a renovação do seu visto: a atividade real da empresa, o faturamento e os empregos criados são analisados de acordo com os critérios da KISED."
+            }
+          ]
+        }
+      }
     },
     "step2": {
       "title": "Escolher uma estrutura legal",
-      "description": "Sociedade anônima limitada ou individual cada uma com implicações diferentes."
+      "description": "Sociedade anônima limitada ou individual cada uma com implicações diferentes.",
+      "details": "O status jurídico da sua empresa determina seu nível de responsabilidade financeira, seu regime tributário, sua credibilidade junto a bancos e investidores, além da complexidade da sua gestão administrativa no dia a dia. Mudar de status depois do registro ainda é possível, mas se mostra caro e demorado: é melhor escolher bem desde o início.\n\nDois status concentram a maior parte das aberturas de startups estrangeiras na Coreia: a Chusik Hoesa (sociedade por ações) e a Yuhan Hoesa (sociedade limitada). Compare-as abaixo de acordo com o seu projeto e veja em seguida os pontos-chave comuns aos dois status a antecipar antes do registro.",
+      "structureGuide": {
+        "tabs": {
+          "eyebrow": "Comparativo",
+          "title": "Qual estrutura combina com a sua empresa?",
+          "subtitle": "Os dois status mais comuns para fundadores estrangeiros na Coreia. Compare-os para escolher o que mais se adequa ao seu projeto.",
+          "idealForLabel": "Ideal para",
+          "advantagesLabel": "Vantagens",
+          "requirementsLabel": "A providenciar",
+          "items": [
+            {
+              "icon": "rocket",
+              "code": "주식회사",
+              "name": "Chusik Hoesa",
+              "tag": "Sociedade por ações",
+              "summary": "A estrutura mais reconhecida para startups que pretendem captar investimentos. Oferece mais flexibilidade para incluir investidores e é a preferida dos fundos de capital de risco coreanos.",
+              "idealFor": "Startups que pretendem captar investimentos ou crescer rapidamente com vários sócios.",
+              "advantages": [
+                "Emissão de ações facilitada para receber novos investidores",
+                "Estrutura mais reconhecida por VCs, aceleradoras e programas públicos",
+                "Imagem institucional mais sólida junto a bancos e parceiros"
+              ],
+              "requirements": [
+                "Um acionista e um administrador já são suficientes para começar",
+                "Capital social depositado em conta bancária dedicada antes do registro",
+                "Funções e percentuais de participação definidos no estatuto social antes do registro"
+              ],
+              "watchOut": "Governança mais formal: assembleias gerais, livro de acionistas e atas a manter atualizados. Um auditor estatutário se torna obrigatório se o capital superar 1 bilhão de KRW."
+            },
+            {
+              "icon": "shield",
+              "code": "유한회사",
+              "name": "Yuhan Hoesa",
+              "tag": "Sociedade de responsabilidade limitada",
+              "summary": "Uma estrutura mais simples de abrir e administrar no dia a dia, bem adequada se você está começando sozinho ou com uma equipe pequena, sem necessidade imediata de receber investidores externos.",
+              "idealFor": "Fundadores solo ou equipes pequenas, atividades de serviço ou consultoria.",
+              "advantages": [
+                "Formalidades de constituição e gestão do dia a dia simplificadas",
+                "Sem obrigatoriedade de auditor estatutário",
+                "Custos de funcionamento administrativo reduzidos no dia a dia"
+              ],
+              "requirements": [
+                "Um único sócio já é suficiente, 100% de capital estrangeiro permitido",
+                "Capital social depositado em conta bancária dedicada antes do registro",
+                "Estatuto social redigido de acordo com a lei coreana"
+              ],
+              "watchOut": "Menos adequada se você planeja abrir o capital a investidores: a conversão em Chusik Hoesa ainda é possível, mas precisa ser planejada com antecedência."
+            }
+          ]
+        },
+        "checklist": {
+          "eyebrow": "A antecipar",
+          "title": "Pontos-chave para conhecer",
+          "subtitle": "Quatro princípios válidos independentemente da estrutura escolhida.",
+          "items": [
+            {
+              "icon": "star",
+              "title": "100% de capital estrangeiro",
+              "description": "A Coreia permite que fundadores estrangeiros detenham a totalidade do capital da sua empresa, sem necessidade de sócio local."
+            },
+            {
+              "icon": "id-card",
+              "title": "Um único acionista já é suficiente",
+              "description": "Não há obrigatoriedade de se associar: uma única pessoa pode abrir e deter a totalidade de uma Chusik Hoesa ou de uma Yuhan Hoesa."
+            },
+            {
+              "icon": "document",
+              "title": "Auditor estatutário",
+              "description": "Para uma Chusik Hoesa, um auditor estatutário se torna obrigatório a partir do momento em que o capital supera 1 bilhão de KRW."
+            },
+            {
+              "icon": "target",
+              "title": "Custo de registro",
+              "description": "Preveja cerca de 0,4% do capital registrado, com um mínimo de 112.500 KRW, sem contar honorários de advogado."
+            }
+          ]
+        }
+      }
     },
     "step3": {
       "title": "Garantir um endereço comercial",
-      "description": "É necessário um endereço registrado na Coreia."
+      "description": "É necessário um endereço registrado na Coreia.",
+      "details": "Esse endereço não é um simples detalhe administrativo: registrado no estatuto social protocolado no tribunal comercial, ele se torna seu 본점 (sede social oficial) e determina onde sua empresa pode legalmente exercer sua atividade. Alterá-lo depois do registro exige atualização do estatuto social e novos trâmites no cartório de registro — por isso é melhor fazer a escolha certa desde o início.\n\nQuatro opções principais estão disponíveis para fundadores estrangeiros, do escritório virtual ao endereço pessoal. Compare-as abaixo de acordo com o custo, o que incluem e o perfil de fundador a que correspondem, e veja em seguida os pontos a verificar antes de assinar um contrato de locação ou aceitar uma vaga em incubadora.",
+      "addressGuide": {
+        "comparison": {
+          "eyebrow": "Comparativo",
+          "title": "Qual endereço para a sua sede social?",
+          "subtitle": "Quatro opções principais estão disponíveis para fundadores estrangeiros: compare o custo, o que incluem e o perfil a que correspondem.",
+          "costLabel": "Custo indicativo",
+          "includesLabel": "O que está incluído",
+          "idealForLabel": "Ideal para",
+          "items": [
+            {
+              "icon": "briefcase",
+              "name": "Escritório virtual",
+              "tag": "Implementação rápida",
+              "cost": "≈ 125.000 - 300.000 KRW / mês",
+              "includes": "Endereço comercial registrável, recebimento e digitalização de correspondência, acesso pontual a salas de reunião.",
+              "idealFor": "Fundadores baseados fora da Coreia ou equipes remotas que precisam apenas de um endereço legal.",
+              "watchOut": "O contrato de locação fornecido deve autorizar explicitamente o uso comercial e o registro de uma empresa: peça um modelo já aceito pelo cartório de registro antes de assinar."
+            },
+            {
+              "icon": "users",
+              "name": "Espaço de coworking",
+              "tag": "Flexível",
+              "cost": "a partir de ≈ 120.000 KRW / mês por uma estação dedicada",
+              "includes": "Estação de trabalho ou sala privada, salas de reunião, eventos de networking, endereço registrável nos planos dedicados.",
+              "idealFor": "Equipes pequenas que querem um espaço de trabalho de verdade sem se comprometer com um contrato de locação comercial tradicional.",
+              "watchOut": "Apenas os planos de \"sala privada\" ou \"endereço empresarial\" permitem o registro: uma simples assinatura de open space geralmente não é aceita pelo cartório de registro de empresas."
+            },
+            {
+              "icon": "award",
+              "name": "Centro público para startups",
+              "tag": "Gratuito ou subsidiado",
+              "cost": "Gratuito a custo muito baixo, por seleção",
+              "includes": "Espaço de trabalho, apoio no registro e no visto, mentoria e conexão com investidores, por meio de estruturas como o Global Startup Center ou os centros de incubação da KISED.",
+              "idealFor": "Fundadores estrangeiros em fase de abertura, elegíveis a programas de apoio governamentais.",
+              "watchOut": "Vagas limitadas e atribuídas por seleção: conte com várias semanas de prazo de seleção antes de obter um endereço utilizável para o registro."
+            },
+            {
+              "icon": "home",
+              "name": "Endereço pessoal",
+              "tag": "Econômico",
+              "cost": "0 KRW se você já reside no local",
+              "includes": "Seu contrato de locação ou título de propriedade serve diretamente como comprovante de sede social, sem custo adicional.",
+              "idealFor": "Atividades não regulamentadas, sem atendimento ao público, estoque ou equipe no local.",
+              "watchOut": "Muitos regulamentos de condomínio proíbem o uso comercial de um imóvel residencial, e algumas atividades exigem zoneamento comercial: verifique esses dois pontos antes de escolher essa opção."
+            }
+          ]
+        },
+        "checklist": {
+          "eyebrow": "A antecipar",
+          "title": "Quatro pontos a verificar antes de assinar",
+          "subtitle": "Independentemente do tipo de endereço escolhido, esses elementos influenciam seu registro e a continuidade da sua instalação.",
+          "items": [
+            {
+              "icon": "file-text",
+              "title": "Um comprovante é obrigatório",
+              "description": "Independentemente da sua escolha, um contrato de locação (lease agreement) ou um título de propriedade — em seu nome ou no da futura empresa — é exigido no processo de registro protocolado no tribunal comercial.",
+              "stepLink": 4,
+              "stepLinkLabel": "Ver o protocolo do processo"
+            },
+            {
+              "icon": "map-pin",
+              "title": "Seu endereço se torna o 본점 oficial",
+              "description": "Ele consta no estatuto social (정관) protocolado no momento do registro: torna-se sua sede social legal e determina, entre outras coisas, sua jurisdição tributária e seu foro competente."
+            },
+            {
+              "icon": "refresh-cw",
+              "title": "Mudar de endereço tem um custo",
+              "description": "Uma mudança após o registro exige uma alteração do estatuto social (본점이전) e um novo registro no cartório de empresas, com custos e trâmites adicionais: é melhor planejar um endereço estável desde o início."
+            },
+            {
+              "icon": "alert",
+              "title": "Atenção ao zoneamento",
+              "description": "Algumas atividades regulamentadas (restauração, profissões da saúde...) exigem uma zona comercial específica: verifique a compatibilidade do seu endereço com sua atividade antes de assinar um contrato de locação ou aceitar uma vaga em incubadora."
+            }
+          ]
+        }
+      }
     },
     "step4": {
       "title": "Registrar sua startup",
-      "description": "Processo oficial documentos necessários e prazos."
+      "description": "Processo oficial documentos necessários e prazos.",
+      "details": "Essa etapa é o coração administrativo do seu projeto: sem registro, é impossível abrir uma conta bancária empresarial, contratar funcionários ou emitir notas fiscais legalmente. O procedimento envolve várias instituições diferentes — banco, KOTRA, tribunal comercial — e cada documento obtido serve como comprovante para a etapa seguinte.\n\nTrês fases se sucedem, do depósito do capital até o protocolo do estatuto social no tribunal. Siga-as na ordem abaixo, prepare os documentos exigidos com antecedência e descubra o que você obtém ao final do procedimento.",
+      "registrationGuide": {
+        "phases": {
+          "eyebrow": "O processo",
+          "title": "Três fases para registrar sua empresa",
+          "subtitle": "Cada fase produz um documento indispensável para a fase seguinte. Siga-as na ordem.",
+          "items": [
+            {
+              "icon": "dollar-sign",
+              "title": "Notificação de investimento e depósito do capital",
+              "description": "Antes de qualquer trâmite, notifique seu investimento estrangeiro direto à KOTRA ou a um banco autorizado para câmbio, e depois transfira o capital declarado para uma conta temporária em moeda estrangeira.",
+              "documents": [
+                "Certificado de transação de câmbio (외국환거래신고필증)",
+                "Certificado de saldo de depósito que comprove o capital integralizado"
+              ],
+              "portal": {
+                "label": "KOTRA",
+                "linkLabel": "Notificar seu investimento estrangeiro"
+              }
+            },
+            {
+              "icon": "search",
+              "title": "Reserva do nome da empresa",
+              "description": "Verifique a disponibilidade e reserve o nome da sua empresa junto ao cartório do tribunal. Os nomes devem seguir as convenções coreanas e as classificações industriais — uma etapa que costuma gerar atrasos sem apoio profissional.",
+              "documents": [
+                "Nome de empresa conforme as classificações industriais coreanas",
+                "Confirmação de disponibilidade junto ao cartório"
+              ],
+              "portal": {
+                "label": "Start-Biz Online",
+                "linkLabel": "Verificar e reservar um nome"
+              }
+            },
+            {
+              "icon": "document",
+              "title": "Protocolo do estatuto social e do processo no tribunal",
+              "description": "Protocole todo o processo junto ao tribunal comercial. Se um representante protocolar o pedido em seu lugar, as procurações devem ser fornecidas em duas vias.",
+              "documents": [
+                "Cópia do estatuto social",
+                "Certificado de saldo de depósito",
+                "Passaportes apostilados dos diretores e acionistas",
+                "Procuração legalizada (duas vias se houver representante)"
+              ],
+              "portal": {
+                "label": "Internet Registry Office",
+                "linkLabel": "Protocolar o processo on-line"
+              }
+            }
+          ]
+        },
+        "documents": {
+          "eyebrow": "A preparar",
+          "title": "Dois tipos de documentos a antecipar",
+          "subtitle": "Parte dos documentos é obtida na Coreia ao longo do procedimento, a outra deve ser preparada com antecedência no seu país de origem.",
+          "columns": [
+            {
+              "icon": "map-pin",
+              "title": "Obtidos na Coreia durante o procedimento",
+              "items": [
+                "Certificado de transação de câmbio (외국환거래신고필증)",
+                "Certificado de saldo de depósito",
+                "Confirmação de reserva do nome da empresa"
+              ]
+            },
+            {
+              "icon": "globe",
+              "title": "A preparar no seu país de origem",
+              "items": [
+                "Estatuto social constitutivo, redigido conforme a lei coreana",
+                "Passaportes dos diretores e acionistas, apostilados",
+                "Procuração legalizada se um representante protocolar o processo",
+                "Resoluções dos acionistas, se necessário"
+              ],
+              "note": "Todos os documentos estrangeiros (estatuto social, procuração, resoluções) precisam de reconhecimento em cartório seguido de apostilamento ou legalização consular, além de tradução oficial para o coreano."
+            }
+          ]
+        },
+        "outcome": {
+          "eyebrow": "Ao final",
+          "title": "O que você obtém ao final do procedimento",
+          "subtitle": "Dois documentos oficiais que estabelecem a existência legal da sua empresa — e que você usará imediatamente na etapa seguinte.",
+          "items": [
+            {
+              "icon": "id-card",
+              "code": "법인등록번호",
+              "name": "Número de registro corporativo",
+              "description": "Emitido pelo tribunal comercial via Internet Registry Office, esse número identifica oficialmente sua empresa e comprova sua existência legal."
+            },
+            {
+              "icon": "stamp",
+              "code": "인감증명서",
+              "name": "Certificado de carimbo corporativo",
+              "description": "O 인감 (carimbo da empresa) e seu certificado oficial permitem autenticar os documentos jurídicos e bancários da empresa."
+            }
+          ]
+        }
+      }
     },
     "step5": {
       "title": "Abrir uma conta bancária",
-      "description": "Passo mais difícil para estrangeiros."
+      "description": "Passo mais difícil para estrangeiros.",
+      "details": "A abertura da conta bancária empresarial transforma o capital depositado na conta temporária em verdadeiro caixa da empresa. Os bancos coreanos aplicam controles antilavagem rigorosos — presença na agência geralmente exigida, vários documentos a apresentar — e depois impõem prazos a cumprir para finalizar seu status de empresa de capital estrangeiro junto à KOTRA, sob risco de penalidades se o prazo for ultrapassado.\n\nAlguns bancos coreanos estão claramente mais acostumados a processos de fundadores estrangeiros do que outros: compare-os abaixo antes de escolher sua agência, e siga depois o cronograma de prazos a cumprir após a abertura da sua conta.",
+      "accountGuide": {
+        "banks": {
+          "eyebrow": "Comparativo",
+          "title": "Qual banco para a sua conta empresarial?",
+          "subtitle": "Todos os grandes bancos coreanos podem abrir uma conta empresarial, mas alguns estão claramente mais acostumados a processos de fundadores estrangeiros.",
+          "items": [
+            {
+              "icon": "globe",
+              "name": "KEB Hana Bank",
+              "tag": "O mais internacional",
+              "description": "Considerado o banco mais acessível para estrangeiros: aplicativo disponível em inglês e agências \"Global\" dedicadas a residentes estrangeiros e a empresas de capital estrangeiro.",
+              "points": [
+                "Aplicativo e atendimento ao cliente em inglês",
+                "Agências Global nas grandes cidades"
+              ]
+            },
+            {
+              "icon": "map-pin",
+              "name": "Woori Bank",
+              "tag": "A maior rede de agências",
+              "description": "Conta com um departamento dedicado a empresas de capital estrangeiro e uma rede de agências muito ampla, prática se sua sede social estiver fora de Seul.",
+              "points": [
+                "Departamento de empresas de capital estrangeiro",
+                "Agências na maioria das grandes cidades"
+              ]
+            },
+            {
+              "icon": "link",
+              "name": "Shinhan Bank",
+              "tag": "Rede internacional Shinhan Global",
+              "description": "Sua rede \"Shinhan Global\" está presente em vários países de origem de investidores estrangeiros, o que pode facilitar o contato ainda antes da sua chegada à Coreia.",
+              "points": [
+                "Filiais Shinhan em vários países",
+                "Atendimento dedicado a empresas estrangeiras"
+              ]
+            },
+            {
+              "icon": "award",
+              "name": "KB Kookmin Bank",
+              "tag": "O maior banco de varejo",
+              "description": "Primeiro banco de varejo da Coreia em número de agências, com um departamento especializado no apoio a empresas de investimento estrangeiro (FDI).",
+              "points": [
+                "Rede de agências mais densa do país",
+                "Departamento de FDI dedicado"
+              ]
+            }
+          ]
+        },
+        "timeline": {
+          "eyebrow": "Cronograma",
+          "title": "Os prazos a cumprir após o depósito do capital",
+          "subtitle": "Depois de aberta a conta empresarial, vários prazos se encadeiam — alguns com consequências diretas se ultrapassados.",
+          "items": [
+            {
+              "marker": "D0",
+              "icon": "dollar-sign",
+              "title": "Capital já depositado em conta temporária",
+              "description": "Durante a notificação de investimento, seu capital foi depositado em uma conta temporária aberta em nome do futuro dirigente — é esse capital que será transferido para a nova conta empresarial.",
+              "stepLink": 4,
+              "stepLinkLabel": "Revisar a etapa de registro"
+            },
+            {
+              "marker": "Abertura",
+              "icon": "file-text",
+              "title": "Abertura da conta empresarial",
+              "description": "Conte com cerca de 4 semanas: apresente o estatuto social, o certificado de registro, o certificado de carimbo corporativo, além dos passaportes e ARC dos dirigentes. Documentos emitidos fora da Coreia geralmente precisam ser apostilados e traduzidos para o coreano."
+            },
+            {
+              "marker": "D+20 dias úteis",
+              "icon": "lock",
+              "title": "Fim das restrições antilavagem",
+              "description": "Durante os primeiros 20 dias úteis, os limites de transferência são reduzidos e a abertura de uma segunda conta em outro banco fica bloqueada — uma medida de controle padrão dos bancos coreanos."
+            },
+            {
+              "marker": "D+60 dias no máximo",
+              "icon": "flag",
+              "title": "Registro de FDI a finalizar junto à KOTRA",
+              "description": "O certificado de depósito em moeda estrangeira emitido pelo seu banco deve ser enviado à KOTRA para obter seu certificado de empresa de capital estrangeiro (외국인투자기업등록증), dentro de um prazo máximo de 60 dias após a integralização do capital."
+            }
+          ]
+        }
+      }
     },
     "step6": {
       "title": "Registrar-se nos impostos",
-      "description": "Visão geral do sistema tributário coreano."
+      "description": "Visão geral do sistema tributário coreano.",
+      "details": "Sem o certificado de registro empresarial (사업자등록증), sua empresa não pode emitir notas fiscais nem operar plenamente sua conta bancária empresarial — é o último entrave administrativo antes de uma atividade normal. As empresas de capital estrangeiro também devem designar um agente fiscal coreano, responsável por preparar e protocolar todas as suas declarações em coreano junto ao NTS.\n\nUma vez cumpridas essas formalidades, sua empresa entra no regime tributário comum: imposto sobre a renda corporativa progressivo, IVA de 10% e, sob certas condições, uma redução de imposto significativa para empresas jovens. Veja abaixo os detalhes de cada ponto.",
+      "taxGuide": {
+        "formalities": {
+          "eyebrow": "Formalidades",
+          "title": "Duas formalidades antes de declarar",
+          "subtitle": "Esses dois trâmites determinam sua capacidade de emitir notas fiscais e declarar legalmente seus rendimentos na Coreia.",
+          "columns": [
+            {
+              "icon": "file-text",
+              "title": "Certificado de registro empresarial (사업자등록증)",
+              "description": "Deve ser solicitado via Hometax ou junto à administração tributária local dentro de 20 dias após o início da atividade. Sem esse certificado, é impossível emitir notas fiscais (세금계산서) ou liberar plenamente sua conta bancária empresarial.",
+              "items": [
+                "Certificado de registro no tribunal comercial",
+                "Certificado de carimbo corporativo",
+                "Comprovante de locação da sua sede social"
+              ],
+              "portal": {
+                "label": "Hometax",
+                "linkLabel": "Solicitar o certificado on-line"
+              }
+            },
+            {
+              "icon": "user-check",
+              "title": "Agente fiscal obrigatório (회계대리인)",
+              "description": "As empresas de capital estrangeiro devem designar um agente fiscal nacional (회계대리인), um escritório de contabilidade coreano que se torna seu interlocutor oficial com o NTS.",
+              "items": [
+                "Prepara e protocola suas declarações de IVA e de imposto sobre a renda corporativa",
+                "Todas as declarações são redigidas em coreano",
+                "Cobrado geralmente por mês ou por trimestre, além dos seus custos contábeis"
+              ]
+            }
+          ]
+        },
+        "brackets": {
+          "eyebrow": "Tributação",
+          "title": "A tabela do imposto sobre a renda corporativa (법인세)",
+          "subtitle": "A alíquota aplicável depende do lucro tributável anual da sua empresa, ao qual se soma uma sobretaxa local igual a 10% da alíquota nacional.",
+          "note": "Tabela em vigor desde 1º de janeiro de 2026 — cada faixa aumentou um ponto em relação à tabela anterior.",
+          "items": [
+            {
+              "rate": "10%",
+              "range": "Até 200 milhões de KRW de lucro tributável",
+              "note": "Praticamente todas as startups em fase inicial permanecem nessa faixa.",
+              "highlight": true
+            },
+            {
+              "rate": "20%",
+              "range": "De 200 milhões a 20 bilhões de KRW"
+            },
+            {
+              "rate": "22%",
+              "range": "De 20 a 300 bilhões de KRW"
+            },
+            {
+              "rate": "25%",
+              "range": "Acima de 300 bilhões de KRW"
+            }
+          ]
+        },
+        "stats": {
+          "eyebrow": "Para lembrar",
+          "title": "Três números para conhecer",
+          "subtitle": "Além da tabela do imposto sobre a renda corporativa, três elementos estruturam sua tributação no dia a dia.",
+          "items": [
+            {
+              "icon": "percent",
+              "value": "10%",
+              "label": "IVA (부가가치세)",
+              "description": "Alíquota padrão aplicada à maioria dos bens e serviços, a ser declarada trimestralmente junto ao NTS."
+            },
+            {
+              "icon": "trending-down",
+              "value": "50 a 100%",
+              "label": "Redução de imposto para startups",
+              "description": "Durante os primeiros 5 anos, de acordo com a localização da sua sede social — limitada a 500 milhões de KRW de redução acumulada.",
+              "stepLink": 3,
+              "stepLinkLabel": "Ver as opções de endereço"
+            },
+            {
+              "icon": "calendar",
+              "value": "3 meses",
+              "label": "Declaração anual",
+              "description": "Prazo para protocolar a declaração de imposto sobre a renda corporativa após o encerramento do seu exercício contábil."
+            }
+          ]
+        }
+      }
     },
     "step7": {
       "title": "Encontrar financiamento",
-      "description": "A Coreia oferece programas públicos e capital de risco."
+      "description": "A Coreia oferece programas públicos e capital de risco.",
+      "details": "Entre subsídios à aceleração, financiamentos de P&D e empréstimos públicos com taxas preferenciais, o governo coreano injeta todo ano vários bilhões de KRW no seu ecossistema de startups. Mas a maior parte desse orçamento passa por programas seletivos: idade da empresa, setor de atividade e status de investidor estrangeiro determinam o acesso a cada um deles.\n\nAqui estão três portas de entrada pensadas para fundadores estrangeiros, seguidas dos critérios a verificar antes de montar seu processo de candidatura.",
+      "fundingGuide": {
+        "pathways": {
+          "eyebrow": "Comparativo",
+          "title": "Três portas de entrada para financiar sua startup",
+          "subtitle": "Cada programa atende a um perfil diferente — escolha o que corresponde ao seu estágio, ao seu setor e aos investidores que você já tem.",
+          "items": [
+            {
+              "icon": "globe",
+              "type": "grant",
+              "name": "K-Startup Grand Challenge",
+              "tag": "Subsídio + aceleração",
+              "description": "O programa de destaque do governo coreano para startups fundadas por não coreanos: cerca de cem equipes selecionadas a cada edição, incluindo uma vaga reservada para estudantes estrangeiros. Os selecionados recebem em média 50 milhões de KRW (até 80 milhões) para desenvolvimento de produto, localização e marketing, com acompanhamento de 8 meses até o Demo Day do COMEUP.",
+              "points": [
+                "Startup não coreana com menos de 7 anos (10 anos para deep-tech)",
+                "Setores prioritários: IA, biotecnologia, fintech, mobilidade, energia",
+                "Acesso preferencial ao visto D-8-4S para os selecionados"
+              ],
+              "portal": {
+                "label": "K-Startup Grand Challenge",
+                "linkLabel": "Ver o site do programa"
+              }
+            },
+            {
+              "icon": "cpu",
+              "type": "rnd",
+              "name": "TIPS",
+              "tag": "Subsídio de P&D",
+              "description": "Um subsídio de P&D e comercialização que pode superar 100 milhões de KRW por empresa, dentro de um orçamento nacional ampliado para 5 bilhões de KRW. O acesso não é direto: é preciso ser recomendado por um operador TIPS credenciado — um fundo de investimento ou uma aceleradora parceira do programa.",
+              "points": [
+                "Startup com menos de 7 anos recomendada por um operador TIPS credenciado",
+                "Para startups estrangeiras: pelo menos 1 milhão de USD já captados junto a investidores estrangeiros",
+                "Pode ser combinado com outros subsídios setoriais (agroalimentar, deep-tech...)"
+              ],
+              "portal": {
+                "label": "TIPS",
+                "linkLabel": "Ver o programa em"
+              }
+            },
+            {
+              "icon": "credit-card",
+              "type": "loan",
+              "name": "Empréstimos KOSME (정책자금)",
+              "tag": "Empréstimo com taxa preferencial",
+              "description": "Os fundos públicos (정책자금) da Korea SMEs and Startups Agency financiam capital de giro, investimento e exportação com taxas inferiores às de mercado. Para 2026, o orçamento nacional supera 4,4 trilhões de KRW, direcionado à manufatura, ao investimento produtivo e à expansão internacional.",
+              "points": [
+                "Empresa registrada na Coreia, geralmente há menos de 7 anos",
+                "Solicitação por meio do novo \"Policy Fund Navigator\", que direciona ao programa certo de acordo com o seu perfil",
+                "Pode ser combinado com subsídios, ao contrário do que muitos pensam"
+              ],
+              "portal": {
+                "label": "KOSME",
+                "linkLabel": "Ver o portal"
+              }
+            }
+          ]
+        },
+        "checklist": {
+          "eyebrow": "A verificar",
+          "title": "Quatro critérios antes de se candidatar",
+          "subtitle": "Esses programas compartilham condições de acesso comuns — vale a pena antecipá-las antes de iniciar um processo.",
+          "items": [
+            {
+              "icon": "shield",
+              "title": "Status de investidor estrangeiro (FDI) registrado",
+              "description": "A maioria desses programas — e os benefícios fiscais que os acompanham — pressupõe que sua empresa tenha o status de empresa de capital estrangeiro (FDI), registrado junto à KOTRA.",
+              "stepLink": 5,
+              "stepLinkLabel": "Revisar o registro de FDI"
+            },
+            {
+              "icon": "calendar",
+              "title": "Menos de 7 anos de existência (10 para deep-tech)",
+              "description": "A idade da sua empresa é calculada a partir da data de registro oficial, não a partir do início do projeto. A contagem começa já na etapa anterior.",
+              "stepLink": 4,
+              "stepLinkLabel": "Revisar a data de registro"
+            },
+            {
+              "icon": "target",
+              "title": "Um setor de atividade elegível",
+              "description": "IA, biotecnologia, fintech, mobilidade, energia... A maioria dos programas para fundadores estrangeiros tem como alvo setores prioritários definidos todo ano pelo Ministério das PMEs e Startups (MSS)."
+            },
+            {
+              "icon": "users",
+              "title": "Um operador ou investidor que o recomende",
+              "description": "Para o TIPS, em especial, você não se candidata sozinho: um fundo de investimento ou uma aceleradora credenciada deve primeiro selecioná-lo e recomendá-lo ao programa."
+            }
+          ]
+        }
+      }
     },
     "step8": {
       "title": "Contratar seguros",
-      "description": "Obrigatório ao contratar funcionários."
+      "description": "Obrigatório ao contratar funcionários.",
+      "details": "A inscrição nos 4대보험 deve ser feita dentro de 14 dias após a contratação para o seguro de saúde, e no máximo até o dia 15 do mês seguinte para os outros três regimes — um esquecimento expõe a cobranças retroativas de contribuições e, em alguns regimes, a penalidades. As alíquotas, aliás, foram reajustadas em 1º de janeiro de 2026, com um aumento da contribuição previdenciária que continuará todo ano até 2033.\n\nVeja a seguir como se divide cada uma das quatro contribuições entre empregador e empregado, seguido de três pontos de direito trabalhista a conhecer antes da sua primeira contratação.",
+      "insuranceGuide": {
+        "contributions": {
+          "eyebrow": "Contribuições",
+          "title": "Os 4 seguros sociais obrigatórios (4대보험)",
+          "subtitle": "Cada um se divide de forma diferente entre empregador e empregado — a considerar no cálculo do seu custo total de pessoal.",
+          "items": [
+            {
+              "icon": "trending-up",
+              "name": "Previdência nacional (국민연금)",
+              "rate": "9,5%",
+              "employerLabel": "Empregador",
+              "employerShare": "4,75%",
+              "employerPercent": 50,
+              "employeeLabel": "Empregado",
+              "employeeShare": "4,75%",
+              "employeePercent": 50,
+              "note": "Alíquota elevada de 9% para 9,5% em 1º de janeiro de 2026, no âmbito de uma reforma que a aumentará em 0,5 ponto a cada ano até chegar a 13% em 2033."
+            },
+            {
+              "icon": "heart",
+              "name": "Seguro de saúde (국민건강보험)",
+              "rate": "7,19%",
+              "employerLabel": "Empregador",
+              "employerShare": "3,595%",
+              "employerPercent": 50,
+              "employeeLabel": "Empregado",
+              "employeeShare": "3,595%",
+              "employeePercent": 50,
+              "note": "Elevado de 7,09% para 7,19% em 1º de janeiro de 2026, com o acréscimo de uma sobretaxa para o seguro de cuidados de longa duração (장기요양보험), também dividida em partes iguais."
+            },
+            {
+              "icon": "briefcase",
+              "name": "Seguro-desemprego (고용보험)",
+              "rate": "1,8% + parcela patronal",
+              "employerLabel": "Empregador",
+              "employerShare": "0,9%",
+              "employerPercent": 50,
+              "employeeLabel": "Empregado",
+              "employeeShare": "0,9%",
+              "employeePercent": 50,
+              "note": "A alíquota básica (seguro-desemprego) é dividida em partes iguais. O empregador paga ainda, isoladamente, de 0,25% a 0,85%, dependendo do tamanho da empresa, para o desenvolvimento de competências (고용안정·직업능력개발사업)."
+            },
+            {
+              "icon": "alert-triangle",
+              "name": "Acidentes de trabalho (산재보험)",
+              "rate": "Variável conforme o setor",
+              "employerLabel": "Empregador",
+              "employerShare": "100%",
+              "employerPercent": 100,
+              "employeeLabel": "Empregado",
+              "employeeShare": "0%",
+              "employeePercent": 0,
+              "note": "Totalmente a cargo do empregador. A alíquota básica varia bastante de acordo com o setor e seu nível de risco, e se somam três contribuições de alíquota fixa: acidentes de trajeto (0,06%), garantia salarial (0,06%, exceto setor público) e indenização por amianto (0,006%, empresas com 20 ou mais empregados)."
+            }
+          ]
+        },
+        "facts": {
+          "eyebrow": "Para lembrar",
+          "title": "Três pontos de referência para sua primeira contratação",
+          "subtitle": "Além das contribuições sociais, essas três regras se aplicam já a partir do seu primeiro funcionário.",
+          "items": [
+            {
+              "icon": "dollar-sign",
+              "value": "10.320 KRW",
+              "label": "Salário mínimo por hora (2026)",
+              "description": "Equivalente a cerca de 2.156.880 KRW por mês, com base em 209 horas, alta de 2,9% em relação a 2025. Aplica-se a todos os empregados, independentemente da nacionalidade."
+            },
+            {
+              "icon": "package",
+              "value": "30 dias / ano",
+              "label": "Indenização por demissão (퇴직금)",
+              "description": "Salário médio × 30 dias × (dias trabalhados ÷ 365), devida a todo empregado com pelo menos um ano de vínculo contínuo, independentemente do motivo do desligamento."
+            },
+            {
+              "icon": "globe",
+              "value": "44 países",
+              "label": "Acordos de seguridade social",
+              "description": "De acordo com a nacionalidade e o status de residência dos seus empregados estrangeiros, esses acordos podem dispensá-los de algumas contribuições previdenciárias ou de seguro-desemprego na Coreia.",
+              "stepLink": 1,
+              "stepLinkLabel": "Revisar seu status de visto"
+            }
+          ]
+        }
+      }
     }
   },
   "stepPage": {
     "eyebrow": "Etapa",
     "backLabel": "Voltar ao roteiro",
     "comingSoon": "Conteúdo em breve...",
-    "notFound": "Etapa não encontrada"
+    "notFound": "Etapa não encontrada",
+    "resources": "Recursos úteis"
   },
   "footer": {
     "tagline": "Sua porta de entrada para lançar uma startup na Coreia do Sul.",
