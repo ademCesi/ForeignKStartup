@@ -12,33 +12,50 @@ import TaxGuide from "../components/TaxGuide";
 import FundingGuide from "../components/FundingGuide";
 import InsuranceGuide from "../components/InsuranceGuide";
 import { withGlossary } from "../components/GlossaryTerm";
+import {
+    STEP_COUNT,
+    getStepAnchorId,
+    getStepIndexFromParam,
+    getStepPath,
+    getStepSlug,
+} from "../utils/stepRouting";
 import "../styles/StepPage.scss";
 import heroImage from "../assets/images/slide1.jpg";
 
-const STEP_COUNT = 8;
-
 const StepPage = () => {
-    const { id } = useParams();
+    const { stepId } = useParams();
     const navigate = useNavigate();
     const { t, i18n } = useTranslation();
 
-    const stepIndex = parseInt(id, 10);
-    const isValid = stepIndex >= 1 && stepIndex <= STEP_COUNT;
+    const stepIndex = getStepIndexFromParam(stepId, t);
+    const isValid = stepIndex !== null;
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [id]);
+    }, [stepId]);
+
+    useEffect(() => {
+        if (!isValid) return;
+
+        const canonicalSlug = getStepSlug(stepIndex, t);
+        if (!canonicalSlug) return;
+
+        const decodedParam = decodeURIComponent(stepId ?? "").trim();
+        if (decodedParam !== canonicalSlug) {
+            navigate(getStepPath(stepIndex, t), { replace: true });
+        }
+    }, [isValid, navigate, stepId, stepIndex, t]);
 
     const handleBack = () => {
-        navigate("/", { state: { scrollTo: "roadmap", stepId: id } });
+        navigate("/", { state: { scrollTo: "roadmap", stepId: getStepAnchorId(stepIndex) } });
     };
 
     const handlePrev = () => {
-        if (stepIndex > 1) navigate(`/step/${stepIndex - 1}`);
+        if (stepIndex > 1) navigate(getStepPath(stepIndex - 1, t));
     };
 
     const handleNext = () => {
-        if (stepIndex < STEP_COUNT) navigate(`/step/${stepIndex + 1}`);
+        if (stepIndex < STEP_COUNT) navigate(getStepPath(stepIndex + 1, t));
     };
 
     if (!isValid) {
@@ -57,7 +74,7 @@ const StepPage = () => {
     const title = t(`roadmap.step${stepIndex}.title`);
     const description = t(`roadmap.step${stepIndex}.description`);
     const details = t(`roadmap.step${stepIndex}.details`, { defaultValue: "" });
-    
+
     // Get resources from i18n
     const resources = i18n.getResourceBundle(i18n.language, "translation")?.[`roadmap`]?.[`step${stepIndex}`]?.resources || [];
 
@@ -145,7 +162,7 @@ const StepPage = () => {
                                 <button
                                     key={i}
                                     className={`step-page__nav-dot ${i + 1 === stepIndex ? "step-page__nav-dot--active" : ""}`}
-                                    onClick={() => navigate(`/step/${i + 1}`)}
+                                    onClick={() => navigate(getStepPath(i + 1, t))}
                                     aria-label={`Step ${i + 1}`}
                                 />
                             ))}

@@ -151,6 +151,7 @@ $breakpoint-tablet: 1024px;
         gap: 4px;
         border-bottom: 1px solid $color-border;
         overflow-x: auto;
+        overflow-y: hidden;
 
         @media (max-width: $breakpoint-mobile) {
             gap: 2px;
@@ -183,7 +184,10 @@ $breakpoint-tablet: 1024px;
             justify-content: center;
             transition: background $transition, color $transition;
 
-            svg { width: 15px; height: 15px; }
+            svg {
+                width: 15px;
+                height: 15px;
+            }
         }
 
         &-label {
@@ -214,7 +218,9 @@ $breakpoint-tablet: 1024px;
             padding: 10px 14px;
             gap: 8px;
 
-            &-label { font-size: 0.8rem; }
+            &-label {
+                font-size: 0.8rem;
+            }
         }
     }
 
@@ -263,13 +269,19 @@ $breakpoint-tablet: 1024px;
         align-items: center;
         justify-content: center;
 
-        svg { width: 22px; height: 22px; }
+        svg {
+            width: 22px;
+            height: 22px;
+        }
 
         @media (max-width: $breakpoint-mobile) {
             width: 40px;
             height: 40px;
 
-            svg { width: 18px; height: 18px; }
+            svg {
+                width: 18px;
+                height: 18px;
+            }
         }
     }
 
@@ -336,9 +348,14 @@ $breakpoint-tablet: 1024px;
         text-decoration: none;
         transition: background $transition, border-color $transition;
 
-        svg { width: 14px; height: 14px; }
+        svg {
+            width: 14px;
+            height: 14px;
+        }
 
-        strong { font-weight: 700; }
+        strong {
+            font-weight: 700;
+        }
 
         &:hover {
             background: rgba($color-link, 0.14);
@@ -397,7 +414,10 @@ $breakpoint-tablet: 1024px;
         justify-content: center;
         margin-bottom: 16px;
 
-        svg { width: 20px; height: 20px; }
+        svg {
+            width: 20px;
+            height: 20px;
+        }
     }
 
     &__link {
@@ -421,7 +441,9 @@ $breakpoint-tablet: 1024px;
         &:hover {
             color: darken($color-link, 12%);
 
-            svg { transform: translateX(3px); }
+            svg {
+                transform: translateX(3px);
+            }
         }
     }
 }

@@ -52,7 +52,6 @@ const NavBar = () => {
       <div className="navbar__container">
 
         <Link to="/" className="navbar__logo">
-          <img src={logoPNU} alt="PNU Logo" className="navbar__logo-image" />
           <span className="navbar__logo-foreign">Foreign</span>
           <span className="navbar__logo-k"> K-Startup</span>
           <span className="navbar__logo-star">*</span>

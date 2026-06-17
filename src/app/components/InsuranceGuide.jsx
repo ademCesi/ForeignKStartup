@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { withGlossary } from "./GlossaryTerm";
+import { getStepPath } from "../utils/stepRouting";
 import "../styles/InsuranceGuide.scss";
 
 // ─── Icons ──────────────────────────────────────────────────────────────────
@@ -154,7 +155,7 @@ const InsuranceGuide = () => {
                                 <h4>{item.label}</h4>
                                 <p>{withGlossary(item.description)}</p>
                                 {item.stepLink && (
-                                    <Link to={`/step/${item.stepLink}`} className="insurance-fact__link">
+                                    <Link to={getStepPath(item.stepLink, i18n.t.bind(i18n))} className="insurance-fact__link">
                                         <span>{item.stepLinkLabel}</span>
                                         <Icon name="arrow-right" />
                                     </Link>

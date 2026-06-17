@@ -15,7 +15,8 @@ const Home = () => {
             const stepId = location.state?.stepId;
             setTimeout(() => {
                 if (stepId) {
-                    const el = document.getElementById(`step-${stepId}`);
+                    const anchorId = stepId.startsWith('step-') ? stepId : `step-${stepId}`;
+                    const el = document.getElementById(anchorId);
                     if (el) {
                         el.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         return;

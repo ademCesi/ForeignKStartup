@@ -171,6 +171,7 @@ $breakpoint-tablet: 1024px;
         gap: 8px;
         margin-bottom: 24px;
         border-bottom: 1px solid $color-border;
+        overflow-y: hidden;
 
         @media (max-width: $breakpoint-mobile) {
             gap: 4px;

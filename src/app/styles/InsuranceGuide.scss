@@ -150,6 +150,7 @@ $breakpoint-tablet: 1024px;
         gap: 4px;
         border-bottom: 1px solid $color-border;
         overflow-x: auto;
+        overflow-y: hidden;
     }
 
     &__tab {
@@ -178,7 +179,10 @@ $breakpoint-tablet: 1024px;
             justify-content: center;
             transition: background $transition, color $transition;
 
-            svg { width: 15px; height: 15px; }
+            svg {
+                width: 15px;
+                height: 15px;
+            }
         }
 
         &-label {
@@ -188,12 +192,16 @@ $breakpoint-tablet: 1024px;
             transition: color $transition;
         }
 
-        &:hover &-label { color: $color-primary; }
+        &:hover &-label {
+            color: $color-primary;
+        }
 
         &--active {
             border-bottom-color: $color-accent;
 
-            .insurance-tabs__tab-label { color: $color-primary; }
+            .insurance-tabs__tab-label {
+                color: $color-primary;
+            }
 
             .insurance-tabs__tab-icon {
                 background: rgba($color-accent, 0.1);
@@ -205,7 +213,9 @@ $breakpoint-tablet: 1024px;
             padding: 10px 14px;
             gap: 8px;
 
-            &-label { font-size: 0.8rem; }
+            &-label {
+                font-size: 0.8rem;
+            }
         }
     }
 
@@ -249,7 +259,10 @@ $breakpoint-tablet: 1024px;
         align-items: center;
         justify-content: center;
 
-        svg { width: 24px; height: 24px; }
+        svg {
+            width: 24px;
+            height: 24px;
+        }
     }
 
     &__panel-tag {
@@ -348,7 +361,10 @@ $breakpoint-tablet: 1024px;
         justify-content: center;
         margin-bottom: 16px;
 
-        svg { width: 19px; height: 19px; }
+        svg {
+            width: 19px;
+            height: 19px;
+        }
     }
 
     &__value {
@@ -400,7 +416,9 @@ $breakpoint-tablet: 1024px;
         &:hover {
             color: darken($color-link, 12%);
 
-            svg { transform: translateX(3px); }
+            svg {
+                transform: translateX(3px);
+            }
         }
     }
 }
