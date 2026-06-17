@@ -3,14 +3,24 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import VisaGuide from "../components/VisaGuide";
+import StructureGuide from "../components/StructureGuide";
+import AddressGuide from "../components/AddressGuide";
+import RegistrationGuide from "../components/RegistrationGuide";
+import AccountGuide from "../components/AccountGuide";
+import TaxGuide from "../components/TaxGuide";
+import FundingGuide from "../components/FundingGuide";
+import InsuranceGuide from "../components/InsuranceGuide";
+import { withGlossary } from "../components/GlossaryTerm";
 import "../styles/StepPage.scss";
+import heroImage from "../assets/images/slide1.jpg";
 
 const STEP_COUNT = 8;
 
 const StepPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const stepIndex = parseInt(id, 10);
     const isValid = stepIndex >= 1 && stepIndex <= STEP_COUNT;
@@ -47,6 +57,9 @@ const StepPage = () => {
     const title = t(`roadmap.step${stepIndex}.title`);
     const description = t(`roadmap.step${stepIndex}.description`);
     const details = t(`roadmap.step${stepIndex}.details`, { defaultValue: "" });
+    
+    // Get resources from i18n
+    const resources = i18n.getResourceBundle(i18n.language, "translation")?.[`roadmap`]?.[`step${stepIndex}`]?.resources || [];
 
     return (
         <>
@@ -55,6 +68,8 @@ const StepPage = () => {
 
                 {/* Hero */}
                 <div className="step-page__hero">
+                    <div className="step-page__hero-bg" style={{ backgroundImage: `url(${heroImage})` }} />
+                    <div className="step-page__hero-overlay" />
                     <div className="step-page__hero-inner">
                         <span className="step-page__number">{number}</span>
                         <div className="step-page__hero-text">
@@ -69,11 +84,46 @@ const StepPage = () => {
                 <div className="step-page__content">
                     <div className="step-page__body">
                         {details ? (
-                            <p>{details}</p>
+                            <>
+                                {details.split("\n\n").map((paragraph, index) => (
+                                    <p key={index}>
+                                        {paragraph.split("\n").map((line, lineIndex) => (
+                                            <React.Fragment key={lineIndex}>
+                                                {withGlossary(line)}
+                                                {lineIndex < paragraph.split("\n").length - 1 && <br />}
+                                            </React.Fragment>
+                                        ))}
+                                    </p>
+                                ))}
+                            </>
                         ) : (
                             <p className="step-page__placeholder">{t("stepPage.comingSoon")}</p>
                         )}
                     </div>
+
+                    {/* Visa guide (step 1 only) */}
+                    {stepIndex === 1 && <VisaGuide />}
+
+                    {/* Legal structure guide (step 2 only) */}
+                    {stepIndex === 2 && <StructureGuide />}
+
+                    {/* Address guide (step 3 only) */}
+                    {stepIndex === 3 && <AddressGuide />}
+
+                    {/* Registration guide (step 4 only) */}
+                    {stepIndex === 4 && <RegistrationGuide />}
+
+                    {/* Account guide (step 5 only) */}
+                    {stepIndex === 5 && <AccountGuide />}
+
+                    {/* Tax guide (step 6 only) */}
+                    {stepIndex === 6 && <TaxGuide />}
+
+                    {/* Funding guide (step 7 only) */}
+                    {stepIndex === 7 && <FundingGuide />}
+
+                    {/* Insurance guide (step 8 only) */}
+                    {stepIndex === 8 && <InsuranceGuide />}
 
                     {/* Step navigation */}
                     <div className="step-page__nav">
@@ -124,6 +174,22 @@ const StepPage = () => {
                             {t("stepPage.backLabel")}
                         </button>
                     </div>
+
+                    {/* Resources section */}
+                    {details && resources && resources.length > 0 && (
+                        <div className="step-page__resources">
+                            <h3>{t("stepPage.resources")}</h3>
+                            <ul>
+                                {resources.map((resource, index) => (
+                                    <li key={index}>
+                                        <a href={resource.url} target="_blank" rel="noopener noreferrer">
+                                            {resource.label}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
                 </div>
 
             </main>

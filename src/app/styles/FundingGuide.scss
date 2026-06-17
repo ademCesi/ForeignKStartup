@@ -1,0 +1,427 @@
+// ─── Variables ───────────────────────────────────────────────────────────────
+$color-bg: #f8f7f4;
+$color-primary: #0A2540;
+$color-accent: #C8372D;
+$color-text: #1a1a2e;
+$color-text-muted: #6b7280;
+$color-border: #e5e7eb;
+$color-white: #ffffff;
+$color-success: #1a7f4f;
+$color-link: #7C3AED;
+$color-tabs-orange: #E8651A;
+
+$font-display: 'Playfair Display', Georgia, serif;
+$font-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+$transition: 0.25s ease;
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+
+// ─── Layout ─────────────────────────────────────────────────────────────────
+.funding-guide {
+
+    &__section {
+        margin-bottom: 72px;
+
+        &:last-child {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__section-header {
+        margin-bottom: 32px;
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+
+    }
+
+    &__section-badge {
+        flex-shrink: 0;
+        font-family: $font-display;
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1;
+        color: rgba($color-accent, 0.15);
+
+        @media (max-width: $breakpoint-mobile) {
+            display: none;
+        }
+    }
+
+    &__eyebrow {
+        font-family: $font-body;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $color-accent;
+        margin: 0 0 12px;
+    }
+
+    &__title {
+        font-family: $font-display;
+        font-size: clamp(1.5rem, 3vw, 2.1rem);
+        font-weight: 700;
+        color: $color-primary;
+        margin: 0 0 12px;
+        line-height: 1.25;
+    }
+
+    &__subtitle {
+        font-family: $font-body;
+        font-size: 0.95rem;
+        color: $color-text-muted;
+        line-height: 1.7;
+        margin: 0;
+    }
+}
+
+// ─── Glossary terms ────────────────────────────────────────────────────────────
+.glossary-term {
+    position: relative;
+    display: inline;
+    color: $color-link;
+    text-decoration: none;
+    cursor: help;
+
+    &--link {
+        cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+        color: darken($color-link, 12%);
+
+        .glossary-term__tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -4px);
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &__tooltip {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 260px;
+        max-width: 80vw;
+        background: $color-white;
+        color: $color-text;
+        font-family: $font-body;
+        font-weight: 400;
+        font-size: 0.8rem;
+        line-height: 1.55;
+        text-align: left;
+        padding: 12px 14px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: 1px solid $color-border;
+        box-shadow: 0 14px 32px rgba($color-primary, 0.18);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity $transition, transform $transition;
+        pointer-events: none;
+        z-index: 30;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background: $color-white;
+            border-right: 1px solid $color-border;
+            border-bottom: 1px solid $color-border;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+}
+
+// ─── Funding pathways tabs ─────────────────────────────────────────────────────
+.funding-tabs {
+
+    &__nav {
+        display: flex;
+        gap: 4px;
+        border-bottom: 1px solid $color-border;
+        overflow-x: auto;
+
+        @media (max-width: $breakpoint-mobile) {
+            gap: 2px;
+        }
+    }
+
+    &__tab {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 20px;
+        border: none;
+        border-bottom: 2px solid transparent;
+        background: none;
+        cursor: pointer;
+        font-family: $font-body;
+        white-space: nowrap;
+        margin-bottom: -1px;
+        transition: color $transition, border-color $transition;
+
+        &-icon {
+            flex-shrink: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            background: rgba($color-primary, 0.05);
+            color: $color-text-muted;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background $transition, color $transition;
+
+            svg { width: 15px; height: 15px; }
+        }
+
+        &-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: $color-text-muted;
+            transition: color $transition;
+        }
+
+        &:hover &-label {
+            color: $color-primary;
+        }
+
+        &--active {
+            border-bottom-color: $color-tabs-orange;
+
+            .funding-tabs__tab-label {
+                color: $color-primary;
+            }
+
+            .funding-tabs__tab-icon {
+                background: rgba($color-tabs-orange, 0.12);
+                color: $color-tabs-orange;
+            }
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            padding: 10px 14px;
+            gap: 8px;
+
+            &-label { font-size: 0.8rem; }
+        }
+    }
+
+    &__panel {
+        background: $color-white;
+        border: 1px solid $color-border;
+        border-top: none;
+        border-radius: 0 0 16px 16px;
+        padding: 32px;
+
+        @media (max-width: $breakpoint-mobile) {
+            padding: 20px;
+        }
+    }
+
+    &__panel-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $color-border;
+
+        h3 {
+            font-family: $font-display;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: $color-primary;
+            margin: 0 0 8px;
+            line-height: 1.3;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            gap: 12px;
+        }
+    }
+
+    &__panel-icon {
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: rgba($color-tabs-orange, 0.1);
+        color: $color-tabs-orange;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg { width: 22px; height: 22px; }
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 40px;
+            height: 40px;
+
+            svg { width: 18px; height: 18px; }
+        }
+    }
+
+    &__panel-tag {
+        display: inline-block;
+        font-family: $font-body;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        padding: 4px 10px;
+        border-radius: 100px;
+        color: $color-tabs-orange;
+        background: rgba($color-tabs-orange, 0.1);
+    }
+
+    &__panel-description {
+        font-family: $font-body;
+        font-size: 0.9rem;
+        color: $color-text-muted;
+        line-height: 1.7;
+        margin: 0 0 20px;
+    }
+
+    &__panel-points {
+        list-style: none;
+        margin: 0 0 24px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-family: $font-body;
+            font-size: 0.875rem;
+            color: $color-text;
+            line-height: 1.6;
+
+            svg {
+                width: 14px;
+                height: 14px;
+                margin-top: 3px;
+                flex-shrink: 0;
+                color: $color-success;
+            }
+        }
+    }
+
+    &__panel-portal {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: $font-body;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: $color-link;
+        background: rgba($color-link, 0.08);
+        border: 1px solid rgba($color-link, 0.2);
+        padding: 8px 14px;
+        border-radius: 100px;
+        text-decoration: none;
+        transition: background $transition, border-color $transition;
+
+        svg { width: 14px; height: 14px; }
+
+        strong { font-weight: 700; }
+
+        &:hover {
+            background: rgba($color-link, 0.14);
+            border-color: rgba($color-link, 0.35);
+        }
+    }
+}
+
+// ─── Eligibility criteria cards ────────────────────────────────────────────────
+.funding-criteria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    @media (max-width: $breakpoint-mobile) {
+        grid-template-columns: 1fr;
+    }
+
+    &__card {
+        background: $color-white;
+        border: 1px solid $color-border;
+        border-radius: 16px;
+        padding: 24px;
+        transition: box-shadow $transition, transform $transition;
+
+        &:hover {
+            box-shadow: 0 8px 24px rgba($color-primary, 0.07);
+            transform: translateY(-2px);
+        }
+
+        h4 {
+            font-family: $font-display;
+            font-size: 1rem;
+            font-weight: 700;
+            color: $color-primary;
+            margin: 0 0 8px;
+        }
+
+        p {
+            font-family: $font-body;
+            font-size: 0.875rem;
+            color: $color-text-muted;
+            line-height: 1.7;
+            margin: 0;
+        }
+    }
+
+    &__icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 11px;
+        background: rgba($color-accent, 0.08);
+        color: $color-accent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+
+        svg { width: 20px; height: 20px; }
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 12px;
+        font-family: $font-body;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: $color-link;
+        text-decoration: none;
+        transition: color $transition;
+
+        svg {
+            width: 14px;
+            height: 14px;
+            transition: transform $transition;
+        }
+
+        &:hover {
+            color: darken($color-link, 12%);
+
+            svg { transform: translateX(3px); }
+        }
+    }
+}

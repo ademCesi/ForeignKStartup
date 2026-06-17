@@ -1,0 +1,451 @@
+// ─── Variables ───────────────────────────────────────────────────────────────
+$color-bg: #f8f7f4;
+$color-primary: #0A2540;
+$color-accent: #C8372D;
+$color-text: #1a1a2e;
+$color-text-muted: #6b7280;
+$color-border: #e5e7eb;
+$color-white: #ffffff;
+$color-success: #1a7f4f;
+$color-link: #7C3AED;
+
+$font-display: 'Playfair Display', Georgia, serif;
+$font-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+$transition: 0.25s ease;
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+
+// ─── Layout ─────────────────────────────────────────────────────────────────
+.structure-guide {
+
+    &__section {
+        margin-bottom: 72px;
+
+        &:last-child {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__section-header {
+        margin-bottom: 32px;
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+
+    }
+
+    &__section-badge {
+        flex-shrink: 0;
+        font-family: $font-display;
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1;
+        color: rgba($color-accent, 0.15);
+
+        @media (max-width: $breakpoint-mobile) {
+            display: none;
+        }
+    }
+
+    &__eyebrow {
+        font-family: $font-body;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $color-accent;
+        margin: 0 0 12px;
+    }
+
+    &__title {
+        font-family: $font-display;
+        font-size: clamp(1.5rem, 3vw, 2.1rem);
+        font-weight: 700;
+        color: $color-primary;
+        margin: 0 0 12px;
+        line-height: 1.25;
+    }
+
+    &__subtitle {
+        font-family: $font-body;
+        font-size: 0.95rem;
+        color: $color-text-muted;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    // ─── Checklist grid ───────────────────────────────────────────────────────
+    &__checklist {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        @media (max-width: $breakpoint-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+// ─── Glossary terms ────────────────────────────────────────────────────────────
+.glossary-term {
+    position: relative;
+    display: inline;
+    color: $color-link;
+    text-decoration: none;
+    cursor: help;
+
+    &--link {
+        cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+        color: darken($color-link, 12%);
+
+        .glossary-term__tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -4px);
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &__tooltip {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 260px;
+        max-width: 80vw;
+        background: $color-white;
+        color: $color-text;
+        font-family: $font-body;
+        font-weight: 400;
+        font-size: 0.8rem;
+        line-height: 1.55;
+        text-align: left;
+        padding: 12px 14px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: 1px solid $color-border;
+        box-shadow: 0 14px 32px rgba($color-primary, 0.18);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity $transition, transform $transition;
+        pointer-events: none;
+        z-index: 30;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background: $color-white;
+            border-right: 1px solid $color-border;
+            border-bottom: 1px solid $color-border;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+}
+
+// ─── Tabs ──────────────────────────────────────────────────────────────────────
+.structure-tabs {
+
+    &__nav {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid $color-border;
+
+        @media (max-width: $breakpoint-mobile) {
+            gap: 4px;
+        }
+    }
+
+    &__tab {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        font-family: $font-body;
+        background: none;
+        border: none;
+        border-bottom: 2px solid transparent;
+        padding: 12px 20px;
+        margin-bottom: -1px;
+        cursor: pointer;
+        text-align: left;
+        transition: border-color $transition;
+
+        &-code {
+            font-family: $font-display;
+            font-size: 0.8rem;
+            color: $color-text-muted;
+            transition: color $transition;
+        }
+
+        &-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: $color-text-muted;
+            transition: color $transition;
+        }
+
+        &:hover &-name {
+            color: $color-primary;
+        }
+
+        &--active {
+            border-bottom-color: $color-accent;
+        }
+
+        &--active &-code {
+            color: $color-accent;
+        }
+
+        &--active &-name {
+            color: $color-primary;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            padding: 10px 14px;
+
+            &-code {
+                font-size: 0.7rem;
+            }
+
+            &-name {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    &__panel {
+        background: $color-white;
+        border: 1px solid $color-border;
+        border-radius: 16px;
+        padding: 32px;
+
+        @media (max-width: $breakpoint-mobile) {
+            padding: 20px;
+        }
+    }
+
+    &__panel-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid $color-border;
+
+        @media (max-width: $breakpoint-mobile) {
+            gap: 14px;
+        }
+    }
+
+    &__panel-icon {
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: rgba($color-primary, 0.06);
+        color: $color-primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 40px;
+            height: 40px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &__panel-title-row {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 10px;
+
+        h3 {
+            font-family: $font-display;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: $color-primary;
+            margin: 0;
+        }
+    }
+
+    &__tag {
+        font-family: $font-body;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: $color-accent;
+        background: rgba($color-accent, 0.1);
+        padding: 5px 10px;
+        border-radius: 100px;
+        white-space: nowrap;
+    }
+
+    &__summary {
+        font-family: $font-body;
+        font-size: 0.9rem;
+        color: $color-text-muted;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    &__panel-body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+
+        @media (max-width: $breakpoint-tablet) {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+    }
+
+    &__column {
+        h4 {
+            font-family: $font-body;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: $color-primary;
+            margin: 0 0 12px;
+
+            &:not(:first-child) {
+                margin-top: 24px;
+            }
+        }
+    }
+
+    &__ideal-for {
+        font-family: $font-body;
+        font-size: 0.875rem;
+        color: $color-text;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-family: $font-body;
+            font-size: 0.875rem;
+            color: $color-text;
+            line-height: 1.6;
+
+            svg {
+                width: 15px;
+                height: 15px;
+                margin-top: 3px;
+                flex-shrink: 0;
+                color: $color-success;
+            }
+        }
+    }
+
+    &__watchout {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        font-family: $font-body;
+        font-size: 0.825rem;
+        line-height: 1.6;
+        color: darken($color-accent, 5%);
+        background: rgba($color-accent, 0.07);
+        padding: 12px 14px;
+        border-radius: 10px;
+        margin-top: 24px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            margin-top: 1px;
+            color: $color-accent;
+        }
+    }
+}
+
+// ─── Checklist card ─────────────────────────────────────────────────────────────
+.structure-checklist-card {
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    transition: box-shadow $transition, transform $transition;
+
+    &:hover {
+        box-shadow: 0 12px 32px rgba($color-primary, 0.08);
+        transform: translateY(-3px);
+    }
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: rgba($color-accent, 0.08);
+        color: $color-accent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+
+        svg {
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+    h4 {
+        font-family: $font-display;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: $color-primary;
+        margin: 0 0 8px;
+    }
+
+    p {
+        font-family: $font-body;
+        font-size: 0.825rem;
+        color: $color-text-muted;
+        line-height: 1.6;
+        margin: 0;
+    }
+}
