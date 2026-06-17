@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { getStepAnchorId, getStepPath, STEP_COUNT } from "../utils/stepRouting";
 import "../styles/RoadMap.scss";
 
-const STEP_COUNT = 8;
-
-const RoadMapStep = ({ step, index, isLeft }) => {
+const RoadMapStep = ({ step, index, isLeft, t }) => {
     const ref = useRef(null);
     const [visible, setVisible] = useState(false);
     const navigate = useNavigate();
@@ -21,7 +20,7 @@ const RoadMapStep = ({ step, index, isLeft }) => {
 
     return (
         <div
-            id={`step-${step.number}`}
+            id={getStepAnchorId(parseInt(step.number, 10))}
             ref={ref}
             className={`roadmap__step ${isLeft ? "roadmap__step--left" : "roadmap__step--right"} ${visible ? "roadmap__step--visible" : ""}`}
             style={{ transitionDelay: `${index * 0.1}s` }}
@@ -29,7 +28,7 @@ const RoadMapStep = ({ step, index, isLeft }) => {
             {/* Card */}
             <div
                 className="roadmap__card"
-                onClick={() => navigate(`/step/${parseInt(step.number, 10)}`)}
+                onClick={() => navigate(getStepPath(parseInt(step.number, 10), t))}
             >
                 <span className="roadmap__card-number">{step.number}</span>
                 <h3 className="roadmap__card-title">{step.title}</h3>
@@ -73,6 +72,7 @@ const RoadMap = () => {
                             step={step}
                             index={index}
                             isLeft={index % 2 === 0}
+                            t={t}
                         />
                     ))}
                 </div>

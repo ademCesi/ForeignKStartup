@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/step/:id" element={<StepPage />} />
+        <Route path="/step/:stepId" element={<StepPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/emailPrivacy" element={<EmailPrivacyPage />} />
       </Routes>

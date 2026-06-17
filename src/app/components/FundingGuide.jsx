@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { GLOSSARY, withGlossary } from "./GlossaryTerm";
+import { getStepPath } from "../utils/stepRouting";
 import "../styles/FundingGuide.scss";
 
 // ─── Icons ──────────────────────────────────────────────────────────────────
@@ -183,7 +184,7 @@ const FundingGuide = () => {
                                 <h4>{withGlossary(item.title)}</h4>
                                 <p>{withGlossary(item.description)}</p>
                                 {item.stepLink && (
-                                    <Link to={`/step/${item.stepLink}`} className="funding-criteria__link">
+                                    <Link to={getStepPath(item.stepLink, i18n.t.bind(i18n))} className="funding-criteria__link">
                                         <span>{item.stepLinkLabel}</span>
                                         <Icon name="arrow-right" />
                                     </Link>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { withGlossary } from "./GlossaryTerm";
+import { getStepPath } from "../utils/stepRouting";
 import "../styles/AccountGuide.scss";
 
 // ─── Icons ──────────────────────────────────────────────────────────────────
@@ -176,7 +177,7 @@ const AccountGuide = () => {
                                     </div>
                                     <p>{withGlossary(item.description)}</p>
                                     {item.stepLink && (
-                                        <Link to={`/step/${item.stepLink}`} className="account-timeline-tabs__panel-link">
+                                        <Link to={getStepPath(item.stepLink, i18n.t.bind(i18n))} className="account-timeline-tabs__panel-link">
                                             <span>{item.stepLinkLabel}</span>
                                             <Icon name="arrow-right" />
                                         </Link>

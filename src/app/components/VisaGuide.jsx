@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { withGlossary } from "./GlossaryTerm";
+import { getStepPath } from "../utils/stepRouting";
 import "../styles/VisaGuide.scss";
 
 // ─── Icons ──────────────────────────────────────────────────────────────────
@@ -215,7 +216,7 @@ const VisaGuide = () => {
                                     <h4>{withGlossary(step.title)}</h4>
                                     <p>{withGlossary(step.description)}</p>
                                     {step.stepLink && (
-                                        <Link to={`/step/${step.stepLink}`} className="visa-timeline-step__link">
+                                        <Link to={getStepPath(step.stepLink, i18n.t.bind(i18n))} className="visa-timeline-step__link">
                                             {step.stepLinkLabel}
                                             <Icon name="arrow-right" />
                                         </Link>
