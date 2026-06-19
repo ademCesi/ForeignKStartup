@@ -87,7 +87,7 @@
                 "Proof of sufficient financial resources",
                 "No company registration required to obtain it"
               ],
-              "watchOut": "Does not allow paid commercial activity — preparation only."
+              "watchOut": "Does not allow paid commercial activity - preparation only."
             },
             {
               "icon": "star",
@@ -111,7 +111,7 @@
           "specialCase": {
             "icon": "graduation",
             "title": "Are you a student in Korea (D-2 visa)?",
-            "description": "If your project was born during your studies, many universities — including PNU — have an industry-university cooperation foundation that can support you in moving from student status to D-8-4 founder status, without leaving the country."
+            "description": "If your project was born during your studies, many universities - including PNU - have an industry-university cooperation foundation that can support you in moving from student status to D-8-4 founder status, without leaving the country."
           }
         },
         "timeline": {
@@ -137,7 +137,7 @@
             },
             {
               "title": "Company registration",
-              "description": "With the KISED recommendation letter in hand, you can finalize your company's legal registration with the commercial court — share capital, articles of incorporation, filing the application.",
+              "description": "With the KISED recommendation letter in hand, you can finalize your company's legal registration with the commercial court - share capital, articles of incorporation, filing the application.",
               "stepLink": 4,
               "stepLinkLabel": "See the registration details"
             },
@@ -183,7 +183,7 @@
     "step2": {
       "title": "Choose a legal structure",
       "description": "Corporation LLC or sole proprietorship each has different implications in terms of liability taxation and funding.",
-      "details": "Your company's legal status determines your level of financial liability, your tax regime, your credibility with banks and investors, and how burdensome your day-to-day administration will be. Changing it after registration remains possible, but proves costly and time-consuming — better to choose well from the start.\n\nTwo statuses account for the vast majority of foreign startup formations in Korea: the Chusik Hoesa (joint-stock company) and the Yuhan Hoesa (limited liability company). Compare them below based on your project, then review the key points common to both statuses to plan for before registration.",
+      "details": "Your company's legal status determines your level of financial liability, your tax regime, your credibility with banks and investors, and how burdensome your day-to-day administration will be. Changing it after registration remains possible, but proves costly and time-consuming - better to choose well from the start.\n\nTwo statuses account for the vast majority of foreign startup formations in Korea: the Chusik Hoesa (joint-stock company) and the Yuhan Hoesa (limited liability company). Compare them below based on your project, then review the key points common to both statuses to plan for before registration.",
       "structureGuide": {
         "tabs": {
           "eyebrow": "Comparison",
@@ -265,7 +265,7 @@
     "step3": {
       "title": "Secure a business address",
       "description": "A registered Korean address is required to establish a company. Options include virtual offices or government backed startup centers.",
-      "details": "This address is not a mere administrative detail: recorded in the articles of incorporation filed with the commercial court, it becomes your 본점 (official head office) and determines where your company may legally operate. Changing it after registration requires updating the articles of incorporation and completing new registry formalities — so it's best to make the right choice from the start.\n\nFour main options are available to foreign founders, from virtual offices to personal addresses. Compare them below based on cost, what's included, and the founder profile they suit, then review the points to check before signing a lease or accepting a spot in an incubator.",
+      "details": "This address is not a mere administrative detail: recorded in the articles of incorporation filed with the commercial court, it becomes your 본점 (official head office) and determines where your company may legally operate. Changing it after registration requires updating the articles of incorporation and completing new registry formalities - so it's best to make the right choice from the start.\n\nFour main options are available to foreign founders, from virtual offices to personal addresses. Compare them below based on cost, what's included, and the founder profile they suit, then review the points to check before signing a lease or accepting a spot in an incubator.",
       "addressGuide": {
         "comparison": {
           "eyebrow": "Comparison",
@@ -321,7 +321,7 @@
             {
               "icon": "file-text",
               "title": "Proof of address is mandatory",
-              "description": "Whatever you choose, a lease agreement or property title — in your name or the future company's name — is required in the registration file submitted to the commercial court.",
+              "description": "Whatever you choose, a lease agreement or property title - in your name or the future company's name - is required in the registration file submitted to the commercial court.",
               "stepLink": 4,
               "stepLinkLabel": "See the filing process"
             },
@@ -347,7 +347,7 @@
     "step4": {
       "title": "Register your startup",
       "description": "The official process including required documents registration offices and expected timelines.",
-      "details": "This step is the administrative core of your project: without registration, you cannot open a corporate bank account, hire staff, or legally issue invoices. The procedure involves several different authorities — the bank, KOTRA, the commercial court — and each document obtained serves as supporting evidence for the next step.\n\nThree phases follow one another, from depositing capital to filing the articles of incorporation with the court. Follow them in order below, prepare the required documents in advance, and find out what you receive at the end of the process.",
+      "details": "This step is the administrative core of your project: without registration, you cannot open a corporate bank account, hire staff, or legally issue invoices. The procedure involves several different authorities - the bank, KOTRA, the commercial court - and each document obtained serves as supporting evidence for the next step.\n\nThree phases follow one another, from depositing capital to filing the articles of incorporation with the court. Follow them in order below, prepare the required documents in advance, and find out what you receive at the end of the process.",
       "registrationGuide": {
         "phases": {
           "eyebrow": "The process",
@@ -370,7 +370,7 @@
             {
               "icon": "search",
               "title": "Company name reservation",
-              "description": "Check availability and reserve your company name with the court registry. Names must comply with Korean naming conventions and industry classifications — a step that often creates delays without professional support.",
+              "description": "Check availability and reserve your company name with the court registry. Names must comply with Korean naming conventions and industry classifications - a step that often creates delays without professional support.",
               "documents": [
                 "Company name compliant with Korean industry classifications",
                 "Availability confirmation from the registry"
@@ -427,7 +427,7 @@
         "outcome": {
           "eyebrow": "What you get",
           "title": "What you receive at the end of the process",
-          "subtitle": "Two official documents that establish your company's legal existence — and that you'll use immediately in the next step.",
+          "subtitle": "Two official documents that establish your company's legal existence - and that you'll use immediately in the next step.",
           "items": [
             {
               "icon": "id-card",
@@ -448,7 +448,7 @@
     "step5": {
       "title": "Open a bank account",
       "description": "Often the most challenging step for foreigners. Here are the banks that are foreigner friendly the paperwork to prepare and tips to avoid rejection.",
-      "details": "Opening a corporate bank account turns the capital held in the temporary account into actual company cash flow. Korean banks apply strict anti-money-laundering checks — an in-branch visit is often required, along with a substantial set of documents — and then impose deadlines you must meet to finalize your foreign-invested company status with KOTRA, with penalties if you miss them.\n\nSome Korean banks are markedly more experienced with foreign founders' applications than others: compare them below before choosing your branch, then follow the timeline of deadlines to meet once your account is open.",
+      "details": "Opening a corporate bank account turns the capital held in the temporary account into actual company cash flow. Korean banks apply strict anti-money-laundering checks - an in-branch visit is often required, along with a substantial set of documents - and then impose deadlines you must meet to finalize your foreign-invested company status with KOTRA, with penalties if you miss them.\n\nSome Korean banks are markedly more experienced with foreign founders' applications than others: compare them below before choosing your branch, then follow the timeline of deadlines to meet once your account is open.",
       "accountGuide": {
         "banks": {
           "eyebrow": "Comparison",
@@ -500,13 +500,13 @@
         "timeline": {
           "eyebrow": "Timeline",
           "title": "Deadlines to meet after depositing capital",
-          "subtitle": "Once the corporate account is open, several deadlines follow one another — some with direct consequences if missed.",
+          "subtitle": "Once the corporate account is open, several deadlines follow one another - some with direct consequences if missed.",
           "items": [
             {
               "marker": "Day 0",
               "icon": "dollar-sign",
               "title": "Capital already deposited in a temporary account",
-              "description": "When you notified your investment, your capital was paid into a temporary account opened in the future representative's name — this is the capital that will be transferred to the new corporate account.",
+              "description": "When you notified your investment, your capital was paid into a temporary account opened in the future representative's name - this is the capital that will be transferred to the new corporate account.",
               "stepLink": 4,
               "stepLinkLabel": "Review the registration step"
             },
@@ -520,7 +520,7 @@
               "marker": "Day +20 business days",
               "icon": "lock",
               "title": "End of anti-money-laundering restrictions",
-              "description": "During the first 20 business days, transfer limits are reduced and opening a second account at another bank is blocked — a standard control measure used by Korean banks."
+              "description": "During the first 20 business days, transfer limits are reduced and opening a second account at another bank is blocked - a standard control measure used by Korean banks."
             },
             {
               "marker": "Day +60 days max",
@@ -535,7 +535,7 @@
     "step6": {
       "title": "Register for taxes",
       "description": "Overview of the Korean tax system for startups including VAT and corporate tax.",
-      "details": "Without a business registration certificate (사업자등록증), your company can neither issue tax invoices nor fully operate its corporate bank account — it's the last administrative gate before normal operations. Foreign-invested companies must also appoint a Korean tax agent, responsible for preparing and filing all their returns in Korean with the NTS.\n\nOnce these formalities are complete, your company enters the standard tax regime: progressive corporate income tax, 10% VAT, and, under certain conditions, a significant tax reduction for young companies. Find the details of each point below.",
+      "details": "Without a business registration certificate (사업자등록증), your company can neither issue tax invoices nor fully operate its corporate bank account - it's the last administrative gate before normal operations. Foreign-invested companies must also appoint a Korean tax agent, responsible for preparing and filing all their returns in Korean with the NTS.\n\nOnce these formalities are complete, your company enters the standard tax regime: progressive corporate income tax, 10% VAT, and, under certain conditions, a significant tax reduction for young companies. Find the details of each point below.",
       "taxGuide": {
         "formalities": {
           "eyebrow": "Formalities",
@@ -572,7 +572,7 @@
           "eyebrow": "Taxation",
           "title": "Corporate income tax brackets (법인세)",
           "subtitle": "The applicable rate depends on your company's annual taxable profit, plus a local surtax equal to 10% of the national rate.",
-          "note": "Brackets in effect since January 1, 2026 — each bracket rose by one point compared to the previous scale.",
+          "note": "Brackets in effect since January 1, 2026 - each bracket rose by one point compared to the previous scale.",
           "items": [
             {
               "rate": "10%",
@@ -609,7 +609,7 @@
               "icon": "trending-down",
               "value": "50 to 100%",
               "label": "Startup tax reduction",
-              "description": "During the first 5 years, depending on your head office's location — capped at a cumulative reduction of 500 million KRW.",
+              "description": "During the first 5 years, depending on your head office's location - capped at a cumulative reduction of 500 million KRW.",
               "stepLink": 3,
               "stepLinkLabel": "See address options"
             },
@@ -631,7 +631,7 @@
         "pathways": {
           "eyebrow": "Comparison",
           "title": "Three entry points to fund your startup",
-          "subtitle": "Each program targets a different profile — choose the one that matches your stage, your industry, and your existing investors.",
+          "subtitle": "Each program targets a different profile - choose the one that matches your stage, your industry, and your existing investors.",
           "items": [
             {
               "icon": "globe",
@@ -654,7 +654,7 @@
               "type": "rnd",
               "name": "TIPS",
               "tag": "R&D grant",
-              "description": "An R&D and commercialization grant that can exceed 100 million KRW per company, within a national pool raised to 5 billion KRW. Access isn't direct: you need a recommendation from an approved TIPS operator — an investment fund or accelerator partnered with the program.",
+              "description": "An R&D and commercialization grant that can exceed 100 million KRW per company, within a national pool raised to 5 billion KRW. Access isn't direct: you need a recommendation from an approved TIPS operator - an investment fund or accelerator partnered with the program.",
               "points": [
                 "Startup less than 7 years old, recommended by an approved TIPS operator",
                 "For foreign startups: at least USD 1 million already raised from foreign investors",
@@ -686,12 +686,12 @@
         "checklist": {
           "eyebrow": "To check",
           "title": "Four criteria before applying",
-          "subtitle": "These programs share common eligibility conditions — worth planning for before starting an application.",
+          "subtitle": "These programs share common eligibility conditions - worth planning for before starting an application.",
           "items": [
             {
               "icon": "shield",
               "title": "Registered foreign investor (FDI) status",
-              "description": "Most of these programs — and the tax benefits that come with them — assume your company has foreign-invested company (FDI) status, registered with KOTRA.",
+              "description": "Most of these programs - and the tax benefits that come with them - assume your company has foreign-invested company (FDI) status, registered with KOTRA.",
               "stepLink": 5,
               "stepLinkLabel": "Review FDI registration"
             },
@@ -719,12 +719,12 @@
     "step8": {
       "title": "Get insured",
       "description": "Once you start hiring you must enroll in Korea’s mandatory insurance programs covering health pension and unemployment.",
-      "details": "Enrollment in the 4 major social insurances (4대보험) must be completed within 14 days of hiring for health insurance, and by the 15th of the following month at the latest for the other three programs — missing this exposes you to retroactive contribution claims and, for some programs, penalties. Rates were also revised upward on January 1, 2026, with the pension contribution increase set to continue every year through 2033.\n\nHere's how each of the four contributions is split between employer and employee, followed by three labor law benchmarks to know before your first hire.",
+      "details": "Enrollment in the 4 major social insurances (4대보험) must be completed within 14 days of hiring for health insurance, and by the 15th of the following month at the latest for the other three programs - missing this exposes you to retroactive contribution claims and, for some programs, penalties. Rates were also revised upward on January 1, 2026, with the pension contribution increase set to continue every year through 2033.\n\nHere's how each of the four contributions is split between employer and employee, followed by three labor law benchmarks to know before your first hire.",
       "insuranceGuide": {
         "contributions": {
           "eyebrow": "Contributions",
           "title": "The 4 mandatory social insurances (4대보험)",
-          "subtitle": "Each one is split differently between employer and employee — factor this into your total labor cost calculation.",
+          "subtitle": "Each one is split differently between employer and employee - factor this into your total labor cost calculation.",
           "items": [
             {
               "icon": "trending-up",
