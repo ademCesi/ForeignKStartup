@@ -136,7 +136,7 @@ $breakpoint-mobile: 768px;
             line-height: 1.8;
 
             &::before {
-                content: "—";
+                content: "-";
                 position: absolute;
                 left: 0;
                 color: $color-accent;

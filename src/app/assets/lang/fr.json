@@ -87,7 +87,7 @@
                 "Justificatif de ressources financières suffisantes",
                 "Aucune immatriculation de société requise pour l'obtenir"
               ],
-              "watchOut": "Ne permet pas d'exercer une activité commerciale rémunérée — préparation uniquement."
+              "watchOut": "Ne permet pas d'exercer une activité commerciale rémunérée - préparation uniquement."
             },
             {
               "icon": "star",
@@ -111,7 +111,7 @@
           "specialCase": {
             "icon": "graduation",
             "title": "Vous êtes étudiant en Corée (visa D-2) ?",
-            "description": "Si votre projet est né pendant vos études, de nombreuses universités — dont PNU — disposent d'une fondation de coopération industrie-université qui peut vous accompagner pour passer du statut étudiant à celui de fondateur D-8-4, sans quitter le pays."
+            "description": "Si votre projet est né pendant vos études, de nombreuses universités - dont PNU - disposent d'une fondation de coopération industrie-université qui peut vous accompagner pour passer du statut étudiant à celui de fondateur D-8-4, sans quitter le pays."
           }
         },
         "timeline": {
@@ -137,7 +137,7 @@
             },
             {
               "title": "Immatriculation de la société",
-              "description": "Munis de la lettre de recommandation KISED, vous pouvez finaliser l'enregistrement légal de votre société auprès du tribunal du commerce — capital social, statuts, dépôt du dossier.",
+              "description": "Munis de la lettre de recommandation KISED, vous pouvez finaliser l'enregistrement légal de votre société auprès du tribunal du commerce - capital social, statuts, dépôt du dossier.",
               "stepLink": 4,
               "stepLinkLabel": "Voir le détail de l'immatriculation"
             },
@@ -265,7 +265,7 @@
     "step3": {
       "title": "Sécuriser une adresse professionnelle",
       "description": "Votre société doit disposer d'une adresse de siège social en Corée du Sud dès son immatriculation. Entre bureau virtuel, espace de co-working, centre public pour startups et adresse personnelle, voici comment choisir la solution adaptée à votre budget et à votre activité.",
-      "details": "Cette adresse n'est pas un simple détail administratif : inscrite dans les statuts déposés au tribunal du commerce, elle devient votre 본점 (siège social officiel) et conditionne où votre société peut légalement exercer son activité. La modifier après l'immatriculation implique une mise à jour des statuts et de nouvelles formalités au registre — mieux vaut donc faire le bon choix dès le départ.\n\nQuatre options principales s'offrent aux fondateurs étrangers, du bureau virtuel à l'adresse personnelle. Comparez-les ci-dessous selon leur coût, ce qu'elles incluent et le profil de fondateur auquel elles correspondent, puis retrouvez les points à vérifier avant de signer un bail ou d'accepter une place en incubateur.",
+      "details": "Cette adresse n'est pas un simple détail administratif : inscrite dans les statuts déposés au tribunal du commerce, elle devient votre 본점 (siège social officiel) et conditionne où votre société peut légalement exercer son activité. La modifier après l'immatriculation implique une mise à jour des statuts et de nouvelles formalités au registre - mieux vaut donc faire le bon choix dès le départ.\n\nQuatre options principales s'offrent aux fondateurs étrangers, du bureau virtuel à l'adresse personnelle. Comparez-les ci-dessous selon leur coût, ce qu'elles incluent et le profil de fondateur auquel elles correspondent, puis retrouvez les points à vérifier avant de signer un bail ou d'accepter une place en incubateur.",
       "addressGuide": {
         "comparison": {
           "eyebrow": "Comparatif",
@@ -321,7 +321,7 @@
             {
               "icon": "file-text",
               "title": "Un justificatif est obligatoire",
-              "description": "Quel que soit votre choix, un contrat de bail (lease agreement) ou un titre de propriété — à votre nom ou à celui de la future société — est exigé dans le dossier d'immatriculation déposé au tribunal du commerce.",
+              "description": "Quel que soit votre choix, un contrat de bail (lease agreement) ou un titre de propriété - à votre nom ou à celui de la future société - est exigé dans le dossier d'immatriculation déposé au tribunal du commerce.",
               "stepLink": 4,
               "stepLinkLabel": "Voir le dépôt du dossier"
             },
@@ -347,7 +347,7 @@
     "step4": {
       "title": "Enregistrer votre startup",
       "description": "L'immatriculation transforme votre projet en société légalement reconnue en Corée : capital déposé, nom réservé, statuts déposés au tribunal. Voici comment se déroule la procédure, étape par étape.",
-      "details": "Cette étape est le cœur administratif de votre projet : sans immatriculation, impossible d'ouvrir un compte bancaire d'entreprise, d'embaucher ou de facturer légalement. La procédure implique plusieurs administrations différentes — banque, KOTRA, tribunal de commerce — et chaque document obtenu sert de pièce justificative pour l'étape suivante.\n\nTrois phases se succèdent, du dépôt du capital jusqu'au dépôt des statuts au tribunal. Suivez-les dans l'ordre ci-dessous, préparez les documents requis à l'avance, et découvrez ce que vous obtenez à l'issue de la procédure.",
+      "details": "Cette étape est le cœur administratif de votre projet : sans immatriculation, impossible d'ouvrir un compte bancaire d'entreprise, d'embaucher ou de facturer légalement. La procédure implique plusieurs administrations différentes - banque, KOTRA, tribunal de commerce - et chaque document obtenu sert de pièce justificative pour l'étape suivante.\n\nTrois phases se succèdent, du dépôt du capital jusqu'au dépôt des statuts au tribunal. Suivez-les dans l'ordre ci-dessous, préparez les documents requis à l'avance, et découvrez ce que vous obtenez à l'issue de la procédure.",
       "registrationGuide": {
         "phases": {
           "eyebrow": "Le processus",
@@ -370,7 +370,7 @@
             {
               "icon": "search",
               "title": "Réservation du nom de société",
-              "description": "Vérifiez la disponibilité et réservez le nom de votre société auprès du registre du tribunal. Les noms doivent respecter les conventions coréennes et les classifications industrielles — une étape qui crée souvent des délais sans accompagnement professionnel.",
+              "description": "Vérifiez la disponibilité et réservez le nom de votre société auprès du registre du tribunal. Les noms doivent respecter les conventions coréennes et les classifications industrielles - une étape qui crée souvent des délais sans accompagnement professionnel.",
               "documents": [
                 "Nom de société conforme aux classifications industrielles coréennes",
                 "Confirmation de disponibilité auprès du registre"
@@ -427,7 +427,7 @@
         "outcome": {
           "eyebrow": "À l'arrivée",
           "title": "Ce que vous obtenez à l'issue de la procédure",
-          "subtitle": "Deux documents officiels qui établissent l'existence légale de votre entreprise — et que vous utiliserez immédiatement à l'étape suivante.",
+          "subtitle": "Deux documents officiels qui établissent l'existence légale de votre entreprise - et que vous utiliserez immédiatement à l'étape suivante.",
           "items": [
             {
               "icon": "id-card",
@@ -447,8 +447,8 @@
     },
     "step5": {
       "title": "Ouvrir un compte bancaire",
-      "description": "Une fois votre société immatriculée, il faut ouvrir un compte bancaire d'entreprise coréen pour y transférer le capital initial — une étape réputée délicate pour les fondateurs étrangers. Voici comment choisir votre banque et respecter les délais qui suivent.",
-      "details": "L'ouverture du compte bancaire d'entreprise transforme le capital déposé sur le compte temporaire en véritable trésorerie d'entreprise. Les banques coréennes appliquent des contrôles anti-blanchiment stricts — présence en agence souvent requise, documents à fournir en nombre — puis imposent des délais à respecter pour finaliser votre statut d'entreprise à capitaux étrangers auprès de KOTRA, au risque de pénalités si le délai est dépassé.\n\nCertaines banques coréennes sont nettement plus habituées aux dossiers de fondateurs étrangers que d'autres : comparez-les ci-dessous avant de choisir votre agence, puis suivez le calendrier des délais à respecter une fois votre compte ouvert.",
+      "description": "Une fois votre société immatriculée, il faut ouvrir un compte bancaire d'entreprise coréen pour y transférer le capital initial - une étape réputée délicate pour les fondateurs étrangers. Voici comment choisir votre banque et respecter les délais qui suivent.",
+      "details": "L'ouverture du compte bancaire d'entreprise transforme le capital déposé sur le compte temporaire en véritable trésorerie d'entreprise. Les banques coréennes appliquent des contrôles anti-blanchiment stricts - présence en agence souvent requise, documents à fournir en nombre - puis imposent des délais à respecter pour finaliser votre statut d'entreprise à capitaux étrangers auprès de KOTRA, au risque de pénalités si le délai est dépassé.\n\nCertaines banques coréennes sont nettement plus habituées aux dossiers de fondateurs étrangers que d'autres : comparez-les ci-dessous avant de choisir votre agence, puis suivez le calendrier des délais à respecter une fois votre compte ouvert.",
       "accountGuide": {
         "banks": {
           "eyebrow": "Comparatif",
@@ -500,13 +500,13 @@
         "timeline": {
           "eyebrow": "Calendrier",
           "title": "Les délais à respecter après le dépôt du capital",
-          "subtitle": "Une fois le compte d'entreprise ouvert, plusieurs échéances s'enchaînent — certaines avec des conséquences directes si elles sont dépassées.",
+          "subtitle": "Une fois le compte d'entreprise ouvert, plusieurs échéances s'enchaînent - certaines avec des conséquences directes si elles sont dépassées.",
           "items": [
             {
               "marker": "J0",
               "icon": "dollar-sign",
               "title": "Capital déjà déposé sur un compte temporaire",
-              "description": "Lors de la notification d'investissement, votre capital a été versé sur un compte temporaire ouvert au nom du futur dirigeant — c'est ce capital qui sera transféré sur le nouveau compte d'entreprise.",
+              "description": "Lors de la notification d'investissement, votre capital a été versé sur un compte temporaire ouvert au nom du futur dirigeant - c'est ce capital qui sera transféré sur le nouveau compte d'entreprise.",
               "stepLink": 4,
               "stepLinkLabel": "Revoir l'étape immatriculation"
             },
@@ -520,7 +520,7 @@
               "marker": "J+20 jours ouvrés",
               "icon": "lock",
               "title": "Fin des restrictions anti-blanchiment",
-              "description": "Pendant les 20 premiers jours ouvrés, les plafonds de virement sont réduits et l'ouverture d'un second compte dans une autre banque est bloquée — une mesure de contrôle standard des banques coréennes."
+              "description": "Pendant les 20 premiers jours ouvrés, les plafonds de virement sont réduits et l'ouverture d'un second compte dans une autre banque est bloquée - une mesure de contrôle standard des banques coréennes."
             },
             {
               "marker": "J+60 jours max",
@@ -535,7 +535,7 @@
     "step6": {
       "title": "S’enregistrer aux impôts",
       "description": "Une société immatriculée doit encore s'enregistrer auprès de l'administration fiscale coréenne avant de pouvoir facturer et déclarer ses impôts. Voici les formalités à accomplir et l'essentiel du système fiscal applicable à votre startup.",
-      "details": "Sans certificat d'enregistrement commercial (사업자등록증), votre société ne peut ni émettre de factures fiscales ni faire fonctionner pleinement son compte bancaire d'entreprise — c'est le dernier verrou administratif avant une activité normale. Les sociétés à capitaux étrangers doivent en plus désigner un agent fiscal coréen, chargé de préparer et déposer toutes leurs déclarations en coréen auprès du NTS.\n\nUne fois ces formalités accomplies, votre société entre dans le régime fiscal de droit commun : impôt sur les sociétés progressif, TVA à 10% et, sous conditions, une réduction d'impôt significative pour les jeunes entreprises. Retrouvez ci-dessous le détail de chaque point.",
+      "details": "Sans certificat d'enregistrement commercial (사업자등록증), votre société ne peut ni émettre de factures fiscales ni faire fonctionner pleinement son compte bancaire d'entreprise - c'est le dernier verrou administratif avant une activité normale. Les sociétés à capitaux étrangers doivent en plus désigner un agent fiscal coréen, chargé de préparer et déposer toutes leurs déclarations en coréen auprès du NTS.\n\nUne fois ces formalités accomplies, votre société entre dans le régime fiscal de droit commun : impôt sur les sociétés progressif, TVA à 10% et, sous conditions, une réduction d'impôt significative pour les jeunes entreprises. Retrouvez ci-dessous le détail de chaque point.",
       "taxGuide": {
         "formalities": {
           "eyebrow": "Formalités",
@@ -572,7 +572,7 @@
           "eyebrow": "Fiscalité",
           "title": "Le barème de l'impôt sur les sociétés (법인세)",
           "subtitle": "Le taux applicable dépend du bénéfice imposable annuel de votre société, auquel s'ajoute une surtaxe locale égale à 10% du taux national.",
-          "note": "Barème en vigueur depuis le 1ᵉʳ janvier 2026 — chaque tranche a augmenté d'un point par rapport au barème précédent.",
+          "note": "Barème en vigueur depuis le 1ᵉʳ janvier 2026 - chaque tranche a augmenté d'un point par rapport au barème précédent.",
           "items": [
             {
               "rate": "10%",
@@ -609,7 +609,7 @@
               "icon": "trending-down",
               "value": "50 à 100%",
               "label": "Réduction d'impôt startup",
-              "description": "Pendant les 5 premières années, selon la localisation de votre siège social — plafonnée à 500 millions KRW de réduction cumulée.",
+              "description": "Pendant les 5 premières années, selon la localisation de votre siège social - plafonnée à 500 millions KRW de réduction cumulée.",
               "stepLink": 3,
               "stepLinkLabel": "Voir les options d'adresse"
             },
@@ -631,7 +631,7 @@
         "pathways": {
           "eyebrow": "Comparatif",
           "title": "Trois portes d'entrée pour financer votre startup",
-          "subtitle": "Chaque programme cible un profil différent — choisissez celui qui correspond à votre stade, votre secteur et vos investisseurs déjà en place.",
+          "subtitle": "Chaque programme cible un profil différent - choisissez celui qui correspond à votre stade, votre secteur et vos investisseurs déjà en place.",
           "items": [
             {
               "icon": "globe",
@@ -654,7 +654,7 @@
               "type": "rnd",
               "name": "TIPS",
               "tag": "Subvention R&D",
-              "description": "Une subvention de R&D et de commercialisation pouvant dépasser 100 millions KRW par entreprise, au sein d'une enveloppe nationale portée à 5 milliards KRW. L'accès n'est pas direct : il faut être recommandé par un opérateur TIPS agréé — un fonds d'investissement ou un accélérateur partenaire du programme.",
+              "description": "Une subvention de R&D et de commercialisation pouvant dépasser 100 millions KRW par entreprise, au sein d'une enveloppe nationale portée à 5 milliards KRW. L'accès n'est pas direct : il faut être recommandé par un opérateur TIPS agréé - un fonds d'investissement ou un accélérateur partenaire du programme.",
               "points": [
                 "Startup de moins de 7 ans recommandée par un opérateur TIPS agréé",
                 "Pour les startups étrangères : au moins 1 million USD déjà levés auprès d'investisseurs étrangers",
@@ -686,12 +686,12 @@
         "checklist": {
           "eyebrow": "À vérifier",
           "title": "Quatre critères avant de candidater",
-          "subtitle": "Ces programmes partagent des conditions d'accès communes — autant les anticiper avant de vous lancer dans un dossier.",
+          "subtitle": "Ces programmes partagent des conditions d'accès communes - autant les anticiper avant de vous lancer dans un dossier.",
           "items": [
             {
               "icon": "shield",
               "title": "Statut d'investisseur étranger (FDI) enregistré",
-              "description": "La plupart de ces programmes — et les avantages fiscaux qui les accompagnent — supposent que votre société a le statut d'entreprise à capitaux étrangers (FDI), enregistré auprès de KOTRA.",
+              "description": "La plupart de ces programmes - et les avantages fiscaux qui les accompagnent - supposent que votre société a le statut d'entreprise à capitaux étrangers (FDI), enregistré auprès de KOTRA.",
               "stepLink": 5,
               "stepLinkLabel": "Revoir l'enregistrement FDI"
             },
@@ -719,12 +719,12 @@
     "step8": {
       "title": "Souscrire aux assurances",
       "description": "Dès votre première embauche, votre société doit s'inscrire aux quatre assurances sociales obligatoires coréennes (4대보험) : retraite, santé, chômage et accidents du travail.",
-      "details": "L'inscription aux 4대보험 doit être effectuée dans les 14 jours suivant l'embauche pour l'assurance maladie, et au plus tard le 15 du mois suivant pour les trois autres régimes — un oubli expose à des rappels de cotisations rétroactifs et, pour certains régimes, à des pénalités. Les taux ont par ailleurs été revalorisés au 1ᵉʳ janvier 2026, avec une hausse de la cotisation retraite qui se poursuivra chaque année jusqu'en 2033.\n\nVoici comment se répartit chacune des quatre cotisations entre l'employeur et le salarié, suivi de trois repères de droit du travail à connaître avant votre première embauche.",
+      "details": "L'inscription aux 4대보험 doit être effectuée dans les 14 jours suivant l'embauche pour l'assurance maladie, et au plus tard le 15 du mois suivant pour les trois autres régimes - un oubli expose à des rappels de cotisations rétroactifs et, pour certains régimes, à des pénalités. Les taux ont par ailleurs été revalorisés au 1ᵉʳ janvier 2026, avec une hausse de la cotisation retraite qui se poursuivra chaque année jusqu'en 2033.\n\nVoici comment se répartit chacune des quatre cotisations entre l'employeur et le salarié, suivi de trois repères de droit du travail à connaître avant votre première embauche.",
       "insuranceGuide": {
         "contributions": {
           "eyebrow": "Cotisations",
           "title": "Les 4 assurances sociales obligatoires (4대보험)",
-          "subtitle": "Chacune se répartit différemment entre l'employeur et le salarié — à intégrer dans le calcul de votre coût salarial total.",
+          "subtitle": "Chacune se répartit différemment entre l'employeur et le salarié - à intégrer dans le calcul de votre coût salarial total.",
           "items": [
             {
               "icon": "trending-up",

@@ -87,7 +87,7 @@
                 "Justificante de recursos financieros suficientes",
                 "No se requiere ningún registro de sociedad para obtenerla"
               ],
-              "watchOut": "No permite ejercer una actividad comercial remunerada — solo preparación."
+              "watchOut": "No permite ejercer una actividad comercial remunerada - solo preparación."
             },
             {
               "icon": "star",
@@ -111,7 +111,7 @@
           "specialCase": {
             "icon": "graduation",
             "title": "¿Eres estudiante en Corea (visa D-2)?",
-            "description": "Si tu proyecto nació durante tus estudios, numerosas universidades —entre ellas PNU— cuentan con una fundación de cooperación universidad-industria que puede acompañarte para pasar del estatus de estudiante al de fundador D-8-4, sin salir del país."
+            "description": "Si tu proyecto nació durante tus estudios, numerosas universidades -entre ellas PNU- cuentan con una fundación de cooperación universidad-industria que puede acompañarte para pasar del estatus de estudiante al de fundador D-8-4, sin salir del país."
           }
         },
         "timeline": {
@@ -137,7 +137,7 @@
             },
             {
               "title": "Registro de la sociedad",
-              "description": "Con la carta de recomendación de KISED en mano, puedes finalizar el registro legal de tu sociedad ante el tribunal de comercio — capital social, estatutos, presentación del expediente.",
+              "description": "Con la carta de recomendación de KISED en mano, puedes finalizar el registro legal de tu sociedad ante el tribunal de comercio - capital social, estatutos, presentación del expediente.",
               "stepLink": 4,
               "stepLinkLabel": "Ver el detalle del registro"
             },
@@ -265,7 +265,7 @@
     "step3": {
       "title": "Asegurar una dirección comercial",
       "description": "Se requiere una dirección registrada en Corea.",
-      "details": "Esta dirección no es un simple detalle administrativo: inscrita en los estatutos presentados ante el tribunal de comercio, se convierte en tu 본점 (sede social oficial) y condiciona dónde puede tu sociedad ejercer legalmente su actividad. Modificarla después del registro implica una actualización de los estatutos y nuevos trámites en el registro — por lo que es mejor elegir bien desde el principio.\n\nCuatro opciones principales se ofrecen a los fundadores extranjeros, desde la oficina virtual hasta la dirección personal. Compáralas a continuación según su costo, lo que incluyen y el perfil de fundador al que corresponden, y luego revisa los puntos a verificar antes de firmar un contrato de arrendamiento o de aceptar una plaza en una incubadora.",
+      "details": "Esta dirección no es un simple detalle administrativo: inscrita en los estatutos presentados ante el tribunal de comercio, se convierte en tu 본점 (sede social oficial) y condiciona dónde puede tu sociedad ejercer legalmente su actividad. Modificarla después del registro implica una actualización de los estatutos y nuevos trámites en el registro - por lo que es mejor elegir bien desde el principio.\n\nCuatro opciones principales se ofrecen a los fundadores extranjeros, desde la oficina virtual hasta la dirección personal. Compáralas a continuación según su costo, lo que incluyen y el perfil de fundador al que corresponden, y luego revisa los puntos a verificar antes de firmar un contrato de arrendamiento o de aceptar una plaza en una incubadora.",
       "addressGuide": {
         "comparison": {
           "eyebrow": "Comparativa",
@@ -321,7 +321,7 @@
             {
               "icon": "file-text",
               "title": "Se exige un justificante",
-              "description": "Sea cual sea tu elección, se exige un contrato de arrendamiento (lease agreement) o un título de propiedad —a tu nombre o al de la futura sociedad— en el expediente de registro presentado ante el tribunal de comercio.",
+              "description": "Sea cual sea tu elección, se exige un contrato de arrendamiento (lease agreement) o un título de propiedad -a tu nombre o al de la futura sociedad- en el expediente de registro presentado ante el tribunal de comercio.",
               "stepLink": 4,
               "stepLinkLabel": "Ver la presentación del expediente"
             },
@@ -347,7 +347,7 @@
     "step4": {
       "title": "Registrar tu startup",
       "description": "Proceso oficial documentos necesarios y plazos.",
-      "details": "Esta etapa es el núcleo administrativo de tu proyecto: sin el registro, es imposible abrir una cuenta bancaria empresarial, contratar personal o facturar legalmente. El procedimiento involucra a varias administraciones distintas —banco, KOTRA, tribunal de comercio— y cada documento obtenido sirve como justificante para la etapa siguiente.\n\nSe suceden tres fases, desde el depósito del capital hasta la presentación de los estatutos ante el tribunal. Síguelas en el orden indicado a continuación, prepara los documentos requeridos con antelación y descubre qué obtienes al finalizar el procedimiento.",
+      "details": "Esta etapa es el núcleo administrativo de tu proyecto: sin el registro, es imposible abrir una cuenta bancaria empresarial, contratar personal o facturar legalmente. El procedimiento involucra a varias administraciones distintas -banco, KOTRA, tribunal de comercio- y cada documento obtenido sirve como justificante para la etapa siguiente.\n\nSe suceden tres fases, desde el depósito del capital hasta la presentación de los estatutos ante el tribunal. Síguelas en el orden indicado a continuación, prepara los documentos requeridos con antelación y descubre qué obtienes al finalizar el procedimiento.",
       "registrationGuide": {
         "phases": {
           "eyebrow": "El proceso",
@@ -370,7 +370,7 @@
             {
               "icon": "search",
               "title": "Reserva del nombre de la sociedad",
-              "description": "Verifica la disponibilidad y reserva el nombre de tu sociedad ante el registro del tribunal. Los nombres deben respetar las convenciones coreanas y las clasificaciones industriales — una etapa que a menudo genera demoras sin acompañamiento profesional.",
+              "description": "Verifica la disponibilidad y reserva el nombre de tu sociedad ante el registro del tribunal. Los nombres deben respetar las convenciones coreanas y las clasificaciones industriales - una etapa que a menudo genera demoras sin acompañamiento profesional.",
               "documents": [
                 "Nombre de sociedad conforme a las clasificaciones industriales coreanas",
                 "Confirmación de disponibilidad ante el registro"
@@ -427,7 +427,7 @@
         "outcome": {
           "eyebrow": "Al final",
           "title": "Lo que obtienes al finalizar el procedimiento",
-          "subtitle": "Dos documentos oficiales que establecen la existencia legal de tu empresa — y que utilizarás de inmediato en la etapa siguiente.",
+          "subtitle": "Dos documentos oficiales que establecen la existencia legal de tu empresa - y que utilizarás de inmediato en la etapa siguiente.",
           "items": [
             {
               "icon": "id-card",
@@ -448,7 +448,7 @@
     "step5": {
       "title": "Abrir una cuenta bancaria",
       "description": "El paso más complicado para extranjeros.",
-      "details": "La apertura de la cuenta bancaria empresarial transforma el capital depositado en la cuenta temporal en verdadera tesorería de la empresa. Los bancos coreanos aplican controles antilavado estrictos —presencia en sucursal a menudo requerida, numerosos documentos a aportar— y luego imponen plazos que deben respetarse para finalizar tu estatus de empresa de capital extranjero ante KOTRA, con riesgo de sanciones si se supera el plazo.\n\nAlgunos bancos coreanos están claramente más acostumbrados a los expedientes de fundadores extranjeros que otros: compáralos a continuación antes de elegir tu sucursal, y luego sigue el calendario de plazos que deben respetarse una vez abierta tu cuenta.",
+      "details": "La apertura de la cuenta bancaria empresarial transforma el capital depositado en la cuenta temporal en verdadera tesorería de la empresa. Los bancos coreanos aplican controles antilavado estrictos -presencia en sucursal a menudo requerida, numerosos documentos a aportar- y luego imponen plazos que deben respetarse para finalizar tu estatus de empresa de capital extranjero ante KOTRA, con riesgo de sanciones si se supera el plazo.\n\nAlgunos bancos coreanos están claramente más acostumbrados a los expedientes de fundadores extranjeros que otros: compáralos a continuación antes de elegir tu sucursal, y luego sigue el calendario de plazos que deben respetarse una vez abierta tu cuenta.",
       "accountGuide": {
         "banks": {
           "eyebrow": "Comparativa",
@@ -500,13 +500,13 @@
         "timeline": {
           "eyebrow": "Calendario",
           "title": "Los plazos a respetar tras el depósito del capital",
-          "subtitle": "Una vez abierta la cuenta empresarial, se encadenan varios plazos — algunos con consecuencias directas si se exceden.",
+          "subtitle": "Una vez abierta la cuenta empresarial, se encadenan varios plazos - algunos con consecuencias directas si se exceden.",
           "items": [
             {
               "marker": "D0",
               "icon": "dollar-sign",
               "title": "Capital ya depositado en una cuenta temporal",
-              "description": "Durante la notificación de inversión, tu capital se abonó en una cuenta temporal abierta a nombre del futuro directivo — es ese capital el que se transferirá a la nueva cuenta empresarial.",
+              "description": "Durante la notificación de inversión, tu capital se abonó en una cuenta temporal abierta a nombre del futuro directivo - es ese capital el que se transferirá a la nueva cuenta empresarial.",
               "stepLink": 4,
               "stepLinkLabel": "Revisar la etapa de registro"
             },
@@ -520,7 +520,7 @@
               "marker": "D+20 días hábiles",
               "icon": "lock",
               "title": "Fin de las restricciones antilavado",
-              "description": "Durante los primeros 20 días hábiles, los límites de transferencia se reducen y se bloquea la apertura de una segunda cuenta en otro banco — una medida de control estándar de los bancos coreanos."
+              "description": "Durante los primeros 20 días hábiles, los límites de transferencia se reducen y se bloquea la apertura de una segunda cuenta en otro banco - una medida de control estándar de los bancos coreanos."
             },
             {
               "marker": "D+60 días máx.",
@@ -535,7 +535,7 @@
     "step6": {
       "title": "Registrarse en impuestos",
       "description": "Resumen del sistema fiscal coreano.",
-      "details": "Sin el certificado de registro comercial (사업자등록증), tu sociedad no puede emitir facturas fiscales ni hacer funcionar plenamente su cuenta bancaria empresarial — es el último candado administrativo antes de una actividad normal. Las sociedades de capital extranjero deben además designar un agente fiscal coreano, encargado de preparar y presentar todas sus declaraciones en coreano ante el NTS.\n\nUna vez cumplidos estos trámites, tu sociedad entra en el régimen fiscal de derecho común: impuesto sobre sociedades progresivo, IVA del 10% y, bajo ciertas condiciones, una reducción de impuestos significativa para las empresas jóvenes. A continuación encontrarás el detalle de cada punto.",
+      "details": "Sin el certificado de registro comercial (사업자등록증), tu sociedad no puede emitir facturas fiscales ni hacer funcionar plenamente su cuenta bancaria empresarial - es el último candado administrativo antes de una actividad normal. Las sociedades de capital extranjero deben además designar un agente fiscal coreano, encargado de preparar y presentar todas sus declaraciones en coreano ante el NTS.\n\nUna vez cumplidos estos trámites, tu sociedad entra en el régimen fiscal de derecho común: impuesto sobre sociedades progresivo, IVA del 10% y, bajo ciertas condiciones, una reducción de impuestos significativa para las empresas jóvenes. A continuación encontrarás el detalle de cada punto.",
       "taxGuide": {
         "formalities": {
           "eyebrow": "Trámites",
@@ -572,7 +572,7 @@
           "eyebrow": "Fiscalidad",
           "title": "El baremo del impuesto sobre sociedades (법인세)",
           "subtitle": "La tasa aplicable depende del beneficio imponible anual de tu sociedad, al que se añade un recargo local equivalente al 10% de la tasa nacional.",
-          "note": "Baremo vigente desde el 1 de enero de 2026 — cada tramo aumentó un punto respecto al baremo anterior.",
+          "note": "Baremo vigente desde el 1 de enero de 2026 - cada tramo aumentó un punto respecto al baremo anterior.",
           "items": [
             {
               "rate": "10%",
@@ -609,7 +609,7 @@
               "icon": "trending-down",
               "value": "50 a 100%",
               "label": "Reducción de impuestos para startups",
-              "description": "Durante los primeros 5 años, según la ubicación de tu sede social — con un tope de 500 millones de KRW de reducción acumulada.",
+              "description": "Durante los primeros 5 años, según la ubicación de tu sede social - con un tope de 500 millones de KRW de reducción acumulada.",
               "stepLink": 3,
               "stepLinkLabel": "Ver las opciones de dirección"
             },
@@ -631,7 +631,7 @@
         "pathways": {
           "eyebrow": "Comparativa",
           "title": "Tres puertas de entrada para financiar tu startup",
-          "subtitle": "Cada programa se dirige a un perfil distinto — elige el que corresponda a tu etapa, tu sector y tus inversionistas ya presentes.",
+          "subtitle": "Cada programa se dirige a un perfil distinto - elige el que corresponda a tu etapa, tu sector y tus inversionistas ya presentes.",
           "items": [
             {
               "icon": "globe",
@@ -654,7 +654,7 @@
               "type": "rnd",
               "name": "TIPS",
               "tag": "Subvención I+D",
-              "description": "Una subvención de I+D y de comercialización que puede superar los 100 millones de KRW por empresa, dentro de una bolsa nacional ampliada a 5.000 millones de KRW. El acceso no es directo: es necesario contar con la recomendación de un operador TIPS autorizado — un fondo de inversión o una aceleradora asociada al programa.",
+              "description": "Una subvención de I+D y de comercialización que puede superar los 100 millones de KRW por empresa, dentro de una bolsa nacional ampliada a 5.000 millones de KRW. El acceso no es directo: es necesario contar con la recomendación de un operador TIPS autorizado - un fondo de inversión o una aceleradora asociada al programa.",
               "points": [
                 "Startup de menos de 7 años recomendada por un operador TIPS autorizado",
                 "Para las startups extranjeras: al menos 1 millón de USD ya captados de inversionistas extranjeros",
@@ -686,12 +686,12 @@
         "checklist": {
           "eyebrow": "A verificar",
           "title": "Cuatro criterios antes de postular",
-          "subtitle": "Estos programas comparten condiciones de acceso comunes — conviene anticiparlas antes de iniciar una solicitud.",
+          "subtitle": "Estos programas comparten condiciones de acceso comunes - conviene anticiparlas antes de iniciar una solicitud.",
           "items": [
             {
               "icon": "shield",
               "title": "Estatus de inversionista extranjero (FDI) registrado",
-              "description": "La mayoría de estos programas —y las ventajas fiscales que los acompañan— suponen que tu sociedad tenga el estatus de empresa de capital extranjero (FDI), registrado ante KOTRA.",
+              "description": "La mayoría de estos programas -y las ventajas fiscales que los acompañan- suponen que tu sociedad tenga el estatus de empresa de capital extranjero (FDI), registrado ante KOTRA.",
               "stepLink": 5,
               "stepLinkLabel": "Revisar el registro FDI"
             },
@@ -719,12 +719,12 @@
     "step8": {
       "title": "Contratar seguros",
       "description": "Obligatorio al contratar empleados.",
-      "details": "La inscripción a los 4대보험 debe realizarse dentro de los 14 días siguientes a la contratación para el seguro de salud, y a más tardar el día 15 del mes siguiente para los otros tres regímenes — un olvido expone a recargos de cotizaciones retroactivos y, en algunos regímenes, a sanciones. Las tasas, además, se revalorizaron el 1 de enero de 2026, con un aumento de la cotización de jubilación que continuará cada año hasta 2033.\n\nA continuación se muestra cómo se distribuye cada una de las cuatro cotizaciones entre el empleador y el trabajador, seguido de tres referencias de derecho laboral que debes conocer antes de tu primera contratación.",
+      "details": "La inscripción a los 4대보험 debe realizarse dentro de los 14 días siguientes a la contratación para el seguro de salud, y a más tardar el día 15 del mes siguiente para los otros tres regímenes - un olvido expone a recargos de cotizaciones retroactivos y, en algunos regímenes, a sanciones. Las tasas, además, se revalorizaron el 1 de enero de 2026, con un aumento de la cotización de jubilación que continuará cada año hasta 2033.\n\nA continuación se muestra cómo se distribuye cada una de las cuatro cotizaciones entre el empleador y el trabajador, seguido de tres referencias de derecho laboral que debes conocer antes de tu primera contratación.",
       "insuranceGuide": {
         "contributions": {
           "eyebrow": "Cotizaciones",
           "title": "Los 4 seguros sociales obligatorios (4대보험)",
-          "subtitle": "Cada uno se distribuye de forma diferente entre el empleador y el trabajador — a integrar en el cálculo de tu costo salarial total.",
+          "subtitle": "Cada uno se distribuye de forma diferente entre el empleador y el trabajador - a integrar en el cálculo de tu costo salarial total.",
           "items": [
             {
               "icon": "trending-up",
