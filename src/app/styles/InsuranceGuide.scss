@@ -281,12 +281,12 @@ $breakpoint-tablet: 1024px;
 
     &__panel-body {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 32px;
         margin-bottom: 24px;
 
         @media (max-width: $breakpoint-mobile) {
-            grid-template-columns: 1fr;
+            grid-template-columns: minmax(0, 1fr);
             gap: 20px;
         }
     }
@@ -326,15 +326,15 @@ $breakpoint-tablet: 1024px;
 // ─── Key facts cards ────────────────────────────────────────────────────────────
 .insurance-facts {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
 
     @media (max-width: $breakpoint-tablet) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     @media (max-width: $breakpoint-mobile) {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 

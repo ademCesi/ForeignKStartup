@@ -145,11 +145,11 @@ $breakpoint-tablet: 1024px;
 // ─── Formalities columns ─────────────────────────────────────────────────────────
 .tax-formalities {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
 
     @media (max-width: $breakpoint-tablet) {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     &__column {
@@ -365,11 +365,11 @@ $breakpoint-tablet: 1024px;
 // ─── Key stat cards ─────────────────────────────────────────────────────────────
 .tax-stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 
     @media (max-width: $breakpoint-tablet) {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 
