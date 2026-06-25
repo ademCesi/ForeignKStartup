@@ -5,50 +5,50 @@ import React from "react";
 // explanation and a link to the official resource when one exists.
 export const GLOSSARY = {
     "KISED": {
-        definition: "Korea Institute of Startup & Entrepreneurship Development : l'agence publique qui accompagne les fondateurs étrangers et gère le programme OASIS.",
+        definition: "Korea Institute of Startup & Entrepreneurship Development: the public agency that supports foreign founders and runs the OASIS program.",
         url: "https://www.kised.or.kr"
     },
     "OASIS": {
-        definition: "One-stop Assistance Service for International Startups : la plateforme de KISED qui évalue votre dossier par points pour le visa D-8-4.",
+        definition: "One-stop Assistance Service for International Startups: KISED's platform that scores your application on a points-based scale for the D-8-4 visa.",
         url: "https://www.kised.or.kr"
     },
     "K-Startup Grand Challenge": {
-        definition: "Programme d'accélération du gouvernement coréen pour startups étrangères, avec recommandation directe vers le visa D-8-4S.",
+        definition: "Acceleration program run by the Korean government for foreign startups, with a direct recommendation toward the D-8-4S visa.",
         url: "https://www.k-startupgc.org"
     },
     "TIPS": {
-        definition: "Tech Incubator Program for Startup : programme coréen d'investissement et d'accompagnement technique pour les startups deep-tech.",
+        definition: "Tech Incubator Program for Startup: a Korean investment and technical support program for deep-tech startups.",
         url: "https://www.kised.or.kr/menu.es?mid=a20209040000"
     },
     "KOSME": {
-        definition: "Korea SMEs and Startups Agency (중소벤처기업진흥공단) : l'agence publique qui distribue les prêts à taux préférentiel (정책자금) aux PME et startups coréennes.",
+        definition: "Korea SMEs and Startups Agency (중소벤처기업진흥공단): the public agency that distributes preferential-rate loans (정책자금) to Korean SMEs and startups.",
         url: "https://www.kosme.or.kr"
     },
     "Born2Global": {
-        definition: "Centre coréen d'accélération à l'international qui aide les startups étrangères à se développer sur le marché coréen et mondial."
+        definition: "Korean center for international acceleration that helps foreign startups grow in the Korean and global markets."
     },
     "ARC": {
-        definition: "Alien Registration Card : la carte de résident étranger, à demander dans les 90 jours suivant votre arrivée en Corée.",
+        definition: "Alien Registration Card: the foreign resident card, to be applied for within 90 days of your arrival in Korea.",
         url: "https://www.hikorea.go.kr"
     },
     "Start-Biz Online": {
-        definition: "Le portail officiel coréen de constitution de société en ligne (법인설립시스템) : il permet de vérifier et réserver le nom de votre société, préparer les statuts puis transmettre le dossier d'immatriculation au tribunal du commerce.",
+        definition: "The official Korean online company incorporation portal (법인설립시스템): it lets you check and reserve your company name, prepare the articles of incorporation, and then submit the registration filing to the commercial court.",
         url: "https://www.startbiz.go.kr"
     },
     "Internet Registry Office": {
-        definition: "Le registre du commerce en ligne de la Cour suprême de Corée (인터넷등기소) : votre société y est officiellement immatriculée et vous pouvez y obtenir votre certificat d'immatriculation (법인등기사항증명서).",
+        definition: "The online commercial registry of the Supreme Court of Korea (인터넷등기소): your company is officially registered there, and you can obtain your certificate of incorporation (법인등기사항증명서).",
         url: "https://www.iros.go.kr"
     },
     "Hometax": {
-        definition: "Le portail du Service national des impôts coréen (국세청) : il permet d'enregistrer votre société auprès de l'administration fiscale et de gérer vos déclarations de TVA et d'impôt sur les sociétés.",
+        definition: "The portal of Korea's National Tax Service (국세청): it lets you register your company with the tax administration and manage your VAT and corporate tax filings.",
         url: "https://www.hometax.go.kr"
     },
     "KOTRA": {
-        definition: "Korea Trade-Investment Promotion Agency : son pôle Invest Korea / Foreign Investor Support Center accompagne gratuitement les investisseurs étrangers pour la notification FDI et la création de leur société.",
+        definition: "Korea Trade-Investment Promotion Agency: its Invest Korea / Foreign Investor Support Center division provides free support to foreign investors for FDI notification and company setup.",
         url: "https://www.investkorea.org"
     },
     "Global Startup Center": {
-        definition: "Centre gratuit pour fondateurs étrangers à Gangnam (Séoul), opéré par KISED et le ministère des PME et Startups : espace de coworking, accompagnement à l'immatriculation et au visa, mise en réseau.",
+        definition: "Free center for foreign founders in Gangnam (Seoul), operated by KISED and the Ministry of SMEs and Startups: coworking space, support with registration and visas, and networking.",
         url: "https://www.startup-korea.com"
     }
 };

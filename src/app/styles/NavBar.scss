@@ -60,17 +60,6 @@ $breakpoint-mobile: 768px;
     flex-shrink: 0;
   }
 
-  &__logo-image {
-    height: 32px;
-    width: auto;
-    padding-right: 4px;
-    flex-shrink: 0;
-
-    @media (max-width: $breakpoint-mobile) {
-      height: 24px;
-    }
-  }
-
   &__logo-foreign {
     font-family: $font-display;
     font-size: 1.15rem;
@@ -108,85 +97,6 @@ $breakpoint-mobile: 768px;
     }
   }
 
-  // ─── Links ──────────────────────────────────────────────────────────────────
-  &__links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex: 1;
-    justify-content: center;
-
-    @media (max-width: $breakpoint-mobile) {
-      display: none;
-      position: fixed;
-      top: $nav-height;
-      left: 0;
-      right: 0;
-      background: $color-bg;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 16px 24px 24px;
-      border-bottom: 1px solid $color-border;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-      gap: 4px;
-
-      &--open {
-        display: flex;
-      }
-    }
-  }
-
-  &__link-item {
-    @media (max-width: $breakpoint-mobile) {
-      width: 100%;
-    }
-  }
-
-  &__link {
-    font-family: $font-body;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: $color-text-muted;
-    text-decoration: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    letter-spacing: 0.02em;
-    transition: color $transition, background $transition;
-    display: block;
-
-    &:hover {
-      color: $color-primary;
-      background: rgba($color-primary, 0.05);
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-      padding: 12px 8px;
-      font-size: 1rem;
-      border-bottom: 1px solid $color-border;
-      border-radius: 0;
-
-      &:hover {
-        background: transparent;
-        color: $color-primary;
-      }
-    }
-  }
-
-  // ─── Right side ─────────────────────────────────────────────────────────────
-  &__right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    flex-shrink: 0;
-
-    @media (max-width: $breakpoint-mobile) {
-      gap: 8px;
-    }
-  }
-
   // ─── Language dropdown ──────────────────────────────────────────────────────
   &__lang {
     position: relative;
@@ -220,7 +130,7 @@ $breakpoint-mobile: 768px;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     }
 
-    // Sur mobile, cacher le label et ne garder que le code
+    // On mobile, hide the label and keep only the code
     @media (max-width: $breakpoint-mobile) {
       padding: 6px 8px;
     }
@@ -267,7 +177,7 @@ $breakpoint-mobile: 768px;
     z-index: 100;
     animation: dropdownFade 0.15s ease;
 
-    // S'assurer que le dropdown reste dans l'écran sur mobile
+    // Keep the dropdown within the viewport on mobile
     @media (max-width: $breakpoint-mobile) {
       right: 0;
       left: auto;
@@ -330,62 +240,6 @@ $breakpoint-mobile: 768px;
     to {
       opacity: 1;
       transform: translateY(0);
-    }
-  }
-
-  // ─── Burger ─────────────────────────────────────────────────────────────────
-  &__burger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 36px;
-    height: 36px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-
-    span {
-      display: block;
-      height: 2px;
-      background: $color-primary;
-      border-radius: 2px;
-      transition: transform $transition, opacity $transition, width $transition;
-      transform-origin: center;
-
-      &:nth-child(1) {
-        width: 22px;
-      }
-
-      &:nth-child(2) {
-        width: 16px;
-      }
-
-      &:nth-child(3) {
-        width: 22px;
-      }
-    }
-
-    &--open span {
-      &:nth-child(1) {
-        width: 20px;
-        transform: translateY(7px) rotate(45deg);
-      }
-
-      &:nth-child(2) {
-        opacity: 0;
-        width: 0;
-      }
-
-      &:nth-child(3) {
-        width: 20px;
-        transform: translateY(-7px) rotate(-45deg);
-      }
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-      display: flex;
     }
   }
 }

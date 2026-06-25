@@ -145,11 +145,11 @@ $breakpoint-tablet: 1024px;
 // ─── Bank cards ─────────────────────────────────────────────────────────────────
 .account-banks {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
 
     @media (max-width: $breakpoint-tablet) {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 
@@ -170,6 +170,10 @@ $breakpoint-tablet: 1024px;
         align-items: center;
         gap: 16px;
         margin-bottom: 16px;
+
+        > div {
+            min-width: 0;
+        }
 
         h3 {
             font-family: $font-display;
@@ -198,6 +202,7 @@ $breakpoint-tablet: 1024px;
     }
 
     &__tag {
+        display: inline-block;
         font-family: $font-body;
         font-size: 0.7rem;
         font-weight: 700;
@@ -207,7 +212,6 @@ $breakpoint-tablet: 1024px;
         background: rgba($color-accent, 0.1);
         padding: 4px 10px;
         border-radius: 100px;
-        white-space: nowrap;
     }
 
     &__description {
@@ -246,7 +250,7 @@ $breakpoint-tablet: 1024px;
     }
 }
 
-// ─── Deadline timeline (frise chronologique en tabs) ───────────────────────────
+// ─── Deadline timeline (tabbed timeline) ───────────────────────────────────────
 .account-timeline-tabs {
 
     &__track {

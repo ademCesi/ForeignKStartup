@@ -4,7 +4,6 @@ import Home from './pages/Home';
 import StepPage from './pages/StepPage';
 import PrivacyPage from './pages/PrivacyPage';
 import EmailPrivacyPage from './pages/EmailPrivacyPage';
-import './App.scss';
 
 function App() {
   return (

@@ -78,7 +78,7 @@ const Icon = ({ name }) => {
 };
 
 const RegistrationGuide = () => {
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
     const data = i18n.getResourceBundle(i18n.language, "translation")?.roadmap?.step4?.registrationGuide;
 
     if (!data) return null;
@@ -110,7 +110,7 @@ const RegistrationGuide = () => {
                                             <Icon name={phase.icon} />
                                         </div>
                                         <div>
-                                            <p className="registration-phase__step-label">Étape {index + 1}</p>
+                                            <p className="registration-phase__step-label">{t("stepPage.eyebrow")} {index + 1}</p>
                                             <h3>{withGlossary(phase.title)}</h3>
                                         </div>
                                     </div>

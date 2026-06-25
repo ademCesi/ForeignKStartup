@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import logoPNU from "../assets/images/logoPNU.png";
 import "../styles/NavBar.scss";
 
 const NavBar = () => {
