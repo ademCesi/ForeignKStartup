@@ -53,6 +53,7 @@ export default function RoadmapScreen() {
   return (
     <ThemedView style={styles.container}>
       <SafeAreaView style={styles.safeArea}>
+        <ThemedText type="eyebrow">{t('roadmap.eyebrow')}</ThemedText>
         <ThemedText type="title" style={styles.title}>
           {t('roadmap.title')}
         </ThemedText>
@@ -75,11 +76,17 @@ export default function RoadmapScreen() {
               contentContainerStyle={styles.list}
               renderItem={({ item }) => (
                 <Link href={{ pathname: '/step/[id]', params: { id: item.id } }} asChild>
-                  <Pressable style={{ ...styles.row, backgroundColor: theme.backgroundElement }}>
+                  <Pressable
+                    style={{
+                      ...styles.row,
+                      backgroundColor: theme.surface,
+                      borderColor: theme.border,
+                      shadowColor: theme.primary,
+                    }}>
                     <Ionicons
                       name={item.status === 'done' ? 'checkbox' : 'square-outline'}
                       size={22}
-                      color={item.status === 'done' ? theme.text : theme.textSecondary}
+                      color={item.status === 'done' ? theme.accent : theme.textSecondary}
                     />
                     <ThemedText style={styles.rowText}>
                       {item.step_order}. {item.title}
@@ -97,10 +104,21 @@ export default function RoadmapScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  safeArea: { flex: 1, paddingHorizontal: 20, gap: 8 },
-  title: { fontSize: 28, marginTop: 8 },
+  safeArea: { flex: 1, paddingHorizontal: 20, gap: 6 },
+  title: { marginTop: 2, marginBottom: 4 },
   hint: { marginTop: 4 },
   list: { gap: 10, paddingVertical: 12 },
-  row: { flexDirection: 'row', alignItems: 'center', gap: 12, padding: 14, borderRadius: 12 },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    padding: 14,
+    borderRadius: 14,
+    borderWidth: 1,
+    shadowOpacity: 0.05,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 1,
+  },
   rowText: { flex: 1 },
 });

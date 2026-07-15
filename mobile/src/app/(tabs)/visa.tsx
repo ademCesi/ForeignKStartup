@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { Button } from '@/components/button';
+import { Card } from '@/components/card';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { useTheme } from '@/hooks/use-theme';
@@ -73,6 +75,7 @@ export default function VisaScreen() {
     <ThemedView style={styles.container}>
       <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={styles.scroll}>
+          <ThemedText type="eyebrow">{t('visa.eyebrow')}</ThemedText>
           <ThemedText type="title" style={styles.title}>
             {t('visa.title')}
           </ThemedText>
@@ -86,31 +89,25 @@ export default function VisaScreen() {
                 {questions[index].label}
               </ThemedText>
               {questions[index].options.map((option) => (
-                <Pressable
-                  key={String(option.value)}
-                  style={[styles.option, { backgroundColor: theme.backgroundElement }]}
-                  onPress={() => answer(questions[index].key, option.value)}>
+                <Card key={String(option.value)} onPress={() => answer(questions[index].key, option.value)}>
                   <ThemedText>{option.label}</ThemedText>
-                </Pressable>
+                </Card>
               ))}
             </>
           ) : (
             <>
-              <ThemedView type="backgroundElement" style={styles.resultCard}>
-                <ThemedText type="small" themeColor="textSecondary">
-                  {t('visa.recommended')}
-                </ThemedText>
+              <ThemedView
+                style={[styles.resultCard, { backgroundColor: theme.surfaceSelected, borderColor: theme.accent }]}>
+                <ThemedText type="eyebrow">{t('visa.recommended')}</ThemedText>
                 <ThemedText type="subtitle">{result.recommendation.code}</ThemedText>
                 <ThemedText>{result.recommendation.name}</ThemedText>
                 <ThemedText themeColor="textSecondary">{result.reason}</ThemedText>
               </ThemedView>
 
-              <Pressable style={[styles.button, { backgroundColor: theme.backgroundElement }]} onPress={loadAllVisas}>
-                <ThemedText>{t('visa.compareAll')}</ThemedText>
-              </Pressable>
+              <Button variant="secondary" label={t('visa.compareAll')} onPress={loadAllVisas} />
 
               {allVisas?.map((visa) => (
-                <ThemedView key={visa.code} type="backgroundElement" style={styles.visaCard}>
+                <Card key={visa.code} style={styles.stackGap}>
                   <ThemedText type="smallBold">
                     {visa.code} · {visa.name}
                   </ThemedText>
@@ -118,12 +115,10 @@ export default function VisaScreen() {
                     {visa.duration}
                   </ThemedText>
                   <ThemedText type="small">{visa.best_for}</ThemedText>
-                </ThemedView>
+                </Card>
               ))}
 
-              <Pressable style={[styles.button, { backgroundColor: theme.backgroundSelected }]} onPress={startOver}>
-                <ThemedText>{t('visa.startOver')}</ThemedText>
-              </Pressable>
+              <Button variant="secondary" label={t('visa.startOver')} onPress={startOver} />
             </>
           )}
         </ScrollView>
@@ -136,10 +131,8 @@ const styles = StyleSheet.create({
   container: { flex: 1 },
   safeArea: { flex: 1 },
   scroll: { padding: 20, gap: 12 },
-  title: { fontSize: 24 },
-  question: { fontSize: 18, marginTop: 4 },
-  option: { padding: 14, borderRadius: 10 },
-  button: { padding: 14, borderRadius: 10, alignItems: 'center' },
-  resultCard: { padding: 16, borderRadius: 12, gap: 4 },
-  visaCard: { padding: 12, borderRadius: 10, gap: 2 },
+  title: { marginBottom: 2 },
+  question: { marginTop: 4 },
+  stackGap: { gap: 2 },
+  resultCard: { padding: 18, borderRadius: 14, borderWidth: 1.5, gap: 4 },
 });

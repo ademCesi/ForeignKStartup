@@ -5,8 +5,11 @@ import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, StyleSheet, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { Button } from '@/components/button';
+import { Card } from '@/components/card';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
+import { AppFonts } from '@/constants/theme';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/hooks/use-theme';
 import { api } from '@/lib/api';
@@ -70,28 +73,28 @@ export default function FaqDetailScreen() {
               {post.asked_by}
             </ThemedText>
             <Pressable style={styles.upvote} onPress={upvotePost}>
-              <Ionicons name="arrow-up-outline" size={16} color={theme.textSecondary} />
-              <ThemedText type="small" themeColor="textSecondary">
+              <Ionicons name="arrow-up-outline" size={16} color={theme.accent} />
+              <ThemedText type="small" themeColor="accent">
                 {post.upvotes}
               </ThemedText>
             </Pressable>
           </ThemedView>
 
           {post.answers.map((a) => (
-            <ThemedView key={a.id} type="backgroundElement" style={styles.answerCard}>
+            <Card key={a.id} style={styles.answerCard}>
               <ThemedText>{a.answer}</ThemedText>
               <ThemedView style={styles.metaRow}>
                 <ThemedText type="small" themeColor="textSecondary">
                   {a.answered_by}
                 </ThemedText>
                 <Pressable style={styles.upvote} onPress={() => upvoteAnswer(a.id)}>
-                  <Ionicons name="arrow-up-outline" size={14} color={theme.textSecondary} />
-                  <ThemedText type="small" themeColor="textSecondary">
+                  <Ionicons name="arrow-up-outline" size={14} color={theme.accent} />
+                  <ThemedText type="small" themeColor="accent">
                     {a.upvotes}
                   </ThemedText>
                 </Pressable>
               </ThemedView>
-            </ThemedView>
+            </Card>
           ))}
 
           {user && (
@@ -102,11 +105,12 @@ export default function FaqDetailScreen() {
                 placeholder={t('blog.answerPlaceholder')}
                 placeholderTextColor={theme.textSecondary}
                 multiline
-                style={[styles.input, { color: theme.text, backgroundColor: theme.backgroundElement }]}
+                style={[
+                  styles.input,
+                  { color: theme.text, backgroundColor: theme.surface, borderColor: theme.border },
+                ]}
               />
-              <Pressable style={[styles.button, { backgroundColor: theme.backgroundSelected }]} onPress={submitAnswer}>
-                <ThemedText>{t('blog.submitAnswer')}</ThemedText>
-              </Pressable>
+              <Button label={t('blog.submitAnswer')} onPress={submitAnswer} />
             </ThemedView>
           )}
         </ScrollView>
@@ -122,8 +126,7 @@ const styles = StyleSheet.create({
   question: { fontSize: 20 },
   metaRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'transparent' },
   upvote: { flexDirection: 'row', alignItems: 'center', gap: 4 },
-  answerCard: { padding: 12, borderRadius: 10, gap: 6 },
+  answerCard: { gap: 6 },
   composer: { gap: 8, marginTop: 8, backgroundColor: 'transparent' },
-  input: { padding: 12, borderRadius: 10, minHeight: 70, textAlignVertical: 'top' },
-  button: { padding: 14, borderRadius: 10, alignItems: 'center' },
+  input: { padding: 12, borderRadius: 12, borderWidth: 1, minHeight: 70, textAlignVertical: 'top', fontFamily: AppFonts.body },
 });

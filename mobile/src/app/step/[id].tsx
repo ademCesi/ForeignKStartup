@@ -2,9 +2,11 @@ import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Linking, Pressable, ScrollView, StyleSheet } from 'react-native';
+import { Linking, ScrollView, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { Button } from '@/components/button';
+import { Card } from '@/components/card';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { useAuth } from '@/context/auth-context';
@@ -109,6 +111,9 @@ export default function StepDetailScreen() {
     <ThemedView style={styles.container}>
       <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={styles.scroll}>
+          <ThemedText type="eyebrow">
+            {t('step.eyebrow')} {step.step_order}
+          </ThemedText>
           <ThemedText type="title" style={styles.title}>
             {step.title}
           </ThemedText>
@@ -121,16 +126,13 @@ export default function StepDetailScreen() {
                 {t('step.fundingPrograms')}
               </ThemedText>
               {fundingPrograms.map((program) => (
-                <Pressable
-                  key={program.id}
-                  style={[styles.fundingCard, { backgroundColor: theme.backgroundElement }]}
-                  onPress={() => program.url && Linking.openURL(program.url)}>
+                <Card key={program.id} onPress={() => program.url && Linking.openURL(program.url)} style={styles.stackGap}>
                   <ThemedText type="smallBold">{program.name}</ThemedText>
                   <ThemedText type="small" themeColor="textSecondary">
                     {program.description}
                   </ThemedText>
                   <ThemedText type="small">{program.eligibility}</ThemedText>
-                </Pressable>
+                </Card>
               ))}
             </>
           )}
@@ -139,14 +141,11 @@ export default function StepDetailScreen() {
             {t('step.documents')}
           </ThemedText>
           {step.documents.map((doc) => (
-            <Pressable
-              key={doc.id}
-              onPress={() => toggleDocument(doc)}
-              style={[styles.docRow, { backgroundColor: theme.backgroundElement }]}>
+            <Card key={doc.id} onPress={() => toggleDocument(doc)} style={styles.docRow}>
               <Ionicons
                 name={doc.status === 'ready' ? 'checkbox' : 'square-outline'}
                 size={20}
-                color={doc.status === 'ready' ? theme.text : theme.textSecondary}
+                color={doc.status === 'ready' ? theme.accent : theme.textSecondary}
               />
               <ThemedView style={styles.docText}>
                 <ThemedText>{doc.name}</ThemedText>
@@ -158,7 +157,7 @@ export default function StepDetailScreen() {
                   </ThemedText>
                 )}
               </ThemedView>
-            </Pressable>
+            </Card>
           ))}
           {!user && (
             <ThemedText type="small" themeColor="textSecondary">
@@ -167,17 +166,20 @@ export default function StepDetailScreen() {
           )}
 
           {step.official_url && (
-            <Pressable
-              style={[styles.button, { backgroundColor: theme.backgroundElement }]}
-              onPress={() => Linking.openURL(step.official_url!)}>
-              <ThemedText>{t('step.openOfficial')}</ThemedText>
-            </Pressable>
+            <Button
+              variant="secondary"
+              label={t('step.openOfficial')}
+              onPress={() => Linking.openURL(step.official_url!)}
+              style={styles.actionSpacing}
+            />
           )}
 
           {user && (
-            <Pressable style={[styles.button, { backgroundColor: theme.backgroundSelected }]} onPress={toggleDone}>
-              <ThemedText>{done ? t('step.markNotDone') : t('step.markDone')}</ThemedText>
-            </Pressable>
+            <Button
+              label={done ? t('step.markNotDone') : t('step.markDone')}
+              onPress={toggleDone}
+              style={styles.actionSpacing}
+            />
           )}
         </ScrollView>
       </SafeAreaView>
@@ -189,11 +191,11 @@ const styles = StyleSheet.create({
   container: { flex: 1 },
   safeArea: { flex: 1 },
   scroll: { padding: 20, gap: 12 },
-  title: { fontSize: 24 },
+  title: { marginBottom: 2 },
   details: { lineHeight: 22 },
-  sectionTitle: { fontSize: 18, marginTop: 8 },
-  docRow: { flexDirection: 'row', alignItems: 'center', gap: 12, padding: 12, borderRadius: 10 },
+  sectionTitle: { marginTop: 8 },
+  stackGap: { gap: 4 },
+  docRow: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   docText: { flex: 1, backgroundColor: 'transparent' },
-  fundingCard: { padding: 14, borderRadius: 12, gap: 4 },
-  button: { padding: 14, borderRadius: 10, alignItems: 'center', marginTop: 8 },
+  actionSpacing: { marginTop: 8 },
 });

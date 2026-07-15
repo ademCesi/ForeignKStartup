@@ -3,8 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { FlatList, Pressable, StyleSheet, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { Card } from '@/components/card';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
+import { AppFonts } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
 import { api } from '@/lib/api';
 
@@ -52,7 +54,10 @@ export default function GlossaryScreen() {
           onChangeText={setSearch}
           placeholder={t('glossary.searchPlaceholder')}
           placeholderTextColor={theme.textSecondary}
-          style={[styles.input, { color: theme.text, backgroundColor: theme.backgroundElement }]}
+          style={[
+            styles.input,
+            { color: theme.text, backgroundColor: theme.surface, borderColor: theme.border },
+          ]}
         />
         <ThemedView style={styles.langRow}>
           {LANGS.map((code) => (
@@ -61,9 +66,13 @@ export default function GlossaryScreen() {
               onPress={() => setLang(code)}
               style={[
                 styles.langButton,
-                { backgroundColor: lang === code ? theme.backgroundSelected : theme.backgroundElement },
+                lang === code
+                  ? { backgroundColor: theme.surfaceSelected, borderColor: theme.accent }
+                  : { backgroundColor: theme.surface, borderColor: theme.border },
               ]}>
-              <ThemedText type="smallBold">{code.toUpperCase()}</ThemedText>
+              <ThemedText type="smallBold" themeColor={lang === code ? 'accent' : 'text'}>
+                {code.toUpperCase()}
+              </ThemedText>
             </Pressable>
           ))}
         </ThemedView>
@@ -72,7 +81,7 @@ export default function GlossaryScreen() {
           keyExtractor={(item) => String(item.id)}
           contentContainerStyle={styles.list}
           renderItem={({ item }) => (
-            <ThemedView type="backgroundElement" style={styles.card}>
+            <Card style={styles.cardGap}>
               <ThemedText type="smallBold">
                 {item.term_kr}
                 {item.romanization ? ` (${item.romanization})` : ''}
@@ -80,7 +89,7 @@ export default function GlossaryScreen() {
               <ThemedText type="small" themeColor="textSecondary">
                 {definitionFor(item, lang)}
               </ThemedText>
-            </ThemedView>
+            </Card>
           )}
         />
       </SafeAreaView>
@@ -91,10 +100,10 @@ export default function GlossaryScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   safeArea: { flex: 1, paddingHorizontal: 20, gap: 10 },
-  title: { fontSize: 24, marginTop: 8 },
-  input: { padding: 12, borderRadius: 10 },
+  title: { marginTop: 2 },
+  input: { padding: 12, borderRadius: 12, borderWidth: 1, fontFamily: AppFonts.body },
   langRow: { flexDirection: 'row', gap: 8, backgroundColor: 'transparent' },
-  langButton: { paddingVertical: 6, paddingHorizontal: 14, borderRadius: 8 },
+  langButton: { paddingVertical: 6, paddingHorizontal: 14, borderRadius: 100, borderWidth: 1 },
   list: { gap: 10, paddingVertical: 8 },
-  card: { padding: 14, borderRadius: 12, gap: 4 },
+  cardGap: { gap: 4 },
 });

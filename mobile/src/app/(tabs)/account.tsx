@@ -1,11 +1,14 @@
 import { useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FlatList, Pressable, StyleSheet, TextInput } from 'react-native';
+import { FlatList, StyleSheet, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { Button } from '@/components/button';
+import { Card } from '@/components/card';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
+import { AppFonts } from '@/constants/theme';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/hooks/use-theme';
 import { api } from '@/lib/api';
@@ -84,20 +87,16 @@ export default function AccountScreen() {
             style={styles.reminderList}
             ListEmptyComponent={<ThemedText themeColor="textSecondary">{t('account.noReminders')}</ThemedText>}
             renderItem={({ item }) => (
-              <Pressable
-                style={[styles.reminderCard, { backgroundColor: theme.backgroundElement }]}
-                onPress={() => markRead(item.id)}>
+              <Card onPress={() => markRead(item.id)} style={styles.reminderCard}>
                 <ThemedText>{item.message}</ThemedText>
                 <ThemedText type="small" themeColor="textSecondary">
                   {new Date(item.due_date).toLocaleDateString()}
                 </ThemedText>
-              </Pressable>
+              </Card>
             )}
           />
 
-          <Pressable style={[styles.button, { backgroundColor: theme.backgroundElement }]} onPress={logout}>
-            <ThemedText>{t('account.logout')}</ThemedText>
-          </Pressable>
+          <Button variant="secondary" label={t('account.logout')} onPress={logout} style={styles.actionSpacing} />
         </SafeAreaView>
       </ThemedView>
     );
@@ -116,7 +115,10 @@ export default function AccountScreen() {
           placeholderTextColor={theme.textSecondary}
           autoCapitalize="none"
           keyboardType="email-address"
-          style={[styles.input, { color: theme.text, backgroundColor: theme.backgroundElement }]}
+          style={[
+            styles.input,
+            { color: theme.text, backgroundColor: theme.surface, borderColor: theme.border },
+          ]}
         />
         <TextInput
           value={password}
@@ -124,21 +126,24 @@ export default function AccountScreen() {
           placeholder={t('account.password')}
           placeholderTextColor={theme.textSecondary}
           secureTextEntry
-          style={[styles.input, { color: theme.text, backgroundColor: theme.backgroundElement }]}
+          style={[
+            styles.input,
+            { color: theme.text, backgroundColor: theme.surface, borderColor: theme.border },
+          ]}
         />
         {error && (
-          <ThemedText type="small" style={styles.error}>
+          <ThemedText type="small" themeColor="accent">
             {error}
           </ThemedText>
         )}
-        <Pressable style={[styles.button, { backgroundColor: theme.backgroundSelected }]} onPress={submit}>
-          <ThemedText>{t('account.submit')}</ThemedText>
-        </Pressable>
-        <Pressable onPress={() => setMode(mode === 'login' ? 'register' : 'login')}>
-          <ThemedText type="link" themeColor="textSecondary">
-            {t(mode === 'login' ? 'account.switchToRegister' : 'account.switchToLogin')}
-          </ThemedText>
-        </Pressable>
+        <Button label={t('account.submit')} onPress={submit} />
+        <ThemedText
+          type="link"
+          themeColor="link"
+          style={styles.switchLink}
+          onPress={() => setMode(mode === 'login' ? 'register' : 'login')}>
+          {t(mode === 'login' ? 'account.switchToRegister' : 'account.switchToLogin')}
+        </ThemedText>
       </SafeAreaView>
     </ThemedView>
   );
@@ -148,11 +153,11 @@ const styles = StyleSheet.create({
   container: { flex: 1 },
   safeArea: { flex: 1, paddingHorizontal: 20, gap: 12, justifyContent: 'center' },
   safeAreaList: { flex: 1, paddingHorizontal: 20, gap: 8, paddingTop: 16 },
-  title: { fontSize: 24, marginBottom: 8 },
-  sectionTitle: { fontSize: 18, marginTop: 8 },
+  title: { marginBottom: 6 },
+  sectionTitle: { marginTop: 8 },
   reminderList: { flexGrow: 0 },
-  reminderCard: { padding: 12, borderRadius: 10, marginBottom: 8, gap: 2 },
-  input: { padding: 14, borderRadius: 10 },
-  button: { padding: 14, borderRadius: 10, alignItems: 'center', marginTop: 8 },
-  error: { color: '#d9534f' },
+  reminderCard: { marginBottom: 8, gap: 2 },
+  input: { padding: 14, borderRadius: 12, borderWidth: 1, fontFamily: AppFonts.body },
+  actionSpacing: { marginTop: 8 },
+  switchLink: { textAlign: 'center', marginTop: 4 },
 });

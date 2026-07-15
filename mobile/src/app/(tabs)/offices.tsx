@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FlatList, Linking, Pressable, StyleSheet, TextInput } from 'react-native';
+import { FlatList, Linking, StyleSheet, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { Card } from '@/components/card';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
+import { AppFonts } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
 import { api } from '@/lib/api';
 
@@ -43,7 +45,10 @@ export default function OfficesScreen() {
           onChangeText={setSearch}
           placeholder={t('offices.searchPlaceholder')}
           placeholderTextColor={theme.textSecondary}
-          style={[styles.input, { color: theme.text, backgroundColor: theme.backgroundElement }]}
+          style={[
+            styles.input,
+            { color: theme.text, backgroundColor: theme.surface, borderColor: theme.border },
+          ]}
         />
         <FlatList
           data={services}
@@ -51,9 +56,7 @@ export default function OfficesScreen() {
           contentContainerStyle={styles.list}
           ListEmptyComponent={<ThemedText themeColor="textSecondary">{t('offices.empty')}</ThemedText>}
           renderItem={({ item }) => (
-            <Pressable
-              style={[styles.card, { backgroundColor: theme.backgroundElement }]}
-              onPress={() => item.url && Linking.openURL(item.url)}>
+            <Card onPress={() => item.url && Linking.openURL(item.url)} style={styles.cardGap}>
               <ThemedText type="smallBold">{item.name}</ThemedText>
               <ThemedText type="small" themeColor="textSecondary">
                 {item.role}
@@ -63,7 +66,7 @@ export default function OfficesScreen() {
                   {item.address}
                 </ThemedText>
               )}
-            </Pressable>
+            </Card>
           )}
         />
       </SafeAreaView>
@@ -74,8 +77,8 @@ export default function OfficesScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   safeArea: { flex: 1, paddingHorizontal: 20, gap: 10 },
-  title: { fontSize: 24, marginTop: 8 },
-  input: { padding: 12, borderRadius: 10 },
+  title: { marginTop: 2 },
+  input: { padding: 12, borderRadius: 12, borderWidth: 1, fontFamily: AppFonts.body },
   list: { gap: 10, paddingVertical: 8 },
-  card: { padding: 14, borderRadius: 12, gap: 2 },
+  cardGap: { gap: 2 },
 });

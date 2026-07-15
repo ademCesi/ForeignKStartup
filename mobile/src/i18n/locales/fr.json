@@ -8,12 +8,14 @@
     "account": "Compte"
   },
   "roadmap": {
+    "eyebrow": "Le parcours",
     "title": "Votre feuille de route",
     "stepsDone": "{{done}} étapes sur {{total}} terminées",
     "loading": "Chargement de votre feuille de route...",
     "loginHint": "Connectez-vous depuis l'onglet Compte pour sauvegarder votre progression."
   },
   "step": {
+    "eyebrow": "Étape",
     "documents": "Documents à préparer",
     "needsApostille": "Apostille requise",
     "needsTranslation": "Traduction requise",
@@ -24,6 +26,7 @@
     "fundingPrograms": "Programmes de financement"
   },
   "visa": {
+    "eyebrow": "Comparaison",
     "title": "Trouvez votre visa",
     "question": "Question {{current}} sur {{total}}",
     "next": "Suivant",

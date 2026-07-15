@@ -8,12 +8,14 @@
     "account": "계정"
   },
   "roadmap": {
+    "eyebrow": "프로세스",
     "title": "나의 로드맵",
     "stepsDone": "{{total}}단계 중 {{done}}단계 완료",
     "loading": "로드맵을 불러오는 중...",
     "loginHint": "계정 탭에서 로그인하면 진행 상황이 저장됩니다."
   },
   "step": {
+    "eyebrow": "단계",
     "documents": "준비할 서류",
     "needsApostille": "아포스티유 필요",
     "needsTranslation": "번역 필요",
@@ -24,6 +26,7 @@
     "fundingPrograms": "지원 프로그램"
   },
   "visa": {
+    "eyebrow": "비교",
     "title": "비자 찾기",
     "question": "질문 {{current}} / {{total}}",
     "next": "다음",

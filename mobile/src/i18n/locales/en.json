@@ -8,12 +8,14 @@
     "account": "Account"
   },
   "roadmap": {
+    "eyebrow": "The process",
     "title": "Your roadmap",
     "stepsDone": "{{done}} of {{total}} steps done",
     "loading": "Loading your roadmap...",
     "loginHint": "Log in from the Account tab to save your progress."
   },
   "step": {
+    "eyebrow": "Step",
     "documents": "Documents to prepare",
     "needsApostille": "Apostille required",
     "needsTranslation": "Translation required",
@@ -24,6 +26,7 @@
     "fundingPrograms": "Funding programs"
   },
   "visa": {
+    "eyebrow": "Comparison",
     "title": "Find your visa",
     "question": "Question {{current}} of {{total}}",
     "next": "Next",
