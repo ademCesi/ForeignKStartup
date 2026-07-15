@@ -18,6 +18,7 @@ type AuthContextValue = {
   login: (email: string, password: string) => Promise<void>;
   register: (email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
+  updateProfile: (patch: Partial<Pick<SessionUser, 'language' | 'target_visa'>>) => Promise<void>;
 };
 
 const AuthContext = createContext<AuthContextValue | null>(null);
@@ -65,7 +66,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser(null);
   }
 
-  const value = useMemo(() => ({ user, isLoading, login, register, logout }), [user, isLoading]);
+  async function updateProfile(patch: Partial<Pick<SessionUser, 'language' | 'target_visa'>>) {
+    const { data } = await api.patch('/me', patch);
+    setUser(data);
+  }
+
+  const value = useMemo(
+    () => ({ user, isLoading, login, register, logout, updateProfile }),
+    [user, isLoading]
+  );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

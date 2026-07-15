@@ -1,8 +1,6 @@
 {
   "tabs": {
     "roadmap": "Feuille de route",
-    "visa": "Visa",
-    "offices": "Guichets",
     "glossary": "Glossaire",
     "blog": "Blog",
     "account": "Compte"
@@ -23,7 +21,8 @@
     "markDone": "Marquer l'étape comme terminée",
     "markNotDone": "Marquer l'étape comme non terminée",
     "loginToTrack": "Connectez-vous pour suivre vos documents et votre progression.",
-    "fundingPrograms": "Programmes de financement"
+    "fundingPrograms": "Programmes de financement",
+    "offices": "Guichets près de chez vous"
   },
   "visa": {
     "eyebrow": "Comparaison",
@@ -33,6 +32,7 @@
     "back": "Retour",
     "startOver": "Recommencer",
     "recommended": "Recommandé pour vous",
+    "savedReason": "Enregistré à partir de vos réponses au questionnaire visa.",
     "compareAll": "Comparer tous les visas",
     "q1": "Avez-vous déjà une société enregistrée en Corée ?",
     "q2": "Avez-vous un brevet ou un prototype ?",
@@ -44,11 +44,6 @@
     "q5": "Détenez-vous déjà un statut de résidence longue durée en Corée (ex. un visa de série F) ?",
     "yes": "Oui",
     "no": "Non"
-  },
-  "offices": {
-    "title": "Trouver un guichet",
-    "searchPlaceholder": "Rechercher : immigration, service des impôts...",
-    "empty": "Aucun service ne correspond à votre recherche."
   },
   "glossary": {
     "title": "Glossaire",

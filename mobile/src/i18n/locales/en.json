@@ -1,8 +1,6 @@
 {
   "tabs": {
     "roadmap": "Roadmap",
-    "visa": "Visa",
-    "offices": "Offices",
     "glossary": "Glossary",
     "blog": "Blog",
     "account": "Account"
@@ -23,7 +21,8 @@
     "markDone": "Mark step as done",
     "markNotDone": "Mark step as not done",
     "loginToTrack": "Log in to track documents and progress.",
-    "fundingPrograms": "Funding programs"
+    "fundingPrograms": "Funding programs",
+    "offices": "Offices near you"
   },
   "visa": {
     "eyebrow": "Comparison",
@@ -33,6 +32,7 @@
     "back": "Back",
     "startOver": "Start over",
     "recommended": "Recommended for you",
+    "savedReason": "Saved from your answers to the visa questionnaire.",
     "compareAll": "Compare all visas",
     "q1": "Do you already have a company registered in Korea?",
     "q2": "Do you have a patent or a prototype?",
@@ -44,11 +44,6 @@
     "q5": "Do you already hold long-term residence status in Korea (e.g. an F-series visa)?",
     "yes": "Yes",
     "no": "No"
-  },
-  "offices": {
-    "title": "Find an office",
-    "searchPlaceholder": "Search: immigration, tax office...",
-    "empty": "No services match your search."
   },
   "glossary": {
     "title": "Glossary",

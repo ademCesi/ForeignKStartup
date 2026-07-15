@@ -26,22 +26,6 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="visa"
-        options={{
-          title: t('tabs.visa'),
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="document-text-outline" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="offices"
-        options={{
-          title: t('tabs.offices'),
-          tabBarIcon: ({ color, size }) => <Ionicons name="location-outline" size={size} color={color} />,
-        }}
-      />
-      <Tabs.Screen
         name="glossary"
         options={{
           title: t('tabs.glossary'),

@@ -1,8 +1,6 @@
 {
   "tabs": {
     "roadmap": "로드맵",
-    "visa": "비자",
-    "offices": "관공서",
     "glossary": "용어집",
     "blog": "블로그",
     "account": "계정"
@@ -23,7 +21,8 @@
     "markDone": "완료로 표시",
     "markNotDone": "미완료로 표시",
     "loginToTrack": "서류와 진행 상황을 저장하려면 로그인하세요.",
-    "fundingPrograms": "지원 프로그램"
+    "fundingPrograms": "지원 프로그램",
+    "offices": "주변 관공서"
   },
   "visa": {
     "eyebrow": "비교",
@@ -33,6 +32,7 @@
     "back": "이전",
     "startOver": "다시 시작",
     "recommended": "추천 비자",
+    "savedReason": "비자 질문에 대한 답변을 바탕으로 저장되었습니다.",
     "compareAll": "모든 비자 비교",
     "q1": "이미 한국에 등록된 법인이 있나요?",
     "q2": "특허나 시제품이 있나요?",
@@ -44,11 +44,6 @@
     "q5": "이미 한국에서 장기 거주 자격(F 계열 비자 등)을 가지고 있나요?",
     "yes": "예",
     "no": "아니요"
-  },
-  "offices": {
-    "title": "관공서 찾기",
-    "searchPlaceholder": "검색: 출입국, 세무서...",
-    "empty": "검색 결과가 없습니다."
   },
   "glossary": {
     "title": "용어집",
