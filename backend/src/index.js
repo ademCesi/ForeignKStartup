@@ -7,6 +7,9 @@ const meRoutes = require('./routes/me');
 const roadmapRoutes = require('./routes/roadmap');
 const visasRoutes = require('./routes/visas');
 const servicesRoutes = require('./routes/services');
+const fundingRoutes = require('./routes/funding');
+const glossaryRoutes = require('./routes/glossary');
+const faqRoutes = require('./routes/faq');
 
 const app = express();
 app.use(cors());
@@ -19,6 +22,9 @@ app.use('/me', meRoutes);
 app.use('/roadmap', roadmapRoutes);
 app.use('/visas', visasRoutes);
 app.use('/services', servicesRoutes);
+app.use('/funding', fundingRoutes);
+app.use('/glossary', glossaryRoutes);
+app.use('/faq', faqRoutes);
 
 app.use((req, res) => res.status(404).json({ error: 'Not found' }));
 

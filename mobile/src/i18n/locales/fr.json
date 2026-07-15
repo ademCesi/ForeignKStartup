@@ -3,6 +3,8 @@
     "roadmap": "Feuille de route",
     "visa": "Visa",
     "offices": "Guichets",
+    "glossary": "Glossaire",
+    "blog": "Blog",
     "account": "Compte"
   },
   "roadmap": {
@@ -18,7 +20,8 @@
     "openOfficial": "Ouvrir le site officiel",
     "markDone": "Marquer l'étape comme terminée",
     "markNotDone": "Marquer l'étape comme non terminée",
-    "loginToTrack": "Connectez-vous pour suivre vos documents et votre progression."
+    "loginToTrack": "Connectez-vous pour suivre vos documents et votre progression.",
+    "fundingPrograms": "Programmes de financement"
   },
   "visa": {
     "title": "Trouvez votre visa",
@@ -44,6 +47,19 @@
     "searchPlaceholder": "Rechercher : immigration, service des impôts...",
     "empty": "Aucun service ne correspond à votre recherche."
   },
+  "glossary": {
+    "title": "Glossaire",
+    "searchPlaceholder": "Rechercher un terme..."
+  },
+  "blog": {
+    "title": "Blog communautaire",
+    "ask": "+ Poser une question",
+    "questionPlaceholder": "Que voulez-vous savoir ?",
+    "answerPlaceholder": "Partagez votre expérience pour aider d'autres fondateurs...",
+    "publish": "Publier",
+    "submitAnswer": "Envoyer la réponse",
+    "empty": "Pas encore de questions - soyez le premier à en poser une."
+  },
   "account": {
     "welcome": "Bienvenue, {{email}}",
     "language": "Langue",
@@ -55,6 +71,8 @@
     "password": "Mot de passe",
     "switchToRegister": "Pas encore de compte ? Créez-en un",
     "switchToLogin": "Déjà un compte ? Connectez-vous",
-    "submit": "Valider"
+    "submit": "Valider",
+    "reminders": "Rappels",
+    "noReminders": "Aucun rappel à venir. Marquez des étapes comme terminées pour programmer des rappels d'échéance."
   }
 }

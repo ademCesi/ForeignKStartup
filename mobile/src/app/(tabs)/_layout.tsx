@@ -40,6 +40,20 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
+        name="glossary"
+        options={{
+          title: t('tabs.glossary'),
+          tabBarIcon: ({ color, size }) => <Ionicons name="book-outline" size={size} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="blog"
+        options={{
+          title: t('tabs.blog'),
+          tabBarIcon: ({ color, size }) => <Ionicons name="chatbubbles-outline" size={size} color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="account"
         options={{
           title: t('tabs.account'),

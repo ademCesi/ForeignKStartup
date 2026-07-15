@@ -13,6 +13,7 @@ export default function RootLayout() {
         <Stack screenOptions={{ headerShown: false }}>
           <Stack.Screen name="(tabs)" />
           <Stack.Screen name="step/[id]" options={{ headerShown: true, title: '' }} />
+          <Stack.Screen name="faq/[id]" options={{ headerShown: true, title: '' }} />
         </Stack>
       </AuthProvider>
     </ThemeProvider>

@@ -19,10 +19,21 @@ type StepDocument = {
   status?: 'pending' | 'ready';
 };
 
+type FundingProgram = {
+  id: number;
+  name: string;
+  type: string;
+  description: string;
+  eligibility: string;
+  url: string | null;
+};
+
 type Step = {
   id: number;
+  step_order: number;
   title: string;
   description: string;
+  details: string | null;
   official_url: string | null;
   documents: StepDocument[];
 };
@@ -34,6 +45,7 @@ export default function StepDetailScreen() {
   const { user } = useAuth();
   const [step, setStep] = useState<Step | null>(null);
   const [done, setDone] = useState(false);
+  const [fundingPrograms, setFundingPrograms] = useState<FundingProgram[] | null>(null);
 
   useFocusEffect(
     useCallback(() => {
@@ -54,6 +66,11 @@ export default function StepDetailScreen() {
         }
 
         if (!cancelled) setStep({ ...data, documents });
+
+        if (data.step_order === 7) {
+          const { data: programs } = await api.get('/funding');
+          if (!cancelled) setFundingPrograms(programs);
+        }
       }
 
       load();
@@ -96,6 +113,27 @@ export default function StepDetailScreen() {
             {step.title}
           </ThemedText>
           <ThemedText themeColor="textSecondary">{step.description}</ThemedText>
+          {step.details && <ThemedText style={styles.details}>{step.details}</ThemedText>}
+
+          {fundingPrograms && (
+            <>
+              <ThemedText type="subtitle" style={styles.sectionTitle}>
+                {t('step.fundingPrograms')}
+              </ThemedText>
+              {fundingPrograms.map((program) => (
+                <Pressable
+                  key={program.id}
+                  style={[styles.fundingCard, { backgroundColor: theme.backgroundElement }]}
+                  onPress={() => program.url && Linking.openURL(program.url)}>
+                  <ThemedText type="smallBold">{program.name}</ThemedText>
+                  <ThemedText type="small" themeColor="textSecondary">
+                    {program.description}
+                  </ThemedText>
+                  <ThemedText type="small">{program.eligibility}</ThemedText>
+                </Pressable>
+              ))}
+            </>
+          )}
 
           <ThemedText type="subtitle" style={styles.sectionTitle}>
             {t('step.documents')}
@@ -152,8 +190,10 @@ const styles = StyleSheet.create({
   safeArea: { flex: 1 },
   scroll: { padding: 20, gap: 12 },
   title: { fontSize: 24 },
+  details: { lineHeight: 22 },
   sectionTitle: { fontSize: 18, marginTop: 8 },
   docRow: { flexDirection: 'row', alignItems: 'center', gap: 12, padding: 12, borderRadius: 10 },
   docText: { flex: 1, backgroundColor: 'transparent' },
+  fundingCard: { padding: 14, borderRadius: 12, gap: 4 },
   button: { padding: 14, borderRadius: 10, alignItems: 'center', marginTop: 8 },
 });

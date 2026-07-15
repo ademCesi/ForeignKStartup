@@ -1,12 +1,15 @@
-import { useState } from 'react';
+import { useFocusEffect } from 'expo-router';
+import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, StyleSheet, TextInput } from 'react-native';
+import { FlatList, Pressable, StyleSheet, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/hooks/use-theme';
+import { api } from '@/lib/api';
+import { cancelReminder, scheduleReminders, type ReminderNotification } from '@/lib/notifications';
 
 export default function AccountScreen() {
   const { t } = useTranslation();
@@ -16,6 +19,26 @@ export default function AccountScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
+  const [notifications, setNotifications] = useState<ReminderNotification[]>([]);
+
+  useFocusEffect(
+    useCallback(() => {
+      if (!user) return;
+      let cancelled = false;
+
+      async function load() {
+        const { data } = await api.get('/me/notifications');
+        if (cancelled) return;
+        setNotifications(data);
+        scheduleReminders(data);
+      }
+
+      load();
+      return () => {
+        cancelled = true;
+      };
+    }, [user])
+  );
 
   async function submit() {
     setError(null);
@@ -30,10 +53,18 @@ export default function AccountScreen() {
     }
   }
 
+  async function markRead(id: number) {
+    await api.patch(`/me/notifications/${id}`);
+    await cancelReminder(id);
+    setNotifications((prev) => prev.map((n) => (n.id === id ? { ...n, sent: true } : n)));
+  }
+
   if (user) {
+    const upcoming = notifications.filter((n) => !n.sent);
+
     return (
       <ThemedView style={styles.container}>
-        <SafeAreaView style={styles.safeArea}>
+        <SafeAreaView style={styles.safeAreaList}>
           <ThemedText type="title" style={styles.title}>
             {t('account.welcome', { email: user.email })}
           </ThemedText>
@@ -43,6 +74,27 @@ export default function AccountScreen() {
           <ThemedText themeColor="textSecondary">
             {t('account.targetVisa')}: {user.target_visa ?? '—'}
           </ThemedText>
+
+          <ThemedText type="subtitle" style={styles.sectionTitle}>
+            {t('account.reminders')}
+          </ThemedText>
+          <FlatList
+            data={upcoming}
+            keyExtractor={(item) => String(item.id)}
+            style={styles.reminderList}
+            ListEmptyComponent={<ThemedText themeColor="textSecondary">{t('account.noReminders')}</ThemedText>}
+            renderItem={({ item }) => (
+              <Pressable
+                style={[styles.reminderCard, { backgroundColor: theme.backgroundElement }]}
+                onPress={() => markRead(item.id)}>
+                <ThemedText>{item.message}</ThemedText>
+                <ThemedText type="small" themeColor="textSecondary">
+                  {new Date(item.due_date).toLocaleDateString()}
+                </ThemedText>
+              </Pressable>
+            )}
+          />
+
           <Pressable style={[styles.button, { backgroundColor: theme.backgroundElement }]} onPress={logout}>
             <ThemedText>{t('account.logout')}</ThemedText>
           </Pressable>
@@ -95,8 +147,12 @@ export default function AccountScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   safeArea: { flex: 1, paddingHorizontal: 20, gap: 12, justifyContent: 'center' },
+  safeAreaList: { flex: 1, paddingHorizontal: 20, gap: 8, paddingTop: 16 },
   title: { fontSize: 24, marginBottom: 8 },
+  sectionTitle: { fontSize: 18, marginTop: 8 },
+  reminderList: { flexGrow: 0 },
+  reminderCard: { padding: 12, borderRadius: 10, marginBottom: 8, gap: 2 },
   input: { padding: 14, borderRadius: 10 },
-  button: { padding: 14, borderRadius: 10, alignItems: 'center' },
+  button: { padding: 14, borderRadius: 10, alignItems: 'center', marginTop: 8 },
   error: { color: '#d9534f' },
 });

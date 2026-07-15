@@ -40,6 +40,31 @@ router.get('/progress', asyncHandler(async (req, res) => {
   res.json(rows);
 }));
 
+// Steps that trigger a time-bound reminder once marked done, keyed by step_order.
+const DEADLINE_RULES = {
+  1: [
+    { type: 'arc_window', days: 90, message: 'Apply for your Alien Registration Card (ARC) within 90 days of entering Korea.' },
+    { type: 'visa_renewal', days: 365, message: 'Your visa is due for renewal soon - start gathering the renewal documents.' },
+  ],
+  6: [
+    { type: 'quarterly_vat', days: 90, message: 'Your next quarterly VAT filing with the National Tax Service is coming up.' },
+  ],
+};
+
+async function scheduleDeadlineNotifications(userId, stepId) {
+  const { rows } = await pool.query('SELECT step_order FROM roadmap_steps WHERE id = $1', [stepId]);
+  const rules = DEADLINE_RULES[rows[0]?.step_order];
+  if (!rules) return;
+
+  for (const rule of rules) {
+    await pool.query(
+      `INSERT INTO notifications (user_id, type, due_date, message)
+       VALUES ($1, $2, now() + ($3 || ' days')::interval, $4)`,
+      [userId, rule.type, rule.days, rule.message]
+    );
+  }
+}
+
 router.patch('/progress/:stepId', asyncHandler(async (req, res) => {
   const { status } = req.body;
   if (!['not_started', 'in_progress', 'done'].includes(status)) {
@@ -54,6 +79,11 @@ router.patch('/progress/:stepId', asyncHandler(async (req, res) => {
      RETURNING *`,
     [req.user.id, req.params.stepId, status, completedAt]
   );
+
+  if (status === 'done') {
+    await scheduleDeadlineNotifications(req.user.id, req.params.stepId);
+  }
+
   res.json(rows[0]);
 }));
 
@@ -82,6 +112,25 @@ router.patch('/documents/:id', asyncHandler(async (req, res) => {
      RETURNING *`,
     [req.user.id, req.params.id, status]
   );
+  res.json(rows[0]);
+}));
+
+router.get('/notifications', asyncHandler(async (req, res) => {
+  const { rows } = await pool.query(
+    'SELECT * FROM notifications WHERE user_id = $1 ORDER BY due_date ASC',
+    [req.user.id]
+  );
+  res.json(rows);
+}));
+
+router.patch('/notifications/:id', asyncHandler(async (req, res) => {
+  const { rows } = await pool.query(
+    'UPDATE notifications SET sent = true WHERE id = $1 AND user_id = $2 RETURNING *',
+    [req.params.id, req.user.id]
+  );
+  if (!rows[0]) {
+    return res.status(404).json({ error: 'Notification not found' });
+  }
   res.json(rows[0]);
 }));
 

@@ -1,5 +1,4 @@
--- Core-phase schema. Advanced-phase tables (funding_programs, glossary_terms,
--- notifications, faq_posts) will be added when that phase starts.
+-- Core + Advanced phase schema.
 
 CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
@@ -17,6 +16,8 @@ CREATE TABLE IF NOT EXISTS roadmap_steps (
   description TEXT NOT NULL,
   official_url TEXT
 );
+
+ALTER TABLE roadmap_steps ADD COLUMN IF NOT EXISTS details TEXT;
 
 CREATE TABLE IF NOT EXISTS documents (
   id SERIAL PRIMARY KEY,
@@ -63,4 +64,49 @@ CREATE TABLE IF NOT EXISTS services (
   address TEXT,
   lat NUMERIC(9,6),
   lng NUMERIC(9,6)
+);
+
+CREATE TABLE IF NOT EXISTS funding_programs (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  type TEXT NOT NULL CHECK (type IN ('grant', 'rnd', 'loan', 'accelerator')),
+  description TEXT NOT NULL,
+  eligibility TEXT NOT NULL,
+  url TEXT
+);
+
+CREATE TABLE IF NOT EXISTS glossary_terms (
+  id SERIAL PRIMARY KEY,
+  term_kr TEXT UNIQUE NOT NULL,
+  romanization TEXT,
+  definition_en TEXT NOT NULL,
+  definition_fr TEXT NOT NULL,
+  definition_kr TEXT
+);
+
+CREATE TABLE IF NOT EXISTS notifications (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  type TEXT NOT NULL,
+  due_date TIMESTAMPTZ NOT NULL,
+  message TEXT NOT NULL,
+  sent BOOLEAN NOT NULL DEFAULT false
+);
+
+CREATE TABLE IF NOT EXISTS faq_posts (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  step_id INTEGER REFERENCES roadmap_steps(id) ON DELETE SET NULL,
+  question TEXT NOT NULL,
+  upvotes INTEGER NOT NULL DEFAULT 0,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS faq_answers (
+  id SERIAL PRIMARY KEY,
+  post_id INTEGER NOT NULL REFERENCES faq_posts(id) ON DELETE CASCADE,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  answer TEXT NOT NULL,
+  upvotes INTEGER NOT NULL DEFAULT 0,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );

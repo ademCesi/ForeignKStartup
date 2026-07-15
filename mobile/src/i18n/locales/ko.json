@@ -3,6 +3,8 @@
     "roadmap": "로드맵",
     "visa": "비자",
     "offices": "관공서",
+    "glossary": "용어집",
+    "blog": "블로그",
     "account": "계정"
   },
   "roadmap": {
@@ -18,7 +20,8 @@
     "openOfficial": "공식 사이트 열기",
     "markDone": "완료로 표시",
     "markNotDone": "미완료로 표시",
-    "loginToTrack": "서류와 진행 상황을 저장하려면 로그인하세요."
+    "loginToTrack": "서류와 진행 상황을 저장하려면 로그인하세요.",
+    "fundingPrograms": "지원 프로그램"
   },
   "visa": {
     "title": "비자 찾기",
@@ -44,6 +47,19 @@
     "searchPlaceholder": "검색: 출입국, 세무서...",
     "empty": "검색 결과가 없습니다."
   },
+  "glossary": {
+    "title": "용어집",
+    "searchPlaceholder": "용어 검색..."
+  },
+  "blog": {
+    "title": "커뮤니티 블로그",
+    "ask": "+ 질문하기",
+    "questionPlaceholder": "무엇이 궁금하신가요?",
+    "answerPlaceholder": "다른 창업자들에게 도움이 되도록 경험을 공유해 주세요...",
+    "publish": "게시",
+    "submitAnswer": "답변 등록",
+    "empty": "아직 질문이 없습니다 - 첫 질문을 남겨보세요."
+  },
   "account": {
     "welcome": "환영합니다, {{email}}",
     "language": "언어",
@@ -55,6 +71,8 @@
     "password": "비밀번호",
     "switchToRegister": "계정이 없으신가요? 만들기",
     "switchToLogin": "이미 계정이 있으신가요? 로그인",
-    "submit": "제출"
+    "submit": "제출",
+    "reminders": "알림",
+    "noReminders": "예정된 알림이 없습니다. 로드맵 단계를 완료로 표시하면 기한 알림이 예약됩니다."
   }
 }
