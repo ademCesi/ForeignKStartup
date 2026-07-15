@@ -7,19 +7,19 @@ type CardProps = ViewProps & Pick<PressableProps, 'onPress'>;
 
 export function Card({ style, onPress, ...rest }: CardProps) {
   const theme = useTheme();
-  const Component = onPress ? Pressable : View;
+  const baseStyle = [
+    styles.card,
+    { backgroundColor: theme.surface, borderColor: theme.border, shadowColor: theme.primary },
+    style,
+  ];
 
-  return (
-    <Component
-      onPress={onPress}
-      style={[
-        styles.card,
-        { backgroundColor: theme.surface, borderColor: theme.border, shadowColor: theme.primary },
-        style,
-      ]}
-      {...rest}
-    />
-  );
+  if (onPress) {
+    return (
+      <Pressable onPress={onPress} style={({ pressed }) => [...baseStyle, pressed && styles.pressed]} {...rest} />
+    );
+  }
+
+  return <View style={baseStyle} {...rest} />;
 }
 
 const styles = StyleSheet.create({
@@ -31,5 +31,9 @@ const styles = StyleSheet.create({
     shadowRadius: 14,
     shadowOffset: { width: 0, height: 4 },
     elevation: 2,
+  },
+  pressed: {
+    opacity: 0.92,
+    transform: [{ scale: 0.99 }],
   },
 });

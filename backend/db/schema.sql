@@ -93,6 +93,14 @@ CREATE TABLE IF NOT EXISTS notifications (
   sent BOOLEAN NOT NULL DEFAULT false
 );
 
+-- Dedupe any pre-existing rows (from before this constraint existed) so the
+-- unique index below can be created; re-marking a step done then refreshes
+-- the existing reminder instead of inserting a new one each time.
+DELETE FROM notifications a USING notifications b
+  WHERE a.id < b.id AND a.user_id = b.user_id AND a.type = b.type;
+
+CREATE UNIQUE INDEX IF NOT EXISTS notifications_user_type_idx ON notifications(user_id, type);
+
 CREATE TABLE IF NOT EXISTS faq_posts (
   id SERIAL PRIMARY KEY,
   user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,

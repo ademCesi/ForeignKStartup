@@ -2,7 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Linking, ScrollView, StyleSheet } from 'react-native';
+import { Linking, ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Button } from '@/components/button';
@@ -10,9 +10,11 @@ import { Card } from '@/components/card';
 import { OfficesMap } from '@/components/offices-map';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
+import { AppFonts } from '@/constants/theme';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/hooks/use-theme';
 import { api } from '@/lib/api';
+import { withAlpha } from '@/lib/color';
 
 type StepDocument = {
   id: number;
@@ -145,12 +147,17 @@ export default function StepDetailScreen() {
     <ThemedView style={styles.container}>
       <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={styles.scroll}>
-          <ThemedText type="eyebrow">
-            {t('step.eyebrow')} {step.step_order}
-          </ThemedText>
-          <ThemedText type="title" style={styles.title}>
-            {step.title}
-          </ThemedText>
+          <View style={styles.hero}>
+            <ThemedText style={[styles.ghostNumber, { color: withAlpha(theme.accent, 0.16) }]}>
+              {step.step_order}
+            </ThemedText>
+            <View style={styles.heroText}>
+              <ThemedText type="eyebrow">{t('step.eyebrow')}</ThemedText>
+              <ThemedText type="title" style={styles.title}>
+                {step.title}
+              </ThemedText>
+            </View>
+          </View>
           <ThemedText themeColor="textSecondary">{step.description}</ThemedText>
           {step.details && <ThemedText style={styles.details}>{step.details}</ThemedText>}
 
@@ -383,6 +390,9 @@ const styles = StyleSheet.create({
   container: { flex: 1 },
   safeArea: { flex: 1 },
   scroll: { padding: 20, gap: 12 },
+  hero: { flexDirection: 'row', alignItems: 'flex-start', gap: 12 },
+  ghostNumber: { fontFamily: AppFonts.display, fontSize: 64, lineHeight: 64, marginTop: -6 },
+  heroText: { flex: 1, gap: 4 },
   title: { marginBottom: 2 },
   details: { lineHeight: 22 },
   sectionTitle: { marginTop: 8 },

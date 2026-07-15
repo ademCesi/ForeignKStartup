@@ -6,26 +6,32 @@ import { Platform } from 'react-native';
 export const Colors = {
   light: {
     background: '#f8f7f4',
+    backgroundDeep: '#efe9e0',
     surface: '#ffffff',
     surfaceSelected: '#fbeae8',
     border: '#e5e7eb',
     text: '#1a1a2e',
     textSecondary: '#6b7280',
     primary: '#0A2540',
+    primaryDeep: '#061626',
     accent: '#C8372D',
+    accentDeep: '#8f2519',
     link: '#7C3AED',
     onPrimary: '#ffffff',
     onAccent: '#ffffff',
   },
   dark: {
     background: '#12161f',
+    backgroundDeep: '#090b11',
     surface: '#1c2230',
     surfaceSelected: '#3a201d',
     border: '#2c3341',
     text: '#f5f3ee',
     textSecondary: '#9aa3b7',
     primary: '#f5f3ee',
+    primaryDeep: '#ffffff',
     accent: '#e2584a',
+    accentDeep: '#a83324',
     link: '#b295f5',
     onPrimary: '#12161f',
     onAccent: '#ffffff',
@@ -33,6 +39,7 @@ export const Colors = {
 } as const;
 
 export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
+export type ThemeColors = { [K in ThemeColor]: string };
 
 export const AppFonts = {
   display: 'PlayfairDisplay_700Bold',

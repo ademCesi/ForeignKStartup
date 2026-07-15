@@ -6,8 +6,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Button } from '@/components/button';
 import { Card } from '@/components/card';
+import { ScreenBackground } from '@/components/screen-background';
 import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
 import { AppFonts } from '@/constants/theme';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/hooks/use-theme';
@@ -66,8 +66,8 @@ export default function AccountScreen() {
     const upcoming = notifications.filter((n) => !n.sent);
 
     return (
-      <ThemedView style={styles.container}>
-        <SafeAreaView style={styles.safeAreaList}>
+      <ScreenBackground style={styles.container}>
+        <SafeAreaView edges={['left', 'right', 'bottom']} style={styles.safeAreaList}>
           <ThemedText type="title" style={styles.title}>
             {t('account.welcome', { email: user.email })}
           </ThemedText>
@@ -98,13 +98,13 @@ export default function AccountScreen() {
 
           <Button variant="secondary" label={t('account.logout')} onPress={logout} style={styles.actionSpacing} />
         </SafeAreaView>
-      </ThemedView>
+      </ScreenBackground>
     );
   }
 
   return (
-    <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
+    <ScreenBackground style={styles.container}>
+      <SafeAreaView edges={['left', 'right', 'bottom']} style={styles.safeArea}>
         <ThemedText type="title" style={styles.title}>
           {t(mode === 'login' ? 'account.login' : 'account.register')}
         </ThemedText>
@@ -145,14 +145,14 @@ export default function AccountScreen() {
           {t(mode === 'login' ? 'account.switchToRegister' : 'account.switchToLogin')}
         </ThemedText>
       </SafeAreaView>
-    </ThemedView>
+    </ScreenBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
   safeArea: { flex: 1, paddingHorizontal: 20, gap: 12, justifyContent: 'center' },
-  safeAreaList: { flex: 1, paddingHorizontal: 20, gap: 8, paddingTop: 16 },
+  safeAreaList: { flex: 1, paddingHorizontal: 20, gap: 8, paddingTop: 20 },
   title: { marginBottom: 6 },
   sectionTitle: { marginTop: 8 },
   reminderList: { flexGrow: 0 },

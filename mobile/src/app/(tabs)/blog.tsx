@@ -6,6 +6,7 @@ import { FlatList, Pressable, StyleSheet, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Button } from '@/components/button';
+import { ScreenBackground } from '@/components/screen-background';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { AppFonts } from '@/constants/theme';
@@ -49,8 +50,8 @@ export default function BlogScreen() {
   }
 
   return (
-    <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
+    <ScreenBackground style={styles.container}>
+      <SafeAreaView edges={['left', 'right', 'bottom']} style={styles.safeArea}>
         <ThemedText type="title" style={styles.title}>
           {t('blog.title')}
         </ThemedText>
@@ -109,13 +110,13 @@ export default function BlogScreen() {
           )}
         />
       </SafeAreaView>
-    </ThemedView>
+    </ScreenBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  safeArea: { flex: 1, paddingHorizontal: 20, gap: 10 },
+  safeArea: { flex: 1, paddingHorizontal: 20, paddingTop: 20, gap: 10 },
   title: { marginTop: 2 },
   composer: { gap: 8, backgroundColor: 'transparent' },
   input: { padding: 12, borderRadius: 12, borderWidth: 1, minHeight: 80, textAlignVertical: 'top', fontFamily: AppFonts.body },

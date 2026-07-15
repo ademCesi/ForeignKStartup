@@ -59,7 +59,9 @@ async function scheduleDeadlineNotifications(userId, stepId) {
   for (const rule of rules) {
     await pool.query(
       `INSERT INTO notifications (user_id, type, due_date, message)
-       VALUES ($1, $2, now() + ($3 || ' days')::interval, $4)`,
+       VALUES ($1, $2, now() + ($3 || ' days')::interval, $4)
+       ON CONFLICT (user_id, type)
+       DO UPDATE SET due_date = EXCLUDED.due_date, message = EXCLUDED.message, sent = false`,
       [userId, rule.type, rule.days, rule.message]
     );
   }

@@ -3,21 +3,18 @@ import {
   PlayfairDisplay_600SemiBold,
   PlayfairDisplay_700Bold,
 } from '@expo-google-fonts/playfair-display';
+import { useFonts } from 'expo-font';
 import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useFonts } from 'expo-font';
 import { useEffect } from 'react';
-import { useColorScheme } from 'react-native';
 
-import { Colors } from '@/constants/theme';
 import { AuthProvider } from '@/context/auth-context';
+import { ThemeSchemeProvider, useThemeScheme } from '@/context/theme-context';
 import '@/i18n';
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const theme = colorScheme === 'dark' ? Colors.dark : Colors.light;
   const [fontsLoaded] = useFonts({
     PlayfairDisplay_700Bold,
     PlayfairDisplay_600SemiBold,
@@ -33,35 +30,45 @@ export default function RootLayout() {
 
   if (!fontsLoaded) return null;
 
+  return (
+    <ThemeSchemeProvider>
+      <AuthProvider>
+        <RootNavigation />
+      </AuthProvider>
+    </ThemeSchemeProvider>
+  );
+}
+
+function RootNavigation() {
+  const { scheme, colors } = useThemeScheme();
+
   const navigationTheme = {
-    ...(colorScheme === 'dark' ? DarkTheme : DefaultTheme),
+    ...(scheme === 'dark' ? DarkTheme : DefaultTheme),
     colors: {
-      ...(colorScheme === 'dark' ? DarkTheme.colors : DefaultTheme.colors),
-      background: theme.background,
-      card: theme.surface,
-      text: theme.primary,
-      border: theme.border,
-      primary: theme.accent,
+      ...(scheme === 'dark' ? DarkTheme.colors : DefaultTheme.colors),
+      background: colors.background,
+      card: colors.surface,
+      text: colors.primary,
+      border: colors.border,
+      primary: colors.accent,
     },
   };
 
   const headerScreenOptions = {
     headerShown: true,
     title: '',
-    headerStyle: { backgroundColor: theme.surface },
-    headerTintColor: theme.accent,
+    headerStyle: { backgroundColor: colors.surface },
+    headerTintColor: colors.accent,
     headerShadowVisible: false,
   };
 
   return (
     <ThemeProvider value={navigationTheme}>
-      <AuthProvider>
-        <Stack screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="(tabs)" />
-          <Stack.Screen name="step/[id]" options={headerScreenOptions} />
-          <Stack.Screen name="faq/[id]" options={headerScreenOptions} />
-        </Stack>
-      </AuthProvider>
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="(tabs)" />
+        <Stack.Screen name="step/[id]" options={headerScreenOptions} />
+        <Stack.Screen name="faq/[id]" options={headerScreenOptions} />
+      </Stack>
     </ThemeProvider>
   );
 }

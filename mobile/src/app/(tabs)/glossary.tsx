@@ -4,6 +4,7 @@ import { FlatList, Pressable, StyleSheet, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Card } from '@/components/card';
+import { ScreenBackground } from '@/components/screen-background';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { AppFonts } from '@/constants/theme';
@@ -44,8 +45,8 @@ export default function GlossaryScreen() {
   }, [search]);
 
   return (
-    <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
+    <ScreenBackground style={styles.container}>
+      <SafeAreaView edges={['left', 'right', 'bottom']} style={styles.safeArea}>
         <ThemedText type="title" style={styles.title}>
           {t('glossary.title')}
         </ThemedText>
@@ -93,13 +94,13 @@ export default function GlossaryScreen() {
           )}
         />
       </SafeAreaView>
-    </ThemedView>
+    </ScreenBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  safeArea: { flex: 1, paddingHorizontal: 20, gap: 10 },
+  safeArea: { flex: 1, paddingHorizontal: 20, paddingTop: 20, gap: 10 },
   title: { marginTop: 2 },
   input: { padding: 12, borderRadius: 12, borderWidth: 1, fontFamily: AppFonts.body },
   langRow: { flexDirection: 'row', gap: 8, backgroundColor: 'transparent' },
