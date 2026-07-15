@@ -1,21 +1,21 @@
-import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, ScrollView, StyleSheet, TextInput } from 'react-native';
+import { ScrollView, StyleSheet, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Button } from '@/components/button';
 import { Card } from '@/components/card';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
+import { UpvoteButton } from '@/components/upvote-button';
 import { AppFonts } from '@/constants/theme';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/hooks/use-theme';
 import { api } from '@/lib/api';
 
-type Answer = { id: number; answer: string; answered_by: string; upvotes: number };
-type Post = { id: number; question: string; asked_by: string; upvotes: number; answers: Answer[] };
+type Answer = { id: number; answer: string; answered_by: string; upvotes: number; upvoted: boolean };
+type Post = { id: number; question: string; asked_by: string; upvotes: number; upvoted: boolean; answers: Answer[] };
 
 export default function FaqDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -36,14 +36,36 @@ export default function FaqDetailScreen() {
     }, [load])
   );
 
-  async function upvotePost() {
-    await api.post(`/faq/${id}/upvote`);
-    load();
+  async function toggleUpvotePost() {
+    if (!post) return;
+    const optimistic = { upvoted: !post.upvoted, upvotes: post.upvotes + (post.upvoted ? -1 : 1) };
+    setPost({ ...post, ...optimistic });
+    try {
+      const { data } = await api.post(`/faq/${id}/upvote`);
+      setPost((prev) => (prev ? { ...prev, upvoted: data.upvoted, upvotes: data.upvotes } : prev));
+    } catch {
+      setPost((prev) => (prev ? { ...prev, upvoted: post.upvoted, upvotes: post.upvotes } : prev));
+    }
   }
 
-  async function upvoteAnswer(answerId: number) {
-    await api.post(`/faq/${id}/answers/${answerId}/upvote`);
-    load();
+  async function toggleUpvoteAnswer(target: Answer) {
+    if (!post) return;
+    const optimistic = { upvoted: !target.upvoted, upvotes: target.upvotes + (target.upvoted ? -1 : 1) };
+    setPost({ ...post, answers: post.answers.map((a) => (a.id === target.id ? { ...a, ...optimistic } : a)) });
+    try {
+      const { data } = await api.post(`/faq/${id}/answers/${target.id}/upvote`);
+      setPost((prev) =>
+        prev
+          ? { ...prev, answers: prev.answers.map((a) => (a.id === target.id ? { ...a, upvoted: data.upvoted, upvotes: data.upvotes } : a)) }
+          : prev
+      );
+    } catch {
+      setPost((prev) =>
+        prev
+          ? { ...prev, answers: prev.answers.map((a) => (a.id === target.id ? { ...a, upvoted: target.upvoted, upvotes: target.upvotes } : a)) }
+          : prev
+      );
+    }
   }
 
   async function submitAnswer() {
@@ -72,12 +94,7 @@ export default function FaqDetailScreen() {
             <ThemedText type="small" themeColor="textSecondary">
               {post.asked_by}
             </ThemedText>
-            <Pressable style={styles.upvote} onPress={upvotePost}>
-              <Ionicons name="arrow-up-outline" size={16} color={theme.accent} />
-              <ThemedText type="small" themeColor="accent">
-                {post.upvotes}
-              </ThemedText>
-            </Pressable>
+            <UpvoteButton count={post.upvotes} upvoted={post.upvoted} onToggle={toggleUpvotePost} />
           </ThemedView>
 
           {post.answers.map((a) => (
@@ -87,12 +104,7 @@ export default function FaqDetailScreen() {
                 <ThemedText type="small" themeColor="textSecondary">
                   {a.answered_by}
                 </ThemedText>
-                <Pressable style={styles.upvote} onPress={() => upvoteAnswer(a.id)}>
-                  <Ionicons name="arrow-up-outline" size={14} color={theme.accent} />
-                  <ThemedText type="small" themeColor="accent">
-                    {a.upvotes}
-                  </ThemedText>
-                </Pressable>
+                <UpvoteButton count={a.upvotes} upvoted={a.upvoted} onToggle={() => toggleUpvoteAnswer(a)} size={16} />
               </ThemedView>
             </Card>
           ))}
@@ -125,7 +137,6 @@ const styles = StyleSheet.create({
   scroll: { padding: 20, gap: 12 },
   question: { fontSize: 20 },
   metaRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'transparent' },
-  upvote: { flexDirection: 'row', alignItems: 'center', gap: 4 },
   answerCard: { gap: 6 },
   composer: { gap: 8, marginTop: 8, backgroundColor: 'transparent' },
   input: { padding: 12, borderRadius: 12, borderWidth: 1, minHeight: 70, textAlignVertical: 'top', fontFamily: AppFonts.body },

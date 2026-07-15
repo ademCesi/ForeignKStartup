@@ -56,7 +56,8 @@
     "answerPlaceholder": "Partagez votre expérience pour aider d'autres fondateurs...",
     "publish": "Publier",
     "submitAnswer": "Envoyer la réponse",
-    "empty": "Pas encore de questions - soyez le premier à en poser une."
+    "empty": "Pas encore de questions - soyez le premier à en poser une.",
+    "loginRequired": "Connectez-vous pour voter."
   },
   "account": {
     "welcome": "Bienvenue, {{email}}",

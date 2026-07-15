@@ -118,3 +118,20 @@ CREATE TABLE IF NOT EXISTS faq_answers (
   upvotes INTEGER NOT NULL DEFAULT 0,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+
+-- Per-user upvote records, so a post/answer can only be upvoted once per
+-- user (and un-upvoted), instead of the counter alone which anyone could
+-- increment indefinitely.
+CREATE TABLE IF NOT EXISTS faq_post_upvotes (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  post_id INTEGER NOT NULL REFERENCES faq_posts(id) ON DELETE CASCADE,
+  UNIQUE (user_id, post_id)
+);
+
+CREATE TABLE IF NOT EXISTS faq_answer_upvotes (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  answer_id INTEGER NOT NULL REFERENCES faq_answers(id) ON DELETE CASCADE,
+  UNIQUE (user_id, answer_id)
+);

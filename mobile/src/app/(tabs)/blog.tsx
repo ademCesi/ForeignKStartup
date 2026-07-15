@@ -2,13 +2,14 @@ import { Ionicons } from '@expo/vector-icons';
 import { Link, useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FlatList, Pressable, StyleSheet, TextInput } from 'react-native';
+import { FlatList, Pressable, StyleSheet, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Button } from '@/components/button';
 import { ScreenBackground } from '@/components/screen-background';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
+import { UpvoteButton } from '@/components/upvote-button';
 import { AppFonts } from '@/constants/theme';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/hooks/use-theme';
@@ -20,6 +21,7 @@ type FaqPost = {
   asked_by: string;
   answer_count: number;
   upvotes: number;
+  upvoted: boolean;
 };
 
 export default function BlogScreen() {
@@ -47,6 +49,17 @@ export default function BlogScreen() {
     setQuestion('');
     setComposing(false);
     load();
+  }
+
+  async function toggleUpvote(post: FaqPost) {
+    const optimistic = { upvoted: !post.upvoted, upvotes: post.upvotes + (post.upvoted ? -1 : 1) };
+    setPosts((prev) => prev.map((p) => (p.id === post.id ? { ...p, ...optimistic } : p)));
+    try {
+      const { data } = await api.post(`/faq/${post.id}/upvote`);
+      setPosts((prev) => prev.map((p) => (p.id === post.id ? { ...p, upvoted: data.upvoted, upvotes: data.upvotes } : p)));
+    } catch {
+      setPosts((prev) => prev.map((p) => (p.id === post.id ? { ...p, upvoted: post.upvoted, upvotes: post.upvotes } : p)));
+    }
   }
 
   return (
@@ -81,32 +94,31 @@ export default function BlogScreen() {
           contentContainerStyle={styles.list}
           ListEmptyComponent={<ThemedText themeColor="textSecondary">{t('blog.empty')}</ThemedText>}
           renderItem={({ item }) => (
-            <Link href={{ pathname: '/faq/[id]', params: { id: item.id } }} asChild>
-              <Pressable
-                style={{
-                  ...styles.card,
-                  backgroundColor: theme.surface,
-                  borderColor: theme.border,
-                  shadowColor: theme.shadow,
-                }}>
-                <ThemedText type="smallBold">{item.question}</ThemedText>
-                <ThemedView style={styles.metaRow}>
-                  <ThemedText type="small" themeColor="textSecondary">
+            <View
+              style={{
+                ...styles.card,
+                backgroundColor: theme.surface,
+                borderColor: theme.border,
+                shadowColor: theme.shadow,
+              }}>
+              <Link href={{ pathname: '/faq/[id]', params: { id: item.id } }} asChild>
+                <Pressable>
+                  <ThemedText type="smallBold">{item.question}</ThemedText>
+                  <ThemedText type="small" themeColor="textSecondary" style={styles.askedBy}>
                     {item.asked_by}
                   </ThemedText>
-                  <ThemedView style={styles.metaRight}>
-                    <Ionicons name="chatbubble-outline" size={14} color={theme.textSecondary} />
-                    <ThemedText type="small" themeColor="textSecondary">
-                      {item.answer_count}
-                    </ThemedText>
-                    <Ionicons name="arrow-up-outline" size={14} color={theme.textSecondary} />
-                    <ThemedText type="small" themeColor="textSecondary">
-                      {item.upvotes}
-                    </ThemedText>
-                  </ThemedView>
+                </Pressable>
+              </Link>
+              <ThemedView style={styles.metaRow}>
+                <ThemedView style={styles.metaLeft}>
+                  <Ionicons name="chatbubble-outline" size={14} color={theme.textSecondary} />
+                  <ThemedText type="small" themeColor="textSecondary">
+                    {item.answer_count}
+                  </ThemedText>
                 </ThemedView>
-              </Pressable>
-            </Link>
+                <UpvoteButton count={item.upvotes} upvoted={item.upvoted} onToggle={() => toggleUpvote(item)} />
+              </ThemedView>
+            </View>
           )}
         />
       </SafeAreaView>
@@ -131,6 +143,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 3 },
     elevation: 1,
   },
+  askedBy: { marginTop: 4 },
   metaRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: 'transparent' },
-  metaRight: { flexDirection: 'row', alignItems: 'center', gap: 4, backgroundColor: 'transparent' },
+  metaLeft: { flexDirection: 'row', alignItems: 'center', gap: 4, backgroundColor: 'transparent' },
 });

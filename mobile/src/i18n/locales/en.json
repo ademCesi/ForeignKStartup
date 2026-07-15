@@ -56,7 +56,8 @@
     "answerPlaceholder": "Share your experience to help other founders...",
     "publish": "Publish",
     "submitAnswer": "Submit answer",
-    "empty": "No questions yet - be the first to ask one."
+    "empty": "No questions yet - be the first to ask one.",
+    "loginRequired": "Log in to upvote."
   },
   "account": {
     "welcome": "Welcome, {{email}}",

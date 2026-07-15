@@ -56,7 +56,8 @@
     "answerPlaceholder": "다른 창업자들에게 도움이 되도록 경험을 공유해 주세요...",
     "publish": "게시",
     "submitAnswer": "답변 등록",
-    "empty": "아직 질문이 없습니다 - 첫 질문을 남겨보세요."
+    "empty": "아직 질문이 없습니다 - 첫 질문을 남겨보세요.",
+    "loginRequired": "추천하려면 로그인하세요."
   },
   "account": {
     "welcome": "환영합니다, {{email}}",
