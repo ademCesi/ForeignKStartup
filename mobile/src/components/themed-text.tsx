@@ -50,13 +50,15 @@ const styles = {
   },
   title: {
     fontFamily: AppFonts.display,
-    fontSize: 30,
-    lineHeight: 36,
+    fontSize: 28,
+    lineHeight: 34,
+    letterSpacing: -0.5,
   },
   subtitle: {
     fontFamily: AppFonts.displaySemiBold,
-    fontSize: 19,
-    lineHeight: 26,
+    fontSize: 18,
+    lineHeight: 24,
+    letterSpacing: -0.3,
   },
   link: {
     fontFamily: AppFonts.bodyMedium,

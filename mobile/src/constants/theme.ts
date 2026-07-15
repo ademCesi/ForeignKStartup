@@ -1,39 +1,43 @@
-// Palette and type ramp ported from the showcase website
-// (src/app/styles/*.scss): warm cream background, navy for headings, a
-// brick-red accent, Playfair Display for display type, DM Sans for body.
+// Clean, soft, modern product design language: light neutral surfaces, bold
+// black type, a warm coral accent, and a peach-pink-lavender gradient
+// reserved for "highlight" moments (recommendations, AI-ish suggestions).
 import { Platform } from 'react-native';
 
 export const Colors = {
   light: {
-    background: '#f8f7f4',
-    backgroundDeep: '#efe9e0',
+    background: '#f7f7f9',
+    backgroundDeep: '#eeeef2',
     surface: '#ffffff',
-    surfaceSelected: '#fbeae8',
-    border: '#e5e7eb',
-    text: '#1a1a2e',
-    textSecondary: '#6b7280',
-    primary: '#0A2540',
-    primaryDeep: '#061626',
-    accent: '#C8372D',
-    accentDeep: '#8f2519',
-    link: '#7C3AED',
+    surfaceSelected: '#f1f1f4',
+    accentSoft: '#ffe4dc',
+    border: '#ececef',
+    text: '#15161a',
+    textSecondary: '#8a8d93',
+    primary: '#15161a',
+    primaryDeep: '#000000',
+    accent: '#ff6b4a',
+    accentDeep: '#e0512f',
+    link: '#7c6aef',
+    shadow: '#000000',
     onPrimary: '#ffffff',
     onAccent: '#ffffff',
   },
   dark: {
-    background: '#12161f',
-    backgroundDeep: '#090b11',
-    surface: '#1c2230',
-    surfaceSelected: '#3a201d',
-    border: '#2c3341',
-    text: '#f5f3ee',
-    textSecondary: '#9aa3b7',
-    primary: '#f5f3ee',
+    background: '#0e0e11',
+    backgroundDeep: '#08080a',
+    surface: '#1b1c20',
+    surfaceSelected: '#26272c',
+    accentSoft: '#3a241e',
+    border: '#2a2b30',
+    text: '#f5f5f7',
+    textSecondary: '#9a9ca3',
+    primary: '#f5f5f7',
     primaryDeep: '#ffffff',
-    accent: '#e2584a',
-    accentDeep: '#a83324',
-    link: '#b295f5',
-    onPrimary: '#12161f',
+    accent: '#ff7a5c',
+    accentDeep: '#ff9478',
+    link: '#a996ff',
+    shadow: '#000000',
+    onPrimary: '#0e0e11',
     onAccent: '#ffffff',
   },
 } as const;
@@ -41,9 +45,16 @@ export const Colors = {
 export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
 export type ThemeColors = { [K in ThemeColor]: string };
 
+// Gradient stops for "highlight" cards (recommendations, tips) - not part of
+// ThemeColors since gradients need an ordered array, not a single value.
+export const HeroGradient = {
+  light: ['#ffe0b2', '#ffc1cc', '#d9c6f7'] as const,
+  dark: ['#4a3323', '#4a2233', '#2a2050'] as const,
+};
+
 export const AppFonts = {
-  display: 'PlayfairDisplay_700Bold',
-  displaySemiBold: 'PlayfairDisplay_600SemiBold',
+  display: 'DMSans_800ExtraBold',
+  displaySemiBold: 'DMSans_700Bold',
   body: 'DMSans_400Regular',
   bodyMedium: 'DMSans_500Medium',
   bodySemiBold: 'DMSans_600SemiBold',
@@ -61,7 +72,7 @@ export const Spacing = {
 } as const;
 
 export const Radius = {
-  card: 14,
+  card: 22,
   pill: 100,
 } as const;
 

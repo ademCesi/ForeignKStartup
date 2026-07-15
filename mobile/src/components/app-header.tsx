@@ -9,10 +9,10 @@ export function AppHeader() {
   const theme = useTheme();
 
   return (
-    <SafeAreaView edges={['top']} style={{ backgroundColor: theme.surface }}>
-      <View style={[styles.row, { borderBottomColor: theme.border }]}>
+    <SafeAreaView edges={['top']} style={{ backgroundColor: theme.background }}>
+      <View style={styles.row}>
         <Text style={styles.wordmark}>
-          <Text style={{ fontFamily: AppFonts.displaySemiBold, color: theme.textSecondary }}>Foreign</Text>
+          <Text style={{ fontFamily: AppFonts.bodySemiBold, color: theme.textSecondary }}>Foreign</Text>
           <Text style={{ fontFamily: AppFonts.display, color: theme.primary }}> K-Startup</Text>
           <Text style={{ fontFamily: AppFonts.display, color: theme.accent, fontSize: 22 }}>*</Text>
         </Text>
@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
-    paddingVertical: 12,
-    borderBottomWidth: 1,
+    paddingTop: 16,
+    paddingBottom: 10,
   },
   wordmark: {
     fontSize: 17,

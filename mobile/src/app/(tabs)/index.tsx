@@ -63,7 +63,7 @@ export default function RoadmapScreen() {
             <ThemedText themeColor="textSecondary">{t('roadmap.loading')}</ThemedText>
           ) : (
             <>
-              <View style={[styles.progressPill, { backgroundColor: theme.surfaceSelected }]}>
+              <View style={[styles.progressPill, { backgroundColor: theme.accentSoft }]}>
                 <ThemedText type="smallBold" themeColor="accent">
                   {t('roadmap.stepsDone', { done: doneCount, total: steps.length })}
                 </ThemedText>
@@ -118,7 +118,7 @@ export default function RoadmapScreen() {
                             ...styles.card,
                             backgroundColor: theme.surface,
                             borderColor: theme.border,
-                            shadowColor: theme.primary,
+                            shadowColor: theme.shadow,
                           }}>
                           <ThemedText type="smallBold">{item.title}</ThemedText>
                         </View>

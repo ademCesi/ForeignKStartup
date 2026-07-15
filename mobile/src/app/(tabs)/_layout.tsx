@@ -40,7 +40,7 @@ export default function TabsLayout() {
         tabBarInactiveTintColor: theme.textSecondary,
         tabBarStyle: [
           styles.tabBar,
-          { backgroundColor: theme.surface, shadowColor: theme.primary },
+          { backgroundColor: theme.surface, shadowColor: theme.shadow },
         ],
         tabBarItemStyle: styles.tabItem,
         tabBarLabelStyle: { fontFamily: AppFonts.bodyMedium, fontSize: 11 },

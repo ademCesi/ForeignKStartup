@@ -68,7 +68,7 @@ export default function GlossaryScreen() {
               style={[
                 styles.langButton,
                 lang === code
-                  ? { backgroundColor: theme.surfaceSelected, borderColor: theme.accent }
+                  ? { backgroundColor: theme.accentSoft, borderColor: theme.accent }
                   : { backgroundColor: theme.surface, borderColor: theme.border },
               ]}>
               <ThemedText type="smallBold" themeColor={lang === code ? 'accent' : 'text'}>

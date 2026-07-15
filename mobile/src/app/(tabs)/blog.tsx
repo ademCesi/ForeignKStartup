@@ -87,7 +87,7 @@ export default function BlogScreen() {
                   ...styles.card,
                   backgroundColor: theme.surface,
                   borderColor: theme.border,
-                  shadowColor: theme.primary,
+                  shadowColor: theme.shadow,
                 }}>
                 <ThemedText type="smallBold">{item.question}</ThemedText>
                 <ThemedView style={styles.metaRow}>

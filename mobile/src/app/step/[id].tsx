@@ -1,5 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect, useLocalSearchParams } from 'expo-router';
+import { LinearGradient } from 'expo-linear-gradient';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Linking, ScrollView, StyleSheet, View } from 'react-native';
@@ -10,9 +11,10 @@ import { Card } from '@/components/card';
 import { OfficesMap } from '@/components/offices-map';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { AppFonts } from '@/constants/theme';
+import { AppFonts, HeroGradient } from '@/constants/theme';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/hooks/use-theme';
+import { useThemeScheme } from '@/context/theme-context';
 import { api } from '@/lib/api';
 import { withAlpha } from '@/lib/color';
 
@@ -282,6 +284,7 @@ function useVisaQuestions() {
 function VisaSection() {
   const { t } = useTranslation();
   const theme = useTheme();
+  const { scheme } = useThemeScheme();
   const { user, updateProfile } = useAuth();
   const questions = useVisaQuestions();
   const [answers, setAnswers] = useState<Answers>({});
@@ -357,13 +360,19 @@ function VisaSection() {
         </>
       ) : (
         <>
-          <ThemedView
-            style={[styles.resultCard, { backgroundColor: theme.surfaceSelected, borderColor: theme.accent }]}>
+          <LinearGradient
+            colors={HeroGradient[scheme]}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            style={styles.resultCard}>
+            <View style={[styles.sparkleBadge, { backgroundColor: withAlpha(theme.onPrimary, 0.35) }]}>
+              <Ionicons name="sparkles" size={16} color={theme.text} />
+            </View>
             <ThemedText type="eyebrow">{t('visa.recommended')}</ThemedText>
             <ThemedText type="subtitle">{result.recommendation.code}</ThemedText>
             <ThemedText>{result.recommendation.name}</ThemedText>
             <ThemedText themeColor="textSecondary">{result.reason}</ThemedText>
-          </ThemedView>
+          </LinearGradient>
 
           <Button variant="secondary" label={t('visa.compareAll')} onPress={loadAllVisas} />
 
@@ -401,5 +410,13 @@ const styles = StyleSheet.create({
   docRow: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   docText: { flex: 1, backgroundColor: 'transparent' },
   actionSpacing: { marginTop: 8 },
-  resultCard: { padding: 18, borderRadius: 14, borderWidth: 1.5, gap: 4 },
+  resultCard: { padding: 20, borderRadius: 24, gap: 4 },
+  sparkleBadge: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 6,
+  },
 });

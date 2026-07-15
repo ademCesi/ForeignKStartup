@@ -9,7 +9,7 @@ export function Card({ style, onPress, ...rest }: CardProps) {
   const theme = useTheme();
   const baseStyle = [
     styles.card,
-    { backgroundColor: theme.surface, borderColor: theme.border, shadowColor: theme.primary },
+    { backgroundColor: theme.surface, borderColor: theme.border, shadowColor: theme.shadow },
     style,
   ];
 
