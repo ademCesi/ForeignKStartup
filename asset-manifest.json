@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/ForeignKStartup/static/css/main.0c0549ae.css",
-    "main.js": "/ForeignKStartup/static/js/main.aefd2f20.js",
+    "main.css": "/ForeignKStartup/static/css/main.f7f2a80e.css",
+    "main.js": "/ForeignKStartup/static/js/main.f093c01c.js",
     "static/media/slide1.jpg": "/ForeignKStartup/static/media/slide1.c41e9751797bbfae0391.jpg",
     "static/media/slide3.jpg": "/ForeignKStartup/static/media/slide3.2c353cedd499f9e9fca3.jpg",
     "static/media/slide2.jpg": "/ForeignKStartup/static/media/slide2.3e7e54cfc37955e3385e.jpg",
     "static/media/slide5.jpg": "/ForeignKStartup/static/media/slide5.54a9c807b509c8fcf577.jpg",
     "static/media/slide4.jpg": "/ForeignKStartup/static/media/slide4.5e9b9abd95a50d90b943.jpg",
     "index.html": "/ForeignKStartup/index.html",
-    "main.0c0549ae.css.map": "/ForeignKStartup/static/css/main.0c0549ae.css.map",
-    "main.aefd2f20.js.map": "/ForeignKStartup/static/js/main.aefd2f20.js.map"
+    "main.f7f2a80e.css.map": "/ForeignKStartup/static/css/main.f7f2a80e.css.map",
+    "main.f093c01c.js.map": "/ForeignKStartup/static/js/main.f093c01c.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c0549ae.css",
-    "static/js/main.aefd2f20.js"
+    "static/css/main.f7f2a80e.css",
+    "static/js/main.f093c01c.js"
   ]
 }
