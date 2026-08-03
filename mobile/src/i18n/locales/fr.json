@@ -1,0 +1,77 @@
+{
+  "tabs": {
+    "roadmap": "Feuille de route",
+    "glossary": "Glossaire",
+    "blog": "Blog",
+    "account": "Compte"
+  },
+  "roadmap": {
+    "eyebrow": "Le parcours",
+    "title": "Votre feuille de route",
+    "stepsDone": "{{done}} étapes sur {{total}} terminées",
+    "loading": "Chargement de votre feuille de route...",
+    "loginHint": "Connectez-vous depuis l'onglet Compte pour sauvegarder votre progression."
+  },
+  "step": {
+    "eyebrow": "Étape",
+    "documents": "Documents à préparer",
+    "needsApostille": "Apostille requise",
+    "needsTranslation": "Traduction requise",
+    "openOfficial": "Ouvrir le site officiel",
+    "markDone": "Marquer l'étape comme terminée",
+    "markNotDone": "Marquer l'étape comme non terminée",
+    "loginToTrack": "Connectez-vous pour suivre vos documents et votre progression.",
+    "fundingPrograms": "Programmes de financement",
+    "offices": "Guichets près de chez vous"
+  },
+  "visa": {
+    "eyebrow": "Comparaison",
+    "title": "Trouvez votre visa",
+    "question": "Question {{current}} sur {{total}}",
+    "next": "Suivant",
+    "back": "Retour",
+    "startOver": "Recommencer",
+    "recommended": "Recommandé pour vous",
+    "savedReason": "Enregistré à partir de vos réponses au questionnaire visa.",
+    "compareAll": "Comparer tous les visas",
+    "q1": "Avez-vous déjà une société enregistrée en Corée ?",
+    "q2": "Avez-vous un brevet ou un prototype ?",
+    "q2_patent": "Oui, un brevet déposé",
+    "q2_prototype": "Oui, un prototype fonctionnel",
+    "q2_none": "Pas encore",
+    "q3": "Disposez-vous d'au moins 100 000 000 KRW (~75 000 $) à investir ?",
+    "q4": "Avez-vous été sélectionné pour un programme d'accélération coréen (ex. K-Startup Grand Challenge) ?",
+    "q5": "Détenez-vous déjà un statut de résidence longue durée en Corée (ex. un visa de série F) ?",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "glossary": {
+    "title": "Glossaire",
+    "searchPlaceholder": "Rechercher un terme..."
+  },
+  "blog": {
+    "title": "Blog communautaire",
+    "ask": "+ Poser une question",
+    "questionPlaceholder": "Que voulez-vous savoir ?",
+    "answerPlaceholder": "Partagez votre expérience pour aider d'autres fondateurs...",
+    "publish": "Publier",
+    "submitAnswer": "Envoyer la réponse",
+    "empty": "Pas encore de questions - soyez le premier à en poser une.",
+    "loginRequired": "Connectez-vous pour voter."
+  },
+  "account": {
+    "welcome": "Bienvenue, {{email}}",
+    "language": "Langue",
+    "targetVisa": "Visa visé",
+    "logout": "Se déconnecter",
+    "login": "Se connecter",
+    "register": "Créer un compte",
+    "email": "Email",
+    "password": "Mot de passe",
+    "switchToRegister": "Pas encore de compte ? Créez-en un",
+    "switchToLogin": "Déjà un compte ? Connectez-vous",
+    "submit": "Valider",
+    "reminders": "Rappels",
+    "noReminders": "Aucun rappel à venir. Marquez des étapes comme terminées pour programmer des rappels d'échéance."
+  }
+}

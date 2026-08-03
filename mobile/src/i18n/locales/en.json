@@ -1,0 +1,77 @@
+{
+  "tabs": {
+    "roadmap": "Roadmap",
+    "glossary": "Glossary",
+    "blog": "Blog",
+    "account": "Account"
+  },
+  "roadmap": {
+    "eyebrow": "The process",
+    "title": "Your roadmap",
+    "stepsDone": "{{done}} of {{total}} steps done",
+    "loading": "Loading your roadmap...",
+    "loginHint": "Log in from the Account tab to save your progress."
+  },
+  "step": {
+    "eyebrow": "Step",
+    "documents": "Documents to prepare",
+    "needsApostille": "Apostille required",
+    "needsTranslation": "Translation required",
+    "openOfficial": "Open official site",
+    "markDone": "Mark step as done",
+    "markNotDone": "Mark step as not done",
+    "loginToTrack": "Log in to track documents and progress.",
+    "fundingPrograms": "Funding programs",
+    "offices": "Offices near you"
+  },
+  "visa": {
+    "eyebrow": "Comparison",
+    "title": "Find your visa",
+    "question": "Question {{current}} of {{total}}",
+    "next": "Next",
+    "back": "Back",
+    "startOver": "Start over",
+    "recommended": "Recommended for you",
+    "savedReason": "Saved from your answers to the visa questionnaire.",
+    "compareAll": "Compare all visas",
+    "q1": "Do you already have a company registered in Korea?",
+    "q2": "Do you have a patent or a prototype?",
+    "q2_patent": "Yes, a registered patent",
+    "q2_prototype": "Yes, a working prototype",
+    "q2_none": "Not yet",
+    "q3": "Do you have at least 100,000,000 KRW (~$75k) to invest?",
+    "q4": "Have you been selected for a Korean accelerator program (e.g. K-Startup Grand Challenge)?",
+    "q5": "Do you already hold long-term residence status in Korea (e.g. an F-series visa)?",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "glossary": {
+    "title": "Glossary",
+    "searchPlaceholder": "Search a term..."
+  },
+  "blog": {
+    "title": "Community blog",
+    "ask": "+ Ask a question",
+    "questionPlaceholder": "What would you like to know?",
+    "answerPlaceholder": "Share your experience to help other founders...",
+    "publish": "Publish",
+    "submitAnswer": "Submit answer",
+    "empty": "No questions yet - be the first to ask one.",
+    "loginRequired": "Log in to upvote."
+  },
+  "account": {
+    "welcome": "Welcome, {{email}}",
+    "language": "Language",
+    "targetVisa": "Target visa",
+    "logout": "Log out",
+    "login": "Log in",
+    "register": "Create account",
+    "email": "Email",
+    "password": "Password",
+    "switchToRegister": "No account yet? Create one",
+    "switchToLogin": "Already have an account? Log in",
+    "submit": "Submit",
+    "reminders": "Reminders",
+    "noReminders": "No upcoming reminders. Mark roadmap steps as done to schedule deadline reminders."
+  }
+}

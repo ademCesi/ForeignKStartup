@@ -1,0 +1,77 @@
+{
+  "tabs": {
+    "roadmap": "로드맵",
+    "glossary": "용어집",
+    "blog": "블로그",
+    "account": "계정"
+  },
+  "roadmap": {
+    "eyebrow": "프로세스",
+    "title": "나의 로드맵",
+    "stepsDone": "{{total}}단계 중 {{done}}단계 완료",
+    "loading": "로드맵을 불러오는 중...",
+    "loginHint": "계정 탭에서 로그인하면 진행 상황이 저장됩니다."
+  },
+  "step": {
+    "eyebrow": "단계",
+    "documents": "준비할 서류",
+    "needsApostille": "아포스티유 필요",
+    "needsTranslation": "번역 필요",
+    "openOfficial": "공식 사이트 열기",
+    "markDone": "완료로 표시",
+    "markNotDone": "미완료로 표시",
+    "loginToTrack": "서류와 진행 상황을 저장하려면 로그인하세요.",
+    "fundingPrograms": "지원 프로그램",
+    "offices": "주변 관공서"
+  },
+  "visa": {
+    "eyebrow": "비교",
+    "title": "비자 찾기",
+    "question": "질문 {{current}} / {{total}}",
+    "next": "다음",
+    "back": "이전",
+    "startOver": "다시 시작",
+    "recommended": "추천 비자",
+    "savedReason": "비자 질문에 대한 답변을 바탕으로 저장되었습니다.",
+    "compareAll": "모든 비자 비교",
+    "q1": "이미 한국에 등록된 법인이 있나요?",
+    "q2": "특허나 시제품이 있나요?",
+    "q2_patent": "네, 등록된 특허가 있습니다",
+    "q2_prototype": "네, 작동하는 시제품이 있습니다",
+    "q2_none": "아직 없습니다",
+    "q3": "투자할 수 있는 자금이 1억 원(약 7.5만 달러) 이상인가요?",
+    "q4": "K-Startup Grand Challenge 같은 한국 액셀러레이터 프로그램에 선정된 적이 있나요?",
+    "q5": "이미 한국에서 장기 거주 자격(F 계열 비자 등)을 가지고 있나요?",
+    "yes": "예",
+    "no": "아니요"
+  },
+  "glossary": {
+    "title": "용어집",
+    "searchPlaceholder": "용어 검색..."
+  },
+  "blog": {
+    "title": "커뮤니티 블로그",
+    "ask": "+ 질문하기",
+    "questionPlaceholder": "무엇이 궁금하신가요?",
+    "answerPlaceholder": "다른 창업자들에게 도움이 되도록 경험을 공유해 주세요...",
+    "publish": "게시",
+    "submitAnswer": "답변 등록",
+    "empty": "아직 질문이 없습니다 - 첫 질문을 남겨보세요.",
+    "loginRequired": "추천하려면 로그인하세요."
+  },
+  "account": {
+    "welcome": "환영합니다, {{email}}",
+    "language": "언어",
+    "targetVisa": "목표 비자",
+    "logout": "로그아웃",
+    "login": "로그인",
+    "register": "계정 만들기",
+    "email": "이메일",
+    "password": "비밀번호",
+    "switchToRegister": "계정이 없으신가요? 만들기",
+    "switchToLogin": "이미 계정이 있으신가요? 로그인",
+    "submit": "제출",
+    "reminders": "알림",
+    "noReminders": "예정된 알림이 없습니다. 로드맵 단계를 완료로 표시하면 기한 알림이 예약됩니다."
+  }
+}
