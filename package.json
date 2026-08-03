@@ -2,7 +2,7 @@
   "name": "foreign-k-startup",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://TON-USERNAME.github.io/TON-REPO",
+  "homepage": "https://ademcesi.github.io/ForeignKStartup",
   "dependencies": {
     "i18next": "^21.10.0",
     "react": "^19.2.7",
@@ -20,7 +20,7 @@
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -o github"
   },
   "eslintConfig": {
     "extends": [

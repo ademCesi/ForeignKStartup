@@ -812,5 +812,18 @@
     "comingSoon": "곧 콘텐츠가 제공됩니다...",
     "notFound": "단계를 찾을 수 없습니다",
     "resources": "유용한 자료"
+  },
+  "footer": {
+    "tagline": "대한민국에서 스타트업을 시작하기 위한 관문.",
+    "organization": "부산대학교 V-SPACE",
+    "addressLine1": "부산광역시 금정구 부산대학로63번길 2",
+    "addressLine2": "기계관(303동) V-SPACE 208호",
+    "phone": "전화. 051-510-3261",
+    "fax": "팩스. 051-510-0787",
+    "privacy": "개인정보처리방침",
+    "emailPolicy": "이메일 무단수집 거부",
+    "contact": "연락처",
+    "copyrightOwner": "PNU V-Space",
+    "copyright": "© Copyright"
   }
 }

@@ -812,5 +812,18 @@
     "comingSoon": "内容即将推出...",
     "notFound": "未找到步骤",
     "resources": "实用资源"
+  },
+  "footer": {
+    "tagline": "您在韩国创业的门户。",
+    "organization": "釜山国立大学 V-SPACE",
+    "addressLine1": "釜山广域市金井区釜山大学路63番街2号",
+    "addressLine2": "机械馆（303号楼）V-SPACE 208室",
+    "phone": "电话. 051-510-3261",
+    "fax": "传真. 051-510-0787",
+    "privacy": "隐私政策",
+    "emailPolicy": "拒绝未经授权的电子邮件收集",
+    "contact": "联系方式",
+    "copyrightOwner": "PNU V-Space",
+    "copyright": "© Copyright"
   }
 }

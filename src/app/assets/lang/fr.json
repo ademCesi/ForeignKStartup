@@ -812,5 +812,18 @@
     "comingSoon": "Contenu à venir...",
     "notFound": "Étape introuvable",
     "resources": "Ressources utiles"
+  },
+  "footer": {
+    "tagline": "Votre passerelle pour lancer une startup en Corée du Sud.",
+    "organization": "Université nationale de Pusan V-SPACE",
+    "addressLine1": "2, Busandaehak-ro 63beon-gil, Geumjeong-gu, Busan",
+    "addressLine2": "Bâtiment de génie mécanique (303), salle 208 V-SPACE",
+    "phone": "Tél. 051-510-3261",
+    "fax": "Fax. 051-510-0787",
+    "privacy": "Politique de confidentialité",
+    "emailPolicy": "Refus de collecte non autorisée d'e-mails",
+    "contact": "Contact",
+    "copyrightOwner": "PNU V-Space",
+    "copyright": "© Copyright"
   }
 }

@@ -812,5 +812,18 @@
     "comingSoon": "Content coming soon...",
     "notFound": "Step not found",
     "resources": "Useful resources"
+  },
+  "footer": {
+    "tagline": "Your gateway to launching a startup in South Korea.",
+    "organization": "Pusan National University V-SPACE",
+    "addressLine1": "2, Busandaehak-ro 63beon-gil, Geumjeong-gu, Busan",
+    "addressLine2": "Mechanical Engineering Building (303), Room 208 V-SPACE",
+    "phone": "Tel. 051-510-3261",
+    "fax": "Fax. 051-510-0787",
+    "privacy": "Privacy Policy",
+    "emailPolicy": "Refusal of unauthorized email collection",
+    "contact": "Contact",
+    "copyrightOwner": "PNU V-Space",
+    "copyright": "© Copyright"
   }
 }

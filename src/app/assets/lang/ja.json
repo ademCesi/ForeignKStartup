@@ -812,5 +812,18 @@
     "comingSoon": "コンテンツ近日公開...",
     "notFound": "ステップが見つかりません",
     "resources": "便利なリソース"
+  },
+  "footer": {
+    "tagline": "韓国でスタートアップを始めるためのゲートウェイ。",
+    "organization": "釜山大学校 V-SPACE",
+    "addressLine1": "釜山広域市金井区釜山大学路63番キル2",
+    "addressLine2": "機械工学館（303棟）V-SPACE 208号室",
+    "phone": "電話. 051-510-3261",
+    "fax": "ファックス. 051-510-0787",
+    "privacy": "プライバシーポリシー",
+    "emailPolicy": "メールアドレスの無断収集拒否",
+    "contact": "お問い合わせ",
+    "copyrightOwner": "PNU V-Space",
+    "copyright": "© Copyright"
   }
 }

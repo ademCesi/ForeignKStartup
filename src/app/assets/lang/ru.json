@@ -812,5 +812,18 @@
     "comingSoon": "Скоро будет доступно...",
     "notFound": "Шаг не найден",
     "resources": "Полезные ресурсы"
+  },
+  "footer": {
+    "tagline": "Ваш путь к запуску стартапа в Южной Корее.",
+    "organization": "Пусанский национальный университет V-SPACE",
+    "addressLine1": "2, Busandaehak-ro 63beon-gil, Кымджон-гу, Пусан",
+    "addressLine2": "Корпус машиностроения (303), комната 208 V-SPACE",
+    "phone": "Тел. 051-510-3261",
+    "fax": "Факс. 051-510-0787",
+    "privacy": "Политика конфиденциальности",
+    "emailPolicy": "Отказ от несанкционированного сбора электронной почты",
+    "contact": "Контакты",
+    "copyrightOwner": "PNU V-Space",
+    "copyright": "© Copyright"
   }
 }

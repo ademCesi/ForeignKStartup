@@ -812,5 +812,18 @@
     "comingSoon": "सामग्री जल्द ही आ रही है...",
     "notFound": "चरण नहीं मिला",
     "resources": "उपयोगी संसाधन"
+  },
+  "footer": {
+    "tagline": "दक्षिण कोरिया में स्टार्टअप शुरू करने का आपका प्रवेश द्वार।",
+    "organization": "पुसान राष्ट्रीय विश्वविद्यालय V-SPACE",
+    "addressLine1": "2, Busandaehak-ro 63beon-gil, Geumjeong-gu, Busan",
+    "addressLine2": "मैकेनिकल इंजीनियरिंग भवन (303), कक्ष 208 V-SPACE",
+    "phone": "फ़ोन. 051-510-3261",
+    "fax": "फ़ैक्स. 051-510-0787",
+    "privacy": "गोपनीयता नीति",
+    "emailPolicy": "अनधिकृत ईमेल संग्रहण से इनकार",
+    "contact": "संपर्क करें",
+    "copyrightOwner": "PNU V-Space",
+    "copyright": "© Copyright"
   }
 }

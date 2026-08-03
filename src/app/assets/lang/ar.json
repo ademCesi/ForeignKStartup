@@ -812,5 +812,18 @@
     "comingSoon": "المحتوى قريباً...",
     "notFound": "لم يتم العثور على الخطوة",
     "resources": "موارد مفيدة"
+  },
+  "footer": {
+    "tagline": "بوابتك لإطلاق شركة ناشئة في كوريا الجنوبية.",
+    "organization": "جامعة بوسان الوطنية V-SPACE",
+    "addressLine1": "2، Busandaehak-ro 63beon-gil، Geumjeong-gu، بوسان",
+    "addressLine2": "مبنى الهندسة الميكانيكية (303)، الغرفة 208 V-SPACE",
+    "phone": "هاتف. 051-510-3261",
+    "fax": "فاكس. 051-510-0787",
+    "privacy": "سياسة الخصوصية",
+    "emailPolicy": "رفض جمع البريد الإلكتروني غير المصرح به",
+    "contact": "اتصل بنا",
+    "copyrightOwner": "PNU V-Space",
+    "copyright": "© حقوق النشر"
   }
 }
