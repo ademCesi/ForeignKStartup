@@ -10,7 +10,10 @@
     "title": "Your roadmap",
     "stepsDone": "{{done}} of {{total}} steps done",
     "loading": "Loading your roadmap...",
-    "loginHint": "Log in from the Account tab to save your progress."
+    "loginHint": "Log in from the Account tab to save your progress.",
+    "community": "From the community",
+    "seeAll": "See all",
+    "tipTitle": "Good to know"
   },
   "step": {
     "eyebrow": "Step",
@@ -60,9 +63,7 @@
     "loginRequired": "Log in to upvote."
   },
   "account": {
-    "welcome": "Welcome, {{email}}",
-    "language": "Language",
-    "targetVisa": "Target visa",
+    "welcome": "Welcome, {{name}}",
     "logout": "Log out",
     "login": "Log in",
     "register": "Create account",
@@ -72,6 +73,17 @@
     "switchToLogin": "Already have an account? Log in",
     "submit": "Submit",
     "reminders": "Reminders",
-    "noReminders": "No upcoming reminders. Mark roadmap steps as done to schedule deadline reminders."
+    "noReminders": "No upcoming reminders. Mark roadmap steps as done to schedule deadline reminders.",
+    "daysLeft": "days left",
+    "progressDone": "You've completed your roadmap!",
+    "progressOne": "Just 1 step left!",
+    "progressFew": "Only {{count}} steps left!",
+    "progressMany": "{{count}} steps left - keep going",
+    "reminderTitles": {
+      "arc_window": "ARC Registration",
+      "visa_renewal": "Visa Renewal",
+      "quarterly_vat": "VAT Filing",
+      "default": "Reminder"
+    }
   }
 }

@@ -10,10 +10,11 @@ import { ScreenBackground } from '@/components/screen-background';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { UpvoteButton } from '@/components/upvote-button';
-import { AppFonts } from '@/constants/theme';
+import { AppFonts, BottomTabInset } from '@/constants/theme';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/hooks/use-theme';
 import { api } from '@/lib/api';
+import { emailName } from '@/lib/format';
 
 type FaqPost = {
   id: number;
@@ -105,7 +106,7 @@ export default function BlogScreen() {
                 <Pressable>
                   <ThemedText type="smallBold">{item.question}</ThemedText>
                   <ThemedText type="small" themeColor="textSecondary" style={styles.askedBy}>
-                    {item.asked_by}
+                    {emailName(item.asked_by)}
                   </ThemedText>
                 </Pressable>
               </Link>
@@ -132,7 +133,7 @@ const styles = StyleSheet.create({
   title: { marginTop: 2 },
   composer: { gap: 8, backgroundColor: 'transparent' },
   input: { padding: 12, borderRadius: 12, borderWidth: 1, minHeight: 80, textAlignVertical: 'top', fontFamily: AppFonts.body },
-  list: { gap: 10, paddingVertical: 8 },
+  list: { gap: 10, paddingVertical: 8, paddingBottom: BottomTabInset },
   card: {
     padding: 14,
     borderRadius: 14,

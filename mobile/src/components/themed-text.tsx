@@ -24,7 +24,7 @@ export function ThemedText({ style, type = 'default', themeColor, ...rest }: The
         type === 'link' && [styles.link, { color: theme.link }],
         type === 'linkPrimary' && [styles.link, { color: theme.accent }],
         type === 'code' && styles.code,
-        type === 'eyebrow' && [styles.eyebrow, { color: theme.accent }],
+        type === 'eyebrow' && [styles.eyebrow, { color: theme[themeColor ?? 'accent'] }],
         style,
       ]}
       {...rest}

@@ -1,56 +1,66 @@
-// Clean, soft, modern product design language: light neutral surfaces, bold
-// black type, a warm coral accent, and a peach-pink-lavender gradient
-// reserved for "highlight" moments (recommendations, AI-ish suggestions).
-import { Platform } from 'react-native';
+// Warm, modern product design language: cream/plum surfaces, bold type, one
+// consistent coral accent used everywhere, and a single berry "highlight"
+// color reserved for warnings/callouts. Flat colors only - no gradients.
 
 export const Colors = {
   light: {
-    background: '#f7f7f9',
-    backgroundDeep: '#eeeef2',
+    background: '#fff8f0',
+    backgroundDeep: '#ffeee0',
     surface: '#ffffff',
-    surfaceSelected: '#f1f1f4',
-    accentSoft: '#ffe4dc',
-    border: '#ececef',
-    text: '#15161a',
-    textSecondary: '#8a8d93',
-    primary: '#15161a',
+    surfaceSelected: '#fff1e6',
+    border: '#f1e4d8',
+    text: '#1f1a2e',
+    textSecondary: '#8d8296',
+    primary: '#1f1a2e',
     primaryDeep: '#000000',
-    accent: '#ff6b4a',
-    accentDeep: '#e0512f',
-    link: '#7c6aef',
+
+    accent: '#ff6a3d',
+    accentDeep: '#e5501f',
+    accentSoft: '#ffe0d1',
+    onAccent: '#ffffff',
+
+    highlight: '#e0447b',
+    highlightDeep: '#b52f61',
+    highlightSoft: '#fbe1ec',
+    onHighlight: '#ffffff',
+
+    link: '#8b5cf6',
+    success: '#22a35c',
     shadow: '#000000',
     onPrimary: '#ffffff',
-    onAccent: '#ffffff',
+    onSuccess: '#ffffff',
   },
   dark: {
-    background: '#0e0e11',
-    backgroundDeep: '#08080a',
-    surface: '#1b1c20',
-    surfaceSelected: '#26272c',
-    accentSoft: '#3a241e',
-    border: '#2a2b30',
-    text: '#f5f5f7',
-    textSecondary: '#9a9ca3',
-    primary: '#f5f5f7',
+    background: '#15121c',
+    backgroundDeep: '#0c0a12',
+    surface: '#211d2b',
+    surfaceSelected: '#2c2638',
+    border: '#332c40',
+    text: '#f7f3ee',
+    textSecondary: '#a79bbd',
+    primary: '#f7f3ee',
     primaryDeep: '#ffffff',
-    accent: '#ff7a5c',
-    accentDeep: '#ff9478',
-    link: '#a996ff',
+
+    accent: '#ff8a5c',
+    accentDeep: '#ff6a3d',
+    accentSoft: '#3a2a22',
+    onAccent: '#1f1a2e',
+
+    highlight: '#ff6fa0',
+    highlightDeep: '#e0447b',
+    highlightSoft: '#3a1f2b',
+    onHighlight: '#1f1a2e',
+
+    link: '#b794f6',
+    success: '#3ecb7e',
     shadow: '#000000',
-    onPrimary: '#0e0e11',
-    onAccent: '#ffffff',
+    onPrimary: '#15121c',
+    onSuccess: '#0e0e11',
   },
 } as const;
 
 export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
 export type ThemeColors = { [K in ThemeColor]: string };
-
-// Gradient stops for "highlight" cards (recommendations, tips) - not part of
-// ThemeColors since gradients need an ordered array, not a single value.
-export const HeroGradient = {
-  light: ['#ffe0b2', '#ffc1cc', '#d9c6f7'] as const,
-  dark: ['#4a3323', '#4a2233', '#2a2050'] as const,
-};
 
 export const AppFonts = {
   display: 'DMSans_800ExtraBold',
@@ -76,5 +86,6 @@ export const Radius = {
   pill: 100,
 } as const;
 
-export const BottomTabInset = Platform.select({ ios: 50, android: 80 }) ?? 0;
+// Clearance so scrollable content doesn't sit behind the floating tab bar.
+export const BottomTabInset = 110;
 export const MaxContentWidth = 800;

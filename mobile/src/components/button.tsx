@@ -3,6 +3,7 @@ import { Pressable, StyleSheet, type StyleProp, type ViewStyle, type PressablePr
 import { ThemedText } from '@/components/themed-text';
 import { AppFonts, Radius } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
+import { withAlpha } from '@/lib/color';
 
 type ButtonProps = Omit<PressableProps, 'style'> & {
   label: string;
@@ -19,7 +20,9 @@ export function Button({ label, variant = 'primary', style, ...rest }: ButtonPro
       style={({ pressed }) => [
         styles.button,
         {
-          backgroundColor: isPrimary ? theme.primary : theme.surfaceSelected,
+          backgroundColor: isPrimary ? theme.primary : theme.surface,
+          borderWidth: isPrimary ? 0 : 1.5,
+          borderColor: withAlpha(theme.text, 0.16),
           shadowColor: theme.shadow,
         },
         isPrimary && styles.shadow,

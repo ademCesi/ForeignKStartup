@@ -10,7 +10,10 @@
     "title": "나의 로드맵",
     "stepsDone": "{{total}}단계 중 {{done}}단계 완료",
     "loading": "로드맵을 불러오는 중...",
-    "loginHint": "계정 탭에서 로그인하면 진행 상황이 저장됩니다."
+    "loginHint": "계정 탭에서 로그인하면 진행 상황이 저장됩니다.",
+    "community": "커뮤니티 소식",
+    "seeAll": "모두 보기",
+    "tipTitle": "알아두면 좋아요"
   },
   "step": {
     "eyebrow": "단계",
@@ -60,9 +63,7 @@
     "loginRequired": "추천하려면 로그인하세요."
   },
   "account": {
-    "welcome": "환영합니다, {{email}}",
-    "language": "언어",
-    "targetVisa": "목표 비자",
+    "welcome": "환영합니다, {{name}}",
     "logout": "로그아웃",
     "login": "로그인",
     "register": "계정 만들기",
@@ -72,6 +73,17 @@
     "switchToLogin": "이미 계정이 있으신가요? 로그인",
     "submit": "제출",
     "reminders": "알림",
-    "noReminders": "예정된 알림이 없습니다. 로드맵 단계를 완료로 표시하면 기한 알림이 예약됩니다."
+    "noReminders": "예정된 알림이 없습니다. 로드맵 단계를 완료로 표시하면 기한 알림이 예약됩니다.",
+    "daysLeft": "일 남음",
+    "progressDone": "로드맵을 완료했습니다!",
+    "progressOne": "이제 1단계 남았습니다!",
+    "progressFew": "이제 {{count}}단계 남았습니다!",
+    "progressMany": "{{count}}단계 남음 - 계속하세요",
+    "reminderTitles": {
+      "arc_window": "ARC 등록",
+      "visa_renewal": "비자 갱신",
+      "quarterly_vat": "부가세 신고",
+      "default": "알림"
+    }
   }
 }

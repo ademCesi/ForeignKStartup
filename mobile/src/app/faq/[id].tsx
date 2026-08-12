@@ -13,6 +13,7 @@ import { AppFonts } from '@/constants/theme';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/hooks/use-theme';
 import { api } from '@/lib/api';
+import { emailName } from '@/lib/format';
 
 type Answer = { id: number; answer: string; answered_by: string; upvotes: number; upvoted: boolean };
 type Post = { id: number; question: string; asked_by: string; upvotes: number; upvoted: boolean; answers: Answer[] };
@@ -92,7 +93,7 @@ export default function FaqDetailScreen() {
           </ThemedText>
           <ThemedView style={styles.metaRow}>
             <ThemedText type="small" themeColor="textSecondary">
-              {post.asked_by}
+              {emailName(post.asked_by)}
             </ThemedText>
             <UpvoteButton count={post.upvotes} upvoted={post.upvoted} onToggle={toggleUpvotePost} />
           </ThemedView>
@@ -102,7 +103,7 @@ export default function FaqDetailScreen() {
               <ThemedText>{a.answer}</ThemedText>
               <ThemedView style={styles.metaRow}>
                 <ThemedText type="small" themeColor="textSecondary">
-                  {a.answered_by}
+                  {emailName(a.answered_by)}
                 </ThemedText>
                 <UpvoteButton count={a.upvotes} upvoted={a.upvoted} onToggle={() => toggleUpvoteAnswer(a)} size={16} />
               </ThemedView>

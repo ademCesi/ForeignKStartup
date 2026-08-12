@@ -1,6 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect, useLocalSearchParams } from 'expo-router';
-import { LinearGradient } from 'expo-linear-gradient';
 import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Linking, ScrollView, StyleSheet, View } from 'react-native';
@@ -8,13 +7,13 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Button } from '@/components/button';
 import { Card } from '@/components/card';
+import { GuideSections, type GuideSection } from '@/components/guide-sections';
 import { OfficesMap } from '@/components/offices-map';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { AppFonts, HeroGradient } from '@/constants/theme';
+import { AppFonts } from '@/constants/theme';
 import { useAuth } from '@/context/auth-context';
 import { useTheme } from '@/hooks/use-theme';
-import { useThemeScheme } from '@/context/theme-context';
 import { api } from '@/lib/api';
 import { withAlpha } from '@/lib/color';
 
@@ -54,6 +53,7 @@ type Step = {
   description: string;
   details: string | null;
   official_url: string | null;
+  guide: GuideSection[] | null;
   documents: StepDocument[];
 };
 
@@ -163,6 +163,8 @@ export default function StepDetailScreen() {
           <ThemedText themeColor="textSecondary">{step.description}</ThemedText>
           {step.details && <ThemedText style={styles.details}>{step.details}</ThemedText>}
 
+          <GuideSections sections={step.guide} />
+
           {step.step_order === 1 && <VisaSection />}
 
           {fundingPrograms && (
@@ -208,7 +210,7 @@ export default function StepDetailScreen() {
               <Ionicons
                 name={doc.status === 'ready' ? 'checkbox' : 'square-outline'}
                 size={20}
-                color={doc.status === 'ready' ? theme.accent : theme.textSecondary}
+                color={doc.status === 'ready' ? theme.success : theme.textSecondary}
               />
               <ThemedView style={styles.docText}>
                 <ThemedText>{doc.name}</ThemedText>
@@ -284,7 +286,6 @@ function useVisaQuestions() {
 function VisaSection() {
   const { t } = useTranslation();
   const theme = useTheme();
-  const { scheme } = useThemeScheme();
   const { user, updateProfile } = useAuth();
   const questions = useVisaQuestions();
   const [answers, setAnswers] = useState<Answers>({});
@@ -360,19 +361,19 @@ function VisaSection() {
         </>
       ) : (
         <>
-          <LinearGradient
-            colors={HeroGradient[scheme]}
-            start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 1 }}
-            style={styles.resultCard}>
-            <View style={[styles.sparkleBadge, { backgroundColor: withAlpha(theme.onPrimary, 0.35) }]}>
-              <Ionicons name="sparkles" size={16} color={theme.text} />
+          <View style={[styles.resultCard, { backgroundColor: theme.accent }]}>
+            <View style={[styles.sparkleBadge, { backgroundColor: withAlpha(theme.onAccent, 0.25) }]}>
+              <Ionicons name="sparkles" size={16} color={theme.onAccent} />
             </View>
-            <ThemedText type="eyebrow">{t('visa.recommended')}</ThemedText>
-            <ThemedText type="subtitle">{result.recommendation.code}</ThemedText>
-            <ThemedText>{result.recommendation.name}</ThemedText>
-            <ThemedText themeColor="textSecondary">{result.reason}</ThemedText>
-          </LinearGradient>
+            <ThemedText type="eyebrow" themeColor="onAccent">
+              {t('visa.recommended')}
+            </ThemedText>
+            <ThemedText type="subtitle" themeColor="onAccent">
+              {result.recommendation.code}
+            </ThemedText>
+            <ThemedText themeColor="onAccent">{result.recommendation.name}</ThemedText>
+            <ThemedText style={{ color: withAlpha(theme.onAccent, 0.85) }}>{result.reason}</ThemedText>
+          </View>
 
           <Button variant="secondary" label={t('visa.compareAll')} onPress={loadAllVisas} />
 

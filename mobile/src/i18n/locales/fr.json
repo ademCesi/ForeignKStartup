@@ -10,7 +10,10 @@
     "title": "Votre feuille de route",
     "stepsDone": "{{done}} étapes sur {{total}} terminées",
     "loading": "Chargement de votre feuille de route...",
-    "loginHint": "Connectez-vous depuis l'onglet Compte pour sauvegarder votre progression."
+    "loginHint": "Connectez-vous depuis l'onglet Compte pour sauvegarder votre progression.",
+    "community": "Depuis la communauté",
+    "seeAll": "Tout voir",
+    "tipTitle": "Le saviez-vous ?"
   },
   "step": {
     "eyebrow": "Étape",
@@ -60,9 +63,7 @@
     "loginRequired": "Connectez-vous pour voter."
   },
   "account": {
-    "welcome": "Bienvenue, {{email}}",
-    "language": "Langue",
-    "targetVisa": "Visa visé",
+    "welcome": "Bienvenue, {{name}}",
     "logout": "Se déconnecter",
     "login": "Se connecter",
     "register": "Créer un compte",
@@ -72,6 +73,17 @@
     "switchToLogin": "Déjà un compte ? Connectez-vous",
     "submit": "Valider",
     "reminders": "Rappels",
-    "noReminders": "Aucun rappel à venir. Marquez des étapes comme terminées pour programmer des rappels d'échéance."
+    "noReminders": "Aucun rappel à venir. Marquez des étapes comme terminées pour programmer des rappels d'échéance.",
+    "daysLeft": "jours restants",
+    "progressDone": "Vous avez terminé votre parcours !",
+    "progressOne": "Plus qu'une étape !",
+    "progressFew": "Plus que {{count}} étapes !",
+    "progressMany": "{{count}} étapes restantes - continuez",
+    "reminderTitles": {
+      "arc_window": "Enregistrement ARC",
+      "visa_renewal": "Renouvellement visa",
+      "quarterly_vat": "Déclaration TVA",
+      "default": "Rappel"
+    }
   }
 }
