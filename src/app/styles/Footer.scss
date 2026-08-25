@@ -1,8 +1,214 @@
 // ─── Variables ───────────────────────────────────────────────────────────────
 $color-primary: #0A2540;
+$color-accent: #C8372D;
+$color-white: #ffffff;
+$color-text-muted: rgba(#ffffff, 0.5);
+$color-border: rgba(#ffffff, 0.1);
+
+$font-display: 'Playfair Display', Georgia, serif;
+$font-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+$transition: 0.2s ease;
+$breakpoint-mobile: 768px;
 
 // ─── Footer ───────────────────────────────────────────────────────────────────
 .footer {
     background: $color-primary;
     padding: 56px 0 32px;
-}
+
+    &__container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 40px;
+
+        @media (max-width: $breakpoint-mobile) {
+            padding: 0 20px;
+        }
+    }
+
+    // ─── Top ──────────────────────────────────────────────────────────────────
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 48px;
+
+        @media (max-width: $breakpoint-mobile) {
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+
+    // ─── Brand ────────────────────────────────────────────────────────────────
+    &__brand {
+        flex: 1;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+        text-decoration: none;
+    }
+
+    &__logo-img {
+        height: 36px;
+        width: auto;
+        border-radius: 50%;
+    }
+
+    &__logo-text {
+        display: flex;
+        align-items: baseline;
+        gap: 1px;
+    }
+
+    &__logo-foreign {
+        font-family: $font-display;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: rgba($color-white, 0.6);
+        letter-spacing: 0.01em;
+    }
+
+    &__logo-k {
+        font-family: $font-display;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: $color-white;
+        letter-spacing: 0.01em;
+    }
+
+    &__logo-star {
+        font-family: $font-display;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $color-accent;
+        line-height: 1;
+        margin-left: 1px;
+    }
+
+    &__tagline {
+        font-family: $font-body;
+        font-size: 0.85rem;
+        color: $color-text-muted;
+        line-height: 1.6;
+        max-width: 300px;
+        margin: 0;
+    }
+
+    // ─── Contact ──────────────────────────────────────────────────────────────
+    &__contact {
+        flex-shrink: 0;
+        text-align: right;
+
+        @media (max-width: $breakpoint-mobile) {
+            text-align: left;
+        }
+    }
+
+    &__contact-name {
+        font-family: $font-display;
+        font-size: 1rem;
+        font-weight: 600;
+        color: $color-white;
+        margin: 0 0 8px;
+    }
+
+    &__contact-address {
+        font-family: $font-body;
+        font-size: 0.8rem;
+        color: $color-text-muted;
+        line-height: 1.7;
+        margin: 0 0 12px;
+    }
+
+    &__contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        span,
+        a {
+            font-family: $font-body;
+            font-size: 0.8rem;
+            color: $color-text-muted;
+            text-decoration: none;
+            transition: color $transition;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            align-items: flex-start;
+        }
+    }
+
+    &__contact-email {
+        color: rgba($color-accent, 0.8) !important;
+
+        &:hover {
+            color: $color-accent !important;
+        }
+    }
+
+    // ─── Divider ──────────────────────────────────────────────────────────────
+    &__divider {
+        height: 1px;
+        background: $color-border;
+        margin: 40px 0 24px;
+    }
+
+    // ─── Bottom ───────────────────────────────────────────────────────────────
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        @media (max-width: $breakpoint-mobile) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+        }
+    }
+
+    &__legal {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    &__legal-link {
+        font-family: $font-body;
+        font-size: 0.78rem;
+        color: $color-text-muted;
+        text-decoration: none;
+        transition: color $transition;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+
+    &__legal-sep {
+        color: $color-border;
+        font-size: 0.75rem;
+    }
+
+    &__copyright {
+        font-family: $font-body;
+        font-size: 0.78rem;
+        color: $color-text-muted;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    &__copyright-link {
+        color: rgba($color-white, 0.7);
+        text-decoration: none;
+        transition: color $transition;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
